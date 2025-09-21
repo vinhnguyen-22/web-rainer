@@ -33,39 +33,33 @@
   </head>
   <body class="bg-dark-bg text-white font-inter">
     <!-- Hero Section -->
-    <section
-      class="relative min-h-screen"
-      style="
-        background-image: url('./images/banner.png');
-        background-size: cover;
-        background-position: right;
-      "
-    >
+    <section class="relative min-h-screen">
+      <img
+        src="./images/banner.png"
+        class="absolute inset-0 w-full h-full object-cover"
+        alt=""
+      />
       <!-- Overlay Gradient -->
       <div
-        class="absolute inset-0 mg:bg-gradient-to-r bg-gradient-to-t from-black/90 via-black/60 to-transparent z-10"
+        class="absolute w-full inset-0 lg:bg-gradient-to-r bg-gradient-to-t from-black via-black/80 to-transparent z-10"
       ></div>
 
-      <!-- Content Wrapper -->
       <div
         class="relative z-20 h-screen flex flex-col items-center justify-end text-center px-6 pb-12 lg:items-start lg:justify-center lg:text-left lg:px-[150px]"
       >
         <div class="max-w-3xl">
-          <!-- Subtitle -->
           <h3
             class="text-sm md:text-base lg:text-2xl font-bold text-gray-400 mb-2 tracking-wide"
           >
             RAINIER SKYMAGIC
           </h3>
 
-          <!-- Title -->
           <h1
             class="text-2xl md:text-4xl lg:text-[64px] font-bold text-white mb-4 lg:mb-6 leading-snug lg:leading-tight"
           >
             LÀM CHỦ MẶT TRỜI
           </h1>
 
-          <!-- Description -->
           <p
             class="text-sm md:text-lg lg:text-xl text-white mb-6 leading-relaxed max-w-xl"
           >
@@ -99,7 +93,7 @@
     </section>
 
     <!-- Product Introduction -->
-    <section class="py-20 bg-gradient-to-b from-blue-900/10 to-dark-bg">
+    <section class="py-[100px] bg-gradient-to-b from-blue-900/10 to-dark-bg">
       <div class="container mx-auto px-6 text-center">
         <h2
           class="text-4xl md:text-5xl lg:text-6xl font-bold text-sky-blue mb-6"
@@ -134,7 +128,7 @@
         src="./images/cong-nghe-doc-quyen-bg.png"
       />
       <img
-        class="relative hidden lg:block lg:absolute top-0 right-0 lg:w-2/5"
+        class="relative hidden lg:block lg:absolute top-0 right-0 max-w-[600px]"
         src="./images/car.png"
       />
       <div class="container mx-auto px-6">
@@ -233,7 +227,7 @@
                 <p>Đạt chuẩn an toàn quốc tế.</p>
               </div>
               <button
-                class="mt-8 border border-white/20 text-light-gray px-6 py-3 rounded-full hover:bg-white/10 transition-colors duration-300 flex items-center gap-2 mr-auto lg:ml-auto"
+                class="lg:ml-auto mt-8 border border-white/20 text-light-gray px-6 py-3 rounded-full hover:bg-white/10 transition-colors duration-300 flex items-center gap-2"
               >
                 <span>Check it out</span>
                 <svg
@@ -298,11 +292,13 @@
       </div>
     </section>
 
-    <section class="relative bg-black">
+    <section class="relative bg-black overflow-hidden">
       <div class="container mx-auto px-6">
-        <div class="grid grid-cols-1 lg:grid-cols-2 items-center gap-10">
+        <div
+          class="grid grid-cols-1 lg:grid-cols-2 items-center gap-10 justify-center"
+        >
           <!-- Text Column -->
-          <div class="text-center lg:text-left py-[72px] z-10">
+          <div class="text-center lg:text-left py-[100px] lg:py-[170px] z-10">
             <h1
               class="text-4xl md:text-6xl lg:text-8xl font-bold text-sky-400 leading-tight"
             >
@@ -483,8 +479,8 @@
       </div>
     </section>
     <!-- Technical Specifications -->
-    <section class="py-16 bg-dark-bg">
-      <div class="container mx-auto px-6 text-center">
+    <section class="bg-dark-bg">
+      <div class="container mx-auto px-6 text-center py-[100px]">
         <!-- Title -->
         <h2 class="text-3xl md:text-4xl font-bold text-sky-blue mb-2">
           THÔNG SỐ VÀNG CỦA SKYMAGIC
@@ -594,7 +590,7 @@
 
           <!-- Cột phải: Bảng thông số -->
           <div
-            class="bg-black/70 backdrop-blur-md rounded-xl p-8 w-full max-w-md ml-auto"
+            class="bg-black/70 backdrop-blur-md opacity-80 rounded-xl p-8 w-full max-w-md lg:ml-auto mx-auto"
           >
             <h3 class="text-2xl font-bold text-gray-400">Thông số</h3>
             <h2 class="text-3xl font-bold text-sky-400 mb-6">Kỹ Thuật</h2>
@@ -661,7 +657,7 @@
       <div class="container mx-auto px-6">
         <!-- Title -->
         <div class="text-center mb-16">
-          <h2 class="text-4xl md:text-5xl font-bold text-sky-blue mb-4">
+          <h2 class="text-3xl md:text-4xl font-bold text-sky-blue mb-4">
             CHỨNG NHẬN VÀ TIÊU CHUẨN QUỐC TẾ
           </h2>
           <p class="text-xl text-gray-text">
@@ -754,7 +750,7 @@
     <section class="py-20 bg-black">
       <div class="container mx-auto px-6">
         <div class="text-center mb-12">
-          <h2 class="text-2xl md:text-3xl font-bold text-sky-400 leading-snug">
+          <h2 class="text-3xl md:text-4xl font-bold text-sky-400 leading-snug">
             ĐỒNG HÀNH CÙNG NHIỀU<br />THƯƠNG HIỆU Ô TÔ CAO CẤP
           </h2>
         </div>
@@ -784,7 +780,7 @@
       </div>
     </section>
 
-    <section class="py-20 bg-[#012233]">
+    <section class="py-[100px] bg-[#012233]">
       <div class="container mx-auto px-6">
         <!-- Title -->
         <div class="text-center mb-16">
@@ -794,9 +790,7 @@
         </div>
 
         <!-- Pricing Grid -->
-        <div
-          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[32px] lg:gap-[148px]"
-        >
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-[32px] lg:gap-[148px]">
           <!-- Sunroof -->
           <div class="p-auto lg:p-8 rounded-xl text-left">
             <h3 class="text-sky-400 font-bold text-xl mb-3">SUNROOF</h3>
@@ -901,9 +895,9 @@
     </section>
 
     <!-- Testimonials -->
-    <section class="py-20 bg-black">
-      <div class="container mx-auto px-6">
-        <div id="ts-wrapper" class="relative max-w-5xl">
+    <section class="py-[167px] bg-black">
+      <div class="container mx-auto px-6 flex justify-center items-center">
+        <div id="ts-wrapper" class="relative">
           <!-- Slides -->
           <div class="space-y-12">
             <!-- Slide 1 -->
@@ -918,7 +912,7 @@
               <div class="mt-10 flex items-center justify-between">
                 <div class="flex items-center gap-4">
                   <img
-                    src="https://via.placeholder.com/64x64"
+                    src="./images/chu-xe.png"
                     alt="Anh Phạm Hoàng Minh"
                     class="w-12 h-12 rounded-full object-cover"
                   />
@@ -992,7 +986,7 @@
               <div class="mt-10 flex items-center justify-between">
                 <div class="flex items-center gap-4">
                   <img
-                    src="https://via.placeholder.com/64x64"
+                    src="./images/chu-xe.png"
                     alt="Chị Thuỳ Trang"
                     class="w-12 h-12 rounded-full object-cover"
                   />
@@ -1015,7 +1009,7 @@
               <div class="mt-10 flex items-center justify-between">
                 <div class="flex items-center gap-4">
                   <img
-                    src="https://via.placeholder.com/64x64"
+                    src="./images/chu-xe.png"
                     alt="Anh Quốc Dũng"
                     class="w-12 h-12 rounded-full object-cover"
                   />
@@ -1038,7 +1032,7 @@
               <div class="mt-10 flex items-center justify-between">
                 <div class="flex items-center gap-4">
                   <img
-                    src="https://via.placeholder.com/64x64"
+                    src="./images/chu-xe.png"
                     alt="Anh Minh Tuấn"
                     class="w-12 h-12 rounded-full object-cover"
                   />
@@ -1060,7 +1054,7 @@
               <div class="mt-10 flex items-center justify-between">
                 <div class="flex items-center gap-4">
                   <img
-                    src="https://via.placeholder.com/64x64"
+                    src="./images/chu-xe.png"
                     alt="Chị Mỹ Linh"
                     class="w-12 h-12 rounded-full object-cover"
                   />
