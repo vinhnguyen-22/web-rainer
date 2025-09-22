@@ -1164,6 +1164,10 @@
         offset: 100, // khoảng cách trước khi trigger
         disable: 'mobile',
       });
+
+      window.addEventListener('resize', () => {
+        AOS.refresh();
+      });
     </script>
   </body>
 </html>
