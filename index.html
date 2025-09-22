@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>RAINIER SKYMAGIC - Phim Cách Nhiệt Cửa Sổ Trời</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
     <script>
       tailwind.config = {
         theme: {
@@ -31,7 +33,6 @@
       rel="stylesheet"
     />
     <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
-    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
   </head>
   <body class="bg-dark-bg text-white font-inter">
     <!-- Hero Section -->
@@ -47,7 +48,7 @@
       ></div>
 
       <div
-        class="relative z-20 h-screen flex flex-col items-center justify-end text-center px-6 pb-12 lg:items-start lg:justify-center lg:text-left lg:px-[150px]"
+        class="relative z-20 min-h-screen flex flex-col items-center justify-end text-center px-6 pb-12 lg:items-start lg:justify-center lg:text-left lg:px-[150px]"
       >
         <div class="max-w-3xl">
           <h3
@@ -126,20 +127,27 @@
 
     <!-- Technology Section -->
     <section
-      class="relative mb-[120px] min-h-screen bg-gradient-to-b from-black via-[#031d29] to-black"
+      class="relative mb-[120px] py-[100px] bg-gradient-to-b from-black via-[#031d29] to-black"
     >
       <img
         class="absolute top-10 left-0 w-full lg:block hidden"
         src="./images/cong-nghe-doc-quyen-bg.png"
+        alt=""
       />
       <img
         data-aos="fade-left"
+        data-aos-anchor-placement="top-bottom"
         class="relative hidden lg:block lg:absolute top-0 right-0 max-w-[600px]"
         src="./images/car.png"
+        alt="Car"
       />
       <div class="container mx-auto px-6">
         <!-- Section Header -->
-        <div data-aos="fade-right" class="lg:pb-[242px] text-left">
+        <div
+          data-aos="fade-right"
+          data-aos-anchor-placement="top-bottom"
+          class="lg:pb-[120px] text-left"
+        >
           <h2 class="text-3xl md:text-5xl font-bold text-sky-blue/30 mb-4">
             CÔNG NGHỆ ĐỘC QUYỀN
           </h2>
@@ -150,9 +158,7 @@
           <h4 class="text-2xl md:text-3xl font-bold text-sky-blue mb-6">
             Lá chắn toàn diện 3 trong 1
           </h4>
-          <div
-            class="space-y-4 text-lg text-white leading-relaxed text-wrap max-w-xl"
-          >
+          <div class="space-y-4 text-lg text-white leading-relaxed max-w-xl">
             <p>
               MagicShield360™ (công nghệ phún xạ kim loại đa tầng kết hợp TPU
               cao cấp) là tổ hợp công nghệ tiên tiến chỉ có trên Skymagic, tạo
@@ -160,16 +166,21 @@
             </p>
           </div>
           <img
-            class="relative lg:hidden lg:absolute top-0 right-0 lg:w-2/5"
+            class="relative lg:hidden mt-8 w-full max-w-sm mx-auto"
             src="./images/car.png"
+            alt="Car mobile"
           />
         </div>
 
         <!-- Technology Features -->
-        <div class="space-y-[40px]">
-          <!-- Feature 1: IR-Reflect Matrix -->
+        <div class="space-y-[60px]">
+          <!-- Feature 1 -->
           <div class="grid lg:grid-cols-2 gap-12 items-center">
-            <div data-aos="fade-right" class="order-1">
+            <div
+              data-aos="fade-right"
+              data-aos-anchor-placement="top-bottom"
+              class="order-1"
+            >
               <h4 class="text-3xl md:text-4xl font-bold text-sky-blue mb-6">
                 Ma trận phản xạ nhiệt<br />IR-Reflect Matrix
               </h4>
@@ -183,10 +194,10 @@
                   Hạ nhiệt khoang xe tức thì đến 30°C, duy trì sự mát mẻ ngay cả
                   dưới nắng gắt.
                 </p>
-                <p>Khác biệt hoàn toàn so với các dòng phim truyền thống</p>
+                <p>Khác biệt hoàn toàn so với các dòng phim truyền thống.</p>
               </div>
               <button
-                class="mt-8 border border-white/20 text-light-gray px-6 py-3 rounded-full hover:bg-white/10 transition-colors duration-300 flex items-center gap-2"
+                class="mt-8 border border-white/20 text-light-gray px-6 py-3 rounded-full hover:bg-white/10 transition flex items-center gap-2"
               >
                 <span>Check it out</span>
                 <svg
@@ -200,11 +211,15 @@
                     stroke-linejoin="round"
                     stroke-width="2"
                     d="M9 5l7 7-7 7"
-                  ></path>
+                  />
                 </svg>
               </button>
             </div>
-            <div data-aos="fade-left" class="lg:order-1">
+            <div
+              data-aos="fade-left"
+              data-aos-anchor-placement="top-bottom"
+              class="lg:order-1"
+            >
               <img
                 src="./images/feat-1.png"
                 alt="IR-Reflect Matrix"
@@ -213,9 +228,13 @@
             </div>
           </div>
 
-          <!-- Feature 2: PET/TPU Safety -->
+          <!-- Feature 2 -->
           <div class="grid lg:grid-cols-2 gap-12 items-center">
-            <div data-aos="fade-right" class="order-1 lg:order-2">
+            <div
+              data-aos="fade-right"
+              data-aos-anchor-placement="top-bottom"
+              class="order-1 lg:order-2"
+            >
               <img
                 src="./images/feat-2.png"
                 alt="PET/TPU 7 mil"
@@ -224,6 +243,7 @@
             </div>
             <div
               data-aos="fade-left"
+              data-aos-anchor-placement="top-bottom"
               class="order-1 lg:order-2 text-left lg:text-right"
             >
               <h4 class="text-3xl md:text-4xl font-bold text-sky-blue mb-6">
@@ -236,7 +256,7 @@
                 <p>Đạt chuẩn an toàn quốc tế.</p>
               </div>
               <button
-                class="lg:ml-auto mt-8 border border-white/20 text-light-gray px-6 py-3 rounded-full hover:bg-white/10 transition-colors duration-300 flex items-center gap-2"
+                class="lg:ml-auto mt-8 border border-white/20 text-light-gray px-6 py-3 rounded-full hover:bg-white/10 transition flex items-center gap-2"
               >
                 <span>Check it out</span>
                 <svg
@@ -250,15 +270,19 @@
                     stroke-linejoin="round"
                     stroke-width="2"
                     d="M9 5l7 7-7 7"
-                  ></path>
+                  />
                 </svg>
               </button>
             </div>
           </div>
 
-          <!-- Feature 3: Self-Healing -->
+          <!-- Feature 3 -->
           <div class="grid lg:grid-cols-2 gap-12 items-center">
-            <div data-aos="fade-right" class="order-1">
+            <div
+              data-aos="fade-right"
+              data-aos-anchor-placement="top-bottom"
+              class="order-1"
+            >
               <h4 class="text-3xl md:text-4xl font-bold text-sky-blue mb-6">
                 Lớp phủ tự hồi phục<br />Self-Healing Top-Coat
               </h4>
@@ -271,7 +295,7 @@
                 <p>Tiết kiệm chi phí bảo dưỡng kính trần.</p>
               </div>
               <button
-                class="mt-8 border border-white/20 text-light-gray px-6 py-3 rounded-full hover:bg-white/10 transition-colors duration-300 flex items-center gap-2"
+                class="mt-8 border border-white/20 text-light-gray px-6 py-3 rounded-full hover:bg-white/10 transition flex items-center gap-2"
               >
                 <span>Check it out</span>
                 <svg
@@ -285,11 +309,15 @@
                     stroke-linejoin="round"
                     stroke-width="2"
                     d="M9 5l7 7-7 7"
-                  ></path>
+                  />
                 </svg>
               </button>
             </div>
-            <div data-aos="fade-left" class="lg:order-1">
+            <div
+              data-aos="fade-left"
+              data-aos-anchor-placement="top-bottom"
+              class="lg:order-1"
+            >
               <img
                 src="./images/feat-3.png"
                 alt="Self-Healing Top-Coat"
@@ -1158,10 +1186,16 @@
         );
       })();
     </script>
+
     <script>
       AOS.init({
-        duration: 800, // thời gian animation
+        duration: 1000, // thời gian animation
         offset: 100, // khoảng cách trước khi trigger
+        disable: 'mobile',
+      });
+      // refresh lại khi resize để responsive
+      window.addEventListener('resize', () => {
+        AOS.refresh();
       });
     </script>
   </body>
