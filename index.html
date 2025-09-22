@@ -30,6 +30,8 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
   </head>
   <body class="bg-dark-bg text-white font-inter">
     <!-- Hero Section -->
@@ -93,7 +95,10 @@
     </section>
 
     <!-- Product Introduction -->
-    <section class="py-[100px] bg-gradient-to-b from-blue-900/10 to-dark-bg">
+    <section
+      data-aos="fade-up"
+      class="py-[100px] bg-gradient-to-b from-blue-900/10 to-dark-bg"
+    >
       <div class="container mx-auto px-6 text-center">
         <h2
           class="text-4xl md:text-5xl lg:text-6xl font-bold text-sky-blue mb-6"
@@ -128,12 +133,13 @@
         src="./images/cong-nghe-doc-quyen-bg.png"
       />
       <img
+        data-aos="fade-left"
         class="relative hidden lg:block lg:absolute top-0 right-0 max-w-[600px]"
         src="./images/car.png"
       />
       <div class="container mx-auto px-6">
         <!-- Section Header -->
-        <div class="lg:pb-[242px] text-left">
+        <div data-aos="fade-right" class="lg:pb-[242px] text-left">
           <h2 class="text-3xl md:text-5xl font-bold text-sky-blue/30 mb-4">
             CÔNG NGHỆ ĐỘC QUYỀN
           </h2>
@@ -163,7 +169,7 @@
         <div class="space-y-[40px]">
           <!-- Feature 1: IR-Reflect Matrix -->
           <div class="grid lg:grid-cols-2 gap-12 items-center">
-            <div class="order-1">
+            <div data-aos="fade-right" class="order-1">
               <h4 class="text-3xl md:text-4xl font-bold text-sky-blue mb-6">
                 Ma trận phản xạ nhiệt<br />IR-Reflect Matrix
               </h4>
@@ -198,7 +204,7 @@
                 </svg>
               </button>
             </div>
-            <div class="lg:order-1">
+            <div data-aos="fade-left" class="lg:order-1">
               <img
                 src="./images/feat-1.png"
                 alt="IR-Reflect Matrix"
@@ -209,14 +215,17 @@
 
           <!-- Feature 2: PET/TPU Safety -->
           <div class="grid lg:grid-cols-2 gap-12 items-center">
-            <div class="order-1 lg:order-2">
+            <div data-aos="fade-right" class="order-1 lg:order-2">
               <img
                 src="./images/feat-2.png"
                 alt="PET/TPU 7 mil"
                 class="rounded-2xl shadow-lg w-full h-auto"
               />
             </div>
-            <div class="order-1 lg:order-2 text-left lg:text-right">
+            <div
+              data-aos="fade-left"
+              class="order-1 lg:order-2 text-left lg:text-right"
+            >
               <h4 class="text-3xl md:text-4xl font-bold text-sky-blue mb-6">
                 Gia cường an toàn<br />PET/TPU 7 mil
               </h4>
@@ -249,7 +258,7 @@
 
           <!-- Feature 3: Self-Healing -->
           <div class="grid lg:grid-cols-2 gap-12 items-center">
-            <div class="order-1">
+            <div data-aos="fade-right" class="order-1">
               <h4 class="text-3xl md:text-4xl font-bold text-sky-blue mb-6">
                 Lớp phủ tự hồi phục<br />Self-Healing Top-Coat
               </h4>
@@ -280,7 +289,7 @@
                 </svg>
               </button>
             </div>
-            <div class="lg:order-1">
+            <div data-aos="fade-left" class="lg:order-1">
               <img
                 src="./images/feat-3.png"
                 alt="Self-Healing Top-Coat"
@@ -292,7 +301,7 @@
       </div>
     </section>
 
-    <section class="relative bg-black overflow-hidden">
+    <section data-aos="fade-up" class="relative bg-black overflow-hidden">
       <div class="container mx-auto px-6">
         <div
           class="grid grid-cols-1 lg:grid-cols-2 items-center gap-10 justify-center"
@@ -331,7 +340,7 @@
         </h2>
         <p class="text-2xl text-gray-text">Mát hơn, an toàn hơn, bền bỉ hơn</p>
       </div>
-      <div class="relative mx-auto px-6 my-[40px]">
+      <div data-aos="fade-up" class="relative mx-auto px-6 my-[40px]">
         <img
           src="./images/in-car.png"
           alt="Giảm nhiệt độ khoang xe"
@@ -359,7 +368,7 @@
         </div>
       </div>
 
-      <div class="relative mx-auto px-6 my-[40px]">
+      <div data-aos="fade-up" class="relative mx-auto px-6 my-[40px]">
         <!-- Background image -->
         <img
           src="./images/in-car2.png"
@@ -393,7 +402,7 @@
         </div>
       </div>
 
-      <div class="relative mx-auto px-6 my-[40px]">
+      <div data-aos="fade-up" class="relative mx-auto px-6 my-[40px]">
         <img
           src="./images/in-car3.png"
           alt="Giảm nhiệt độ khoang xe"
@@ -428,7 +437,7 @@
         alt="Giảm nhiệt độ khoang xe"
         class="lg:absolute top-1/2 transform -translate-y-1/2 left-0 -z-10"
       />
-      <div class="relative mx-auto px-6 lg:my-[40px]">
+      <div data-aos="fade-left" class="relative mx-auto px-6 lg:my-[40px]">
         <div class="container lg:py-[165px] rounded-2xl overflow-hidden">
           <!-- Content -->
           <div class="flex items-center justify-end">
@@ -479,7 +488,7 @@
       </div>
     </section>
     <!-- Technical Specifications -->
-    <section class="bg-dark-bg">
+    <section data-aos="fade-up" class="bg-dark-bg">
       <div class="container mx-auto px-6 text-center py-[100px]">
         <!-- Title -->
         <h2 class="text-3xl md:text-4xl font-bold text-sky-blue mb-2">
@@ -580,7 +589,7 @@
           class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center justify-center"
         >
           <!-- Cột trái: Hình Sky Magic (ẩn khi mobile) -->
-          <div class="hidden lg:flex justify-center">
+          <div data-aos="fade-right" class="hidden lg:flex justify-center">
             <img
               src="./images/sky-magic.png"
               alt="Sky Magic"
@@ -590,6 +599,7 @@
 
           <!-- Cột phải: Bảng thông số -->
           <div
+            data-aos="fade-left"
             class="bg-black/70 backdrop-blur-md opacity-80 rounded-xl p-8 w-full max-w-md lg:ml-auto mx-auto"
           >
             <h3 class="text-2xl font-bold text-gray-400">Thông số</h3>
@@ -653,7 +663,7 @@
     </section>
 
     <!-- Certifications -->
-    <section class="py-20 bg-dark-bg">
+    <section data-aos="fade-up" class="py-20 bg-dark-bg">
       <div class="container mx-auto px-6">
         <!-- Title -->
         <div class="text-center mb-16">
@@ -747,7 +757,7 @@
     </section>
 
     <!-- Partner Brands -->
-    <section class="py-20 bg-black">
+    <section data-aos="fade-up" class="py-20 bg-black">
       <div class="container mx-auto px-6">
         <div class="text-center mb-12">
           <h2 class="text-3xl md:text-4xl font-bold text-sky-400 leading-snug">
@@ -792,7 +802,7 @@
       </div>
     </section>
 
-    <section class="py-[100px] bg-[#012233]">
+    <section data-aos="fade-up" class="py-[100px] bg-[#012233]">
       <div class="container mx-auto px-6">
         <!-- Title -->
         <div class="text-center mb-16">
@@ -907,7 +917,7 @@
     </section>
 
     <!-- Testimonials -->
-    <section class="py-[167px] bg-black">
+    <section data-aos="fade-up" class="py-[167px] bg-black">
       <div class="container mx-auto px-6 flex justify-center items-center">
         <div id="ts-wrapper" class="relative">
           <!-- Slides -->
@@ -1147,6 +1157,12 @@
           { passive: true }
         );
       })();
+    </script>
+    <script>
+      AOS.init({
+        duration: 800, // thời gian animation
+        offset: 100, // khoảng cách trước khi trigger
+      });
     </script>
   </body>
 </html>
