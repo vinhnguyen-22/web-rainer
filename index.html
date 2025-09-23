@@ -34,6 +34,153 @@
     <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
   </head>
   <body class="bg-dark-bg text-white font-inter">
+    <header class="bg-black/70 backdrop-blur-md fixed w-full z-30">
+      <div
+        class="container mx-auto flex items-center justify-between px-6 py-3"
+      >
+        <!-- Logo -->
+        <a href="#" class="flex items-center space-x-2">
+          <img src="./images/Logo.png" alt="Rainier Logo" class="h-10" />
+        </a>
+
+        <!-- Navigation Desktop -->
+        <nav
+          class="hidden md:flex items-center space-x-6 text-white font-medium"
+        >
+          <a
+            href="#"
+            class="hover:text-white px-[16px] py-[12px] hover:bg-sky-400"
+            >TRANG CHỦ</a
+          >
+
+          <!-- Dropdown -->
+          <div class="relative group">
+            <button
+              class="hover:text-white px-[16px] py-[12px] hover:bg-sky-400 flex items-center"
+            >
+              GIỚI THIỆU
+              <svg class="w-4 h-4 ml-1" fill="currentColor" viewBox="0 0 20 20">
+                <path
+                  fill-rule="evenodd"
+                  d="M5.23 7.21a.75.75 0 011.06.02L10 11.21l3.71-3.98a.75.75 0 111.08 1.04l-4.25 4.56a.75.75 0 01-1.08 0L5.21 8.27a.75.75 0 01.02-1.06z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+            </button>
+            <div
+              class="absolute hidden group-hover:block mt-2 bg-white text-black rounded shadow-lg"
+            >
+              <a href="#" class="block px-4 py-2 hover:bg-gray-200"
+                >Về chúng tôi</a
+              >
+              <a href="#" class="block px-4 py-2 hover:bg-gray-200">Tầm nhìn</a>
+            </div>
+          </div>
+
+          <div class="relative group">
+            <button
+              class="hover:text-white px-[16px] py-[12px] hover:bg-sky-400 flex items-center"
+            >
+              SẢN PHẨM
+              <svg class="w-4 h-4 ml-1" fill="currentColor" viewBox="0 0 20 20">
+                <path
+                  fill-rule="evenodd"
+                  d="M5.23 7.21a.75.75 0 011.06.02L10 11.21l3.71-3.98a.75.75 0 111.08 1.04l-4.25 4.56a.75.75 0 01-1.08 0L5.21 8.27a.75.75 0 01.02-1.06z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+            </button>
+            <div
+              class="absolute hidden group-hover:block mt-2 bg-white text-black rounded shadow-lg"
+            >
+              <a href="#" class="block px-4 py-2 hover:bg-gray-200"
+                >Phim cách nhiệt</a
+              >
+              <a href="#" class="block px-4 py-2 hover:bg-gray-200">Phụ kiện</a>
+            </div>
+          </div>
+
+          <a
+            href="#"
+            class="hover:text-white px-[16px] py-[12px] hover:bg-sky-400"
+            >DỰ ÁN</a
+          >
+          <a
+            href="#"
+            class="hover:text-white px-[16px] py-[12px] hover:bg-sky-400"
+            >ĐẠI LÝ</a
+          >
+          <a
+            href="#"
+            class="hover:text-white px-[16px] py-[12px] hover:bg-sky-400"
+            >KINH NGHIỆM</a
+          >
+          <a
+            href="#"
+            class="hover:text-white px-[16px] py-[12px] hover:bg-sky-400"
+            >BẢO HÀNH ĐIỆN TỬ</a
+          >
+          <a
+            href="#"
+            class="hover:text-white px-[16px] py-[12px] hover:bg-sky-400"
+            >LIÊN HỆ</a
+          >
+        </nav>
+
+        <!-- Hotline -->
+        <div class="hidden md:block text-right text-white">
+          <p class="text-sm">Hotline 099 666 8889</p>
+          <p class="text-sky-400 text-lg font-bold">024 6688 9999</p>
+        </div>
+
+        <!-- Hamburger Mobile -->
+        <button id="menu-btn" class="md:hidden text-white focus:outline-none">
+          <svg
+            class="w-7 h-7"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M4 6h16M4 12h16M4 18h16"
+            />
+          </svg>
+        </button>
+      </div>
+
+      <!-- Mobile Menu -->
+      <div
+        id="mobile-menu"
+        class="hidden md:hidden bg-black/70 backdrop-blur-md text-white font-medium flex flex-col space-y-2 px-6 py-4"
+      >
+        <a href="#" class="hover:bg-sky-400 p-2 rounded">TRANG CHỦ</a>
+        <a href="#" class="hover:bg-sky-400 p-2 rounded">GIỚI THIỆU</a>
+        <a href="#" class="hover:bg-sky-400 p-2 rounded">SẢN PHẨM</a>
+        <a href="#" class="hover:bg-sky-400 p-2 rounded">DỰ ÁN</a>
+        <a href="#" class="hover:bg-sky-400 p-2 rounded">ĐẠI LÝ</a>
+        <a href="#" class="hover:bg-sky-400 p-2 rounded">KINH NGHIỆM</a>
+        <a href="#" class="hover:bg-sky-400 p-2 rounded">BẢO HÀNH ĐIỆN TỬ</a>
+        <a href="#" class="hover:bg-sky-400 p-2 rounded">LIÊN HỆ</a>
+
+        <div class="pt-3 border-t border-gray-600">
+          <p class="text-sm">Hotline 099 666 8889</p>
+          <p class="text-sky-400 text-lg font-bold">024 6688 9999</p>
+        </div>
+      </div>
+    </header>
+
+    <script>
+      const btn = document.getElementById('menu-btn');
+      const menu = document.getElementById('mobile-menu');
+
+      btn.addEventListener('click', () => {
+        menu.classList.toggle('hidden');
+      });
+    </script>
+
     <!-- Hero Section -->
     <section class="relative min-h-screen">
       <img
@@ -126,7 +273,7 @@
 
     <!-- Technology Section -->
     <section
-      class="relative mb-[120px] min-h-screen bg-gradient-to-b from-black via-[#031d29] to-black"
+      class="relative mb-[70px] lg:mb-[120px] min-h-screen bg-gradient-to-b from-black via-[#031d29] to-black"
     >
       <img
         class="absolute top-10 left-0 w-full lg:block hidden"
@@ -307,7 +454,7 @@
           class="grid grid-cols-1 lg:grid-cols-2 items-center gap-10 justify-center"
         >
           <!-- Text Column -->
-          <div class="text-center lg:text-left py-[100px] lg:py-[170px] z-10">
+          <div class="text-center lg:text-left py-[70px] lg:py-[170px] z-10">
             <h1
               class="text-4xl md:text-6xl lg:text-8xl font-bold text-sky-400 leading-tight"
             >
@@ -679,14 +826,14 @@
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           <!-- Certificate 1 -->
           <div class="text-left">
-            <div class="h-64 rounded-lg flex items-center justify-center mb-4">
+            <div class="rounded-lg flex items-center justify-center mb-4">
               <img
                 src="./images/cert1.png"
                 alt="Chứng nhận 01"
                 class="h-full object-cover rounded-lg"
               />
             </div>
-            <h4 class="text-sm font-semibold text-gray-400 mb-1 text-center">
+            <h4 class="text-xl font-semibold text-gray-400 mb-1 text-center">
               IATF 16949:2016 <br />
               Certificate of Registration
             </h4>
@@ -694,28 +841,28 @@
 
           <!-- Certificate 2 -->
           <div class="text-left">
-            <div class="h-64 rounded-lg flex items-center justify-center mb-4">
+            <div class="rounded-lg flex items-center justify-center mb-4">
               <img
                 src="./images/cert2.png"
                 alt="Chứng nhận 02"
                 class="h-full object-cover rounded-lg"
               />
             </div>
-            <h4 class="text-sm font-semibold text-gray-400 mb-1 text-center">
+            <h4 class="text-xl font-semibold text-gray-400 mb-1 text-center">
               Declaration of Quality
             </h4>
           </div>
 
           <!-- Certificate 3 -->
           <div class="text-left">
-            <div class="h-64 rounded-lg flex items-center justify-center mb-4">
+            <div class="rounded-lg flex items-center justify-center mb-4">
               <img
                 src="./images/cert3.png"
                 alt="Chứng nhận 03"
                 class="h-full object-cover rounded-lg"
               />
             </div>
-            <h4 class="text-sm font-semibold text-gray-400 mb-1 text-center">
+            <h4 class="text-xl font-semibold text-gray-400 mb-1 text-center">
               Quality Management <br />
               System Certificate
             </h4>
@@ -723,14 +870,14 @@
 
           <!-- Certificate 4 -->
           <div class="text-left">
-            <div class="h-64 rounded-lg flex items-center justify-center mb-4">
+            <div class="rounded-lg flex items-center justify-center mb-4">
               <img
                 src="./images/cert4.png"
                 alt="Chứng nhận 04"
                 class="h-full object-cover rounded-lg"
               />
             </div>
-            <h4 class="text-sm font-semibold text-gray-400 mb-1 text-center">
+            <h4 class="text-xl font-semibold text-gray-400 mb-1 text-center">
               Environmental Management <br />
               System Certificate
             </h4>
@@ -900,82 +1047,34 @@
     </section>
 
     <!-- Testimonials -->
-    <section data-aos="fade-up" class="py-[167px] bg-black">
-      <div class="container mx-auto px-6 flex justify-center items-center">
+
+    <section
+      data-aos="fade-up"
+      class="py-[167px] bg-black flex flex-col items-center"
+    >
+      <div class="container mx-auto px-6">
+        <!-- Wrapper -->
         <div id="ts-wrapper" class="relative">
           <!-- Slides -->
           <div class="space-y-12">
             <!-- Slide 1 -->
             <div class="ts-slide opacity-100 transition-opacity duration-300">
-              <p class="text-white text-2xl md:text-3xl leading-relaxed">
+              <p class="text-white text-3xl md:text-4xl leading-relaxed">
                 Xe tôi hay để ngoài trời nắng, trước đây khi mở cửa ra nóng hầm
-                hập. Sau khi dán phim Skymagic cho cửa sổ trời thì khoang xe mát
-                hơn hẳn, đặc biệt là xe vẫn sáng, không bị bí bách.
+                hập. Sau khi dán phim Skymagic cho cửa sổ trời thì xe khoang xe
+                mát hơn hẳn, đặc biệt là xe vẫn sáng, không bị bí bách.
               </p>
-
-              <!-- author row (left) + nav (right) -->
-              <div class="mt-10 flex items-center justify-between">
-                <div class="flex items-center gap-4">
-                  <img
-                    src="./images/chu-xe.png"
-                    alt="Anh Phạm Hoàng Minh"
-                    class="w-12 h-12 rounded-full object-cover"
-                  />
-                  <div>
-                    <h4 class="text-white font-semibold">
-                      Anh Phạm Hoàng Minh
-                    </h4>
-                    <p class="text-gray-400 text-sm">Chủ xe SUV</p>
-                  </div>
-                </div>
-
-                <!-- navigation (absolute would also work; keep here for accessibility) -->
-                <div class="flex items-center gap-6">
-                  <button
-                    id="ts-prev"
-                    class="w-12 h-12 rounded-full border border-gray-500 text-white flex items-center justify-center hover:bg-gray-800 transition"
-                    aria-label="Slide trước"
-                  >
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      class="w-5 h-5"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                    >
-                      <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
-                        d="M15 19l-7-7 7-7"
-                      />
-                    </svg>
-                  </button>
-
-                  <span id="ts-page" class="text-gray-300 text-sm select-none"
-                    >01/05</span
-                  >
-
-                  <button
-                    id="ts-next"
-                    class="w-12 h-12 rounded-full bg-white text-black flex items-center justify-center hover:bg-gray-200 transition"
-                    aria-label="Slide sau"
-                  >
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      class="w-5 h-5"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                    >
-                      <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
-                        d="M9 5l7 7-7 7"
-                      />
-                    </svg>
-                  </button>
+              <div
+                class="absolute bottom-0 left-0 mt-10 flex items-center gap-4"
+              >
+                <img
+                  src="./images/chu-xe.png"
+                  alt="Anh Phạm Hoàng Minh"
+                  class="w-12 h-12 rounded-full object-cover"
+                />
+                <div>
+                  <h4 class="text-white font-semibold">Anh Phạm Hoàng Minh</h4>
+                  <p class="text-gray-400 text-sm">Chủ xe SUV</p>
                 </div>
               </div>
             </div>
@@ -984,91 +1083,129 @@
             <div
               class="ts-slide hidden opacity-0 transition-opacity duration-300"
             >
-              <p class="text-white text-2xl md:text-3xl leading-relaxed">
-                Dán Skymagic xong chạy cao tốc không còn chói gắt, điều hòa nhẹ
-                hơn rõ rệt. Cửa sổ trời vẫn sáng, nhìn cảnh rất thích.
+              <p class="text-white text-3xl md:text-4xl leading-relaxed">
+                Tôi thích cửa sổ trời vì tạo cảm giác thoáng, nhưng trước đây
+                luôn phải che lại vì nắng nóng. Dùng Skymagic rồi thì tôi có thể
+                thoải mái mở rèm, vừa sáng tự nhiên vừa yên tâm không sợ tia UV
+                hại da.
               </p>
-              <div class="mt-10 flex items-center justify-between">
-                <div class="flex items-center gap-4">
-                  <img
-                    src="./images/chu-xe.png"
-                    alt="Chị Thuỳ Trang"
-                    class="w-12 h-12 rounded-full object-cover"
-                  />
-                  <div>
-                    <h4 class="text-white font-semibold">Chị Thuỳ Trang</h4>
-                    <p class="text-gray-400 text-sm">Chủ xe Crossover</p>
-                  </div>
+
+              <div
+                class="absolute bottom-0 left-0 mt-10 flex items-center gap-4"
+              >
+                <img
+                  src="./images/chu-xe2.png"
+                  alt="Chị Thuỳ Trang"
+                  class="w-12 h-12 rounded-full object-cover"
+                />
+                <div>
+                  <h4 class="text-white font-semibold">Chị Thuỳ Trang</h4>
+                  <p class="text-gray-400 text-sm">Chủ xe Crossover</p>
+                </div>
+              </div>
+            </div>
+            <div
+              class="ts-slide hidden opacity-0 transition-opacity duration-300"
+            >
+              <p class="text-white text-3xl md:text-4xl leading-relaxed">
+                Chở khách cả ngày, đặc biệt vào buổi trưa xe nóng rất khó chịu.
+                Giờ thì xe mát hơn, điều hòa chạy cũng nhẹ hơn, chắc chắn sẽ
+                tiết kiệm được xăng.
+              </p>
+
+              <div
+                class="absolute bottom-0 left-0 mt-10 flex items-center gap-4"
+              >
+                <img
+                  src="./images/chu-xe3.png"
+                  alt="Chị Thuỳ Trang"
+                  class="w-12 h-12 rounded-full object-cover"
+                />
+                <div>
+                  <h4 class="text-white font-semibold">Chị Thuỳ Trang</h4>
+                  <p class="text-gray-400 text-sm">Chủ xe Crossover</p>
                 </div>
               </div>
             </div>
 
-            <!-- Slide 3 -->
             <div
               class="ts-slide hidden opacity-0 transition-opacity duration-300"
             >
-              <p class="text-white text-2xl md:text-3xl leading-relaxed">
-                Trưa nắng đậu ngoài trời nhưng mở cửa không còn sốc nhiệt. Kính
-                vẫn sáng, không tối như dán phim cũ.
+              <p class="text-white text-3xl md:text-4xl leading-relaxed">
+                Phim Skymagic dễ dán, bám kính chắc, ít bị bọt khí. Đặc biệt là
+                độ trong suốt cao, khách hàng thường rất thích vì không làm thay
+                đổi nhiều màu kính gốc.
               </p>
-              <div class="mt-10 flex items-center justify-between">
-                <div class="flex items-center gap-4">
-                  <img
-                    src="./images/chu-xe.png"
-                    alt="Anh Quốc Dũng"
-                    class="w-12 h-12 rounded-full object-cover"
-                  />
-                  <div>
-                    <h4 class="text-white font-semibold">Anh Quốc Dũng</h4>
-                    <p class="text-gray-400 text-sm">Sedan hạng C</p>
-                  </div>
+
+              <div
+                class="absolute bottom-0 left-0 mt-10 flex items-center gap-4"
+              >
+                <img
+                  src="./images/chu-xe4.png"
+                  alt="Chị Thuỳ Trang"
+                  class="w-12 h-12 rounded-full object-cover"
+                />
+                <div>
+                  <h4 class="text-white font-semibold">Chị Thuỳ Trang</h4>
+                  <p class="text-gray-400 text-sm">Chủ xe Crossover</p>
                 </div>
               </div>
             </div>
-
-            <!-- Slide 4 -->
-            <div
-              class="ts-slide hidden opacity-0 transition-opacity duration-300"
-            >
-              <p class="text-white text-2xl md:text-3xl leading-relaxed">
-                Thi công xong nội thất mát hơn, kính nhìn rất trong. Giá trị
-                xứng đáng.
-              </p>
-              <div class="mt-10 flex items-center justify-between">
-                <div class="flex items-center gap-4">
-                  <img
-                    src="./images/chu-xe.png"
-                    alt="Anh Minh Tuấn"
-                    class="w-12 h-12 rounded-full object-cover"
+            <!-- Các slide 3,4,5 tương tự -->
+          </div>
+          <!-- Navigation -->
+          <div class="mt-12 flex justify-end">
+            <div class="flex items-center gap-6">
+              <!-- Prev -->
+              <button
+                id="ts-prev"
+                class="w-10 h-10 rounded-full border border-white text-white flex items-center justify-center hover:bg-white/20 transition"
+                aria-label="Slide trước"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="w-5 h-5"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M15 19l-7-7 7-7"
                   />
-                  <div>
-                    <h4 class="text-white font-semibold">Anh Minh Tuấn</h4>
-                    <p class="text-gray-400 text-sm">Chủ xe Hatchback</p>
-                  </div>
-                </div>
-              </div>
-            </div>
+                </svg>
+              </button>
 
-            <!-- Slide 5 -->
-            <div
-              class="ts-slide hidden opacity-0 transition-opacity duration-300"
-            >
-              <p class="text-white text-2xl md:text-3xl leading-relaxed">
-                Tia UV giảm rõ, đi lâu không rát da. Rất hài lòng với Skymagic.
-              </p>
-              <div class="mt-10 flex items-center justify-between">
-                <div class="flex items-center gap-4">
-                  <img
-                    src="./images/chu-xe.png"
-                    alt="Chị Mỹ Linh"
-                    class="w-12 h-12 rounded-full object-cover"
+              <!-- Page counter -->
+              <span
+                id="ts-page"
+                class="text-gray-300 text-sm min-w-[60px] text-center select-none"
+                >01/05</span
+              >
+
+              <!-- Next -->
+              <button
+                id="ts-next"
+                class="w-10 h-10 rounded-full bg-white text-black flex items-center justify-center hover:bg-gray-200 transition"
+                aria-label="Slide sau"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="w-5 h-5"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M9 5l7 7-7 7"
                   />
-                  <div>
-                    <h4 class="text-white font-semibold">Chị Mỹ Linh</h4>
-                    <p class="text-gray-400 text-sm">Chủ xe MPV</p>
-                  </div>
-                </div>
-              </div>
+                </svg>
+              </button>
             </div>
           </div>
         </div>
