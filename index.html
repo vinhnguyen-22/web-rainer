@@ -381,7 +381,7 @@
 
     <!-- Technology Section -->
     <section
-      class="relative mb-[70px] lg:mb-[120px] min-h-screen bg-gradient-to-b from-black via-[#031d29] to-black"
+      class="relative mb-[70px] lg:mb-[120px] min-h-screen bg-gradient-to-b from-black via-[#031d29] to-black overflow-hidden"
     >
       <img
         class="absolute top-10 left-0 w-full lg:block hidden"
@@ -588,7 +588,7 @@
     </section>
 
     <!-- Benefits Section -->
-    <section class="relative py-[100px]">
+    <section class="relative py-[100px] overflow-hidden">
       <div class="text-center mb-16">
         <h2 class="text-4xl md:text-5xl font-bold text-sky-blue mb-4">
           NÂNG TẦM TRẢI NGHIỆM
@@ -686,7 +686,7 @@
       </div>
     </section>
 
-    <section class="relative">
+    <section class="relative overflow-hidden">
       <img
         src="./images/in-car4.png"
         alt="Giảm nhiệt độ khoang xe"
@@ -743,8 +743,8 @@
       </div>
     </section>
     <!-- Technical Specifications -->
-    <section data-aos="fade-up" class="bg-dark-bg">
-      <div class="container mx-auto px-6 text-center py-[100px]">
+    <section  class="bg-dark-bg overflow-hidden">
+      <div data-aos="fade-up"  class="container mx-auto px-6 text-center py-[100px]">
         <!-- Title -->
         <h2 class="text-3xl md:text-4xl font-bold text-sky-blue mb-2">
           THÔNG SỐ VÀNG CỦA SKYMAGIC
@@ -832,7 +832,7 @@
       </div>
     </section>
     <section
-      class="relative bg-black text-white py-16"
+      class="relative bg-black text-white py-16 overflow-hidden"
       style="
         background-image: url('./images/bg-car.png');
         background-size: cover;
@@ -918,8 +918,8 @@
     </section>
 
     <!-- Certifications -->
-    <section data-aos="fade-up" class="py-20 bg-dark-bg">
-      <div class="container mx-auto px-6">
+    <section class="py-20 bg-dark-bg">
+      <div data-aos="fade-up"  class="container mx-auto px-6">
         <!-- Title -->
         <div class="text-center mb-16">
           <h2 class="text-3xl md:text-4xl font-bold text-sky-blue mb-4">
@@ -1173,7 +1173,7 @@
                 mát hơn hẳn, đặc biệt là xe vẫn sáng, không bị bí bách.
               </p>
               <div
-                class="absolute bottom-0 left-0 mt-10 flex items-center gap-4"
+                class="relative lg:absolute bottom-0 left-0 mt-10 flex items-center gap-4"
               >
                 <img
                   src="./images/chu-xe.png"
@@ -1199,7 +1199,7 @@
               </p>
 
               <div
-                class="absolute bottom-0 left-0 mt-10 flex items-center gap-4"
+                class="relative lg:absolute bottom-0 left-0 mt-10 flex items-center gap-4"
               >
                 <img
                   src="./images/chu-xe2.png"
@@ -1222,7 +1222,7 @@
               </p>
 
               <div
-                class="absolute bottom-0 left-0 mt-10 flex items-center gap-4"
+                class="relative lg:absolute bottom-0 left-0 mt-10 flex items-center gap-4"
               >
                 <img
                   src="./images/chu-xe3.png"
@@ -1246,7 +1246,7 @@
               </p>
 
               <div
-                class="absolute bottom-0 left-0 mt-10 flex items-center gap-4"
+                class="relative lg:absolute bottom-0 left-0 mt-10 flex items-center gap-4"
               >
                 <img
                   src="./images/chu-xe4.png"
@@ -1262,8 +1262,8 @@
             <!-- Các slide 3,4,5 tương tự -->
           </div>
           <!-- Navigation -->
-          <div class="mt-12 flex justify-end">
-            <div class="flex items-center gap-6">
+          <div class="mt-12 flex justify-center lg:justify-end">
+            <div class="flex items-center gap-3 lg:gap-6">
               <!-- Prev -->
               <button
                 id="ts-prev"
@@ -1390,7 +1390,7 @@
       AOS.init({
         duration: 800, // thời gian animation
         offset: 100, // khoảng cách trước khi trigger
-        disable: 'mobile',
+        // disable: 'mobile',
       });
 
       window.addEventListener('resize', () => {
