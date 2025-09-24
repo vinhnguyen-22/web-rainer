@@ -56,7 +56,7 @@
           <!-- Dropdown -->
           <div class="relative group">
             <button
-              class="hover:text-white px-[16px] py-[12px] hover:bg-sky-400 text-sm flex items-center"
+              class="hover:text-white px-[16px] py-[12px] hover:bg-sky-400 text-sm flex items-center focus:outline-none"
             >
               GIỚI THIỆU
               <svg class="w-4 h-4 ml-1" fill="currentColor" viewBox="0 0 20 20">
@@ -68,26 +68,21 @@
               </svg>
             </button>
             <div
-              class="absolute hidden group-hover:block mt-2 bg-white text-black rounded shadow-lg"
+              class="absolute left-0 top-full flex flex-col items-center whitespace-nowrap p-2 hidden group-hover:block group-focus-within:block bg-white text-black rounded shadow-lg"
             >
-              <a
-                href="#"
-                style="text-transform: capitalize"
-                class="block px-4 py-2 hover:bg-gray-200"
+              <a href="#" class="block px-4 py-2 hover:bg-gray-200"
                 >Về Rainier</a
               >
-              <a
-                href="#"
-                style="text-transform: capitalize"
-                class="block px-4 py-2 hover:bg-gray-200"
+              <a href="#" class="block px-4 py-2 hover:bg-gray-200"
                 >Công nghệ</a
               >
             </div>
           </div>
 
+          <!-- Dropdown Sản phẩm -->
           <div class="relative group">
             <button
-              class="hover:text-white px-[16px] py-[12px] hover:bg-sky-400 text-sm flex items-center"
+              class="hover:text-white px-[16px] py-[12px] hover:bg-sky-400 text-sm flex items-center focus:outline-none"
             >
               SẢN PHẨM
               <svg class="w-4 h-4 ml-1" fill="currentColor" viewBox="0 0 20 20">
@@ -99,18 +94,12 @@
               </svg>
             </button>
             <div
-              class="absolute hidden group-hover:block mt-2 bg-white text-black rounded shadow-lg"
+              class="absolute left-0 top-full flex flex-col items-cente whitespace-nowrap p-2 hidden group-hover:block group-focus-within:block bg-white text-black rounded shadow-lg"
             >
-              <a
-                href="#"
-                style="text-transform: capitalize"
-                class="block px-4 py-2 hover:bg-gray-200"
+              <a href="#" class="block px-4 py-2 hover:bg-gray-200"
                 >Phim cách nhiệt nhà kính</a
               >
-              <a
-                href="#"
-                style="text-transform: capitalize"
-                class="block px-4 py-2 hover:bg-gray-200"
+              <a href="#" class="block px-4 py-2 hover:bg-gray-200"
                 >Phim cách nhiệt ô tô</a
               >
             </div>
@@ -151,8 +140,10 @@
 
         <!-- Hamburger Mobile -->
         <button id="menu-btn" class="md:hidden text-white focus:outline-none">
+          <!-- Hamburger Icon -->
           <svg
-            class="w-7 h-7"
+            id="hamburger-icon"
+            class="w-7 h-7 block transition-transform duration-300"
             fill="none"
             stroke="currentColor"
             stroke-width="2"
@@ -164,13 +155,29 @@
               d="M4 6h16M4 12h16M4 18h16"
             />
           </svg>
+
+          <!-- Close Icon -->
+          <svg
+            id="close-icon"
+            class="w-7 h-7 hidden transition-transform duration-300"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M6 18L18 6M6 6l12 12"
+            />
+          </svg>
         </button>
       </div>
 
       <!-- Mobile Menu -->
       <div
         id="mobile-menu"
-        class="hidden md:hidden bg-black/70 backdrop-blur-md text-white font-medium flex flex-col space-y-2 px-6 py-4"
+        class="hidden md:hidden text-white font-medium flex flex-col space-y-2 px-6 py-4 transform -translate-x-full transition-all duration-500 ease-in-out"
       >
         <a href="#" class="hover:bg-sky-400 p-2 rounded">TRANG CHỦ</a>
         <a href="#" class="hover:bg-sky-400 p-2 rounded">GIỚI THIỆU</a>
@@ -189,11 +196,30 @@
     </header>
 
     <script>
-      const btn = document.getElementById('menu-btn');
-      const menu = document.getElementById('mobile-menu');
+      const menuBtn = document.getElementById('menu-btn');
+      const mobileMenu = document.getElementById('mobile-menu');
+      const hamburgerIcon = document.getElementById('hamburger-icon');
+      const closeIcon = document.getElementById('close-icon');
 
-      btn.addEventListener('click', () => {
-        menu.classList.toggle('hidden');
+      menuBtn.addEventListener('click', () => {
+        const isOpen = !mobileMenu.classList.contains('hidden');
+
+        if (isOpen) {
+          // Đóng menu
+          mobileMenu.classList.add('-translate-x-full');
+          setTimeout(() => mobileMenu.classList.add('hidden'), 500);
+          hamburgerIcon.classList.remove('hidden');
+          closeIcon.classList.add('hidden');
+        } else {
+          // Mở menu
+          mobileMenu.classList.remove('hidden');
+          setTimeout(
+            () => mobileMenu.classList.remove('-translate-x-full'),
+            10
+          );
+          hamburgerIcon.classList.add('hidden');
+          closeIcon.classList.remove('hidden');
+        }
       });
     </script>
 
