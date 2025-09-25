@@ -19,7 +19,10 @@
     <meta property="article:modified_time" content="2025-09-10T07:16:33+00:00">
     <meta name="twitter:card" content="summary_large_image">
     <link rel="canonical" href="https://rainier.vn/phim-cach-nhiet-cua-so-troi-sky-magic/" />
-
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
       tailwind.config = {
@@ -48,7 +51,26 @@
     />
     <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
     <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <style>
+      .swiper-button-next,.swiper-button-prev{
+        visibility: hidden;
+      }
+      .mySwiper .swiper-pagination {
+  position: relative;
+  margin-top: 30px;   /* tăng khoảng cách tùy ý */
+  text-align: center;
+}
 
+.mySwiper .swiper-pagination-bullet {
+  background: gray;   /* đổi màu bullet */
+  opacity: 0.7;
+}
+
+.mySwiper .swiper-pagination-bullet-active {
+  background: #0077cc;   /* màu khi active */
+  opacity: 1;
+}
+    </style>
 
   </head>
   <body class="bg-dark-bg text-white font-inter">
@@ -922,23 +944,25 @@
 
     <!-- Certifications -->
     <section class="py-20 bg-dark-bg">
-      <div data-aos="fade-up"  class="container mx-auto px-6">
-        <!-- Title -->
-        <div class="text-center mb-16">
-          <h2 class="text-3xl md:text-4xl font-bold text-sky-blue mb-4">
-            CHỨNG NHẬN VÀ TIÊU CHUẨN QUỐC TẾ
-          </h2>
-          <p class="text-xl text-gray-text">
-            Bảo chứng chất lượng với các chứng nhận uy tín toàn cầu
-          </p>
-        </div>
+  <div data-aos="fade-up" class="container mx-auto px-6">
+    <!-- Title -->
+    <div class="text-center mb-16">
+      <h2 class="text-3xl md:text-4xl font-bold text-sky-blue mb-4">
+        CHỨNG NHẬN VÀ TIÊU CHUẨN QUỐC TẾ
+      </h2>
+      <p class="text-xl text-gray-text">
+        Bảo chứng chất lượng với các chứng nhận uy tín toàn cầu
+      </p>
+    </div>
 
-        <!-- Certificates -->
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          <!-- Certificate 1 -->
+    <!-- Swiper -->
+    <div class="swiper mySwiper">
+      <div class="swiper-wrapper">
+        <!-- Certificate 1 -->
+        <div class="swiper-slide">
           <div class="text-left">
             <div class="rounded-lg flex items-center justify-center mb-4">
-              <img loading="lazy"
+              <img
                 src="./images/cert1.png"
                 alt="Chứng nhận 01"
                 class="h-full object-cover rounded-lg"
@@ -949,11 +973,13 @@
               Certificate of Registration
             </h4>
           </div>
+        </div>
 
-          <!-- Certificate 2 -->
+        <!-- Certificate 2 -->
+        <div class="swiper-slide">
           <div class="text-left">
             <div class="rounded-lg flex items-center justify-center mb-4">
-              <img loading="lazy"
+              <img
                 src="./images/cert2.png"
                 alt="Chứng nhận 02"
                 class="h-full object-cover rounded-lg"
@@ -963,11 +989,13 @@
               Declaration of Quality
             </h4>
           </div>
+        </div>
 
-          <!-- Certificate 3 -->
+        <!-- Certificate 3 -->
+        <div class="swiper-slide">
           <div class="text-left">
             <div class="rounded-lg flex items-center justify-center mb-4">
-              <img loading="lazy"
+              <img
                 src="./images/cert3.png"
                 alt="Chứng nhận 03"
                 class="h-full object-cover rounded-lg"
@@ -978,11 +1006,13 @@
               System Certificate
             </h4>
           </div>
+        </div>
 
-          <!-- Certificate 4 -->
+        <!-- Certificate 4 -->
+        <div class="swiper-slide">
           <div class="text-left">
             <div class="rounded-lg flex items-center justify-center mb-4">
-              <img loading="lazy"
+              <img
                 src="./images/cert4.png"
                 alt="Chứng nhận 04"
                 class="h-full object-cover rounded-lg"
@@ -994,8 +1024,50 @@
             </h4>
           </div>
         </div>
+
+        <!-- Certificate 5 -->
+        <div class="swiper-slide">
+          <div class="text-left">
+            <div class="rounded-lg flex items-center justify-center mb-4">
+              <img
+                src="./images/cert5.png"
+                alt="Chứng nhận 05"
+                class="h-full object-cover rounded-lg"
+              />
+            </div>
+            <h4 class="text-xl font-semibold text-gray-400 mb-1 text-center">
+              Attestation Of Conformity
+            </h4>
+          </div>
+        </div>
+
+        <!-- Certificate 6 -->
+        <div class="swiper-slide">
+          <div class="text-left">
+            <div class="rounded-lg flex items-center justify-center mb-4">
+              <img
+                src="./images/cert6.png"
+                alt="Chứng nhận 06"
+                class="h-full object-cover rounded-lg"
+              />
+            </div>
+            <h4 class="text-xl font-semibold text-gray-400 mb-1 text-center">
+              Attestation Of Conformity
+            </h4>
+          </div>
+        </div>
       </div>
+
+      <!-- Add Pagination -->
+      <div class="swiper-pagination"></div>
+
+      <!-- Add Navigation -->
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+    </div>
+  </div>
     </section>
+
 
     <!-- Partner Brands -->
     <section data-aos="fade-up" class="py-20 bg-black">
@@ -1388,6 +1460,26 @@
           { passive: true }
         );
       })();
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        slidesPerView: 1,
+        spaceBetween: 20,
+        loop: true,
+        autoplay: {
+          delay: 2500, // thời gian giữa các slide (ms)
+          disableOnInteraction: false, // vẫn chạy khi user chạm vào
+        },
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        breakpoints: {
+          640: { slidesPerView: 2 },
+          1024: { slidesPerView: 4 },
+        },
+      });
     </script>
     <script>
       AOS.init({
