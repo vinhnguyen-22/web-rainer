@@ -1,0 +1,19 @@
+.swiper-button-next,
+.swiper-button-prev {
+  visibility: hidden;
+}
+.mySwiper .swiper-pagination {
+  position: relative;
+  margin-top: 30px; /* tăng khoảng cách tùy ý */
+  text-align: center;
+}
+
+.mySwiper .swiper-pagination-bullet {
+  background: gray; /* đổi màu bullet */
+  opacity: 0.7;
+}
+
+.mySwiper .swiper-pagination-bullet-active {
+  background: #0077cc; /* màu khi active */
+  opacity: 1;
+}
