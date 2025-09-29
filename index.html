@@ -40,6 +40,7 @@
           backgroundImage: {
             'text-gradient': 'linear-gradient(90deg, #B143EC 25%, #4472FC 50%, #02FCFE 100%)',
           },
+
           fontFamily: {
             inter: ['Inter', 'sans-serif'],
           },
@@ -206,40 +207,27 @@
         </p>
       </div>
     </div>
-
-    <script>
-      function toggleSubmenu(id) {
-        const submenu = document.getElementById(id);
-        const arrow = event.currentTarget.querySelector('svg');
-        submenu.classList.toggle('hidden');
-        arrow.classList.toggle('rotate-180');
-      }
-    </script>
   </header>
 
   <!-- Hero Section -->
   <section class="relative min-h-screen">
-    <img loading="lazy" src="./images/banner.png" class="absolute inset-0 w-full h-full object-cover"
+    <img loading="lazy" src="./images/lilac/banner.png" class="absolute inset-0 w-full h-full object-cover"
       alt="banner image" />
-    <!-- Overlay Gradient -->
-    <div
-      class="absolute w-full inset-0 lg:bg-gradient-to-r bg-gradient-to-t from-black via-black/80 to-transparent z-10">
+    <div class="absolute w-full inset-0 lg:bg-gradient-to-l bg-gradient-to-t from-black via-black/20 to-transparent z-10">
     </div>
 
     <div
       class="relative z-20 h-screen flex flex-col items-center justify-end text-center px-6 pb-12 lg:items-start lg:justify-center lg:text-left lg:px-[150px]">
       <div class="max-w-3xl">
 
-        <h1
-          class="text-2xl md:text-4xl lg:text-[64px] font-bold text-white mb-4 lg:mb-6 leading-snug lg:leading-tight uppercase">
-
+        <h1 class="text-3xl md:text-4xl lg:text-6xl font-extrabold bg-text-gradient bg-clip-text text-transparent uppercase animate-gradient-move bg-[length:200%_200%]">
           rainier lilac50
         </h1>
 
-        <h3 class="text-sm md:text-base lg:text-2xl font-bold text-gray-400 mb-2 tracking-wide">
+        <h3 class="text-md md:text-lg lg:text-3xl font-semibold text-white mb-2 tracking-wide">
           Kiệt Tác Của Công Nghệ Thế Hệ Mới
         </h3>
-        <p class="text-sm md:text-lg lg:text-xl text-white mb-6 leading-relaxed max-w-xl">
+        <p class="text-sm md:text-lg lg:text-xl text-gray-text mb-6 leading-relaxed max-w-xl">
           Định nghĩa chuẩn mực vàng của dòng phim cách nhiệt phún xạ kim loại đa tầng, bảo vệ an toàn tuyệt đối cho kính
           lái.
         </p>
@@ -261,46 +249,55 @@
   <!-- Product Introduction -->
   <section data-aos="fade-up" class="py-[100px] bg-gradient-to-b from-blue-900/10 to-dark-bg">
     <div class="container mx-auto px-6 text-center">
-      <h2 class="text-3xl md:text-4xl lg:text-4xl font-extrabold italic bg-text-gradient bg-clip-text text-transparent uppercase">
-        KIẾN TẠO CHUẨN MỰC MỚI CHO KÍNH LÁI
-      </h2>
-      <h3 class="text-3xl md:text-4xl font-bold text-white mb-8">
-        Vượt qua giới hạn, định hình giá trị
-      </h3>
-      <p class="text-lg text-gray-text max-w-4xl mx-auto leading-relaxed">
-        Phá vỡ mọi giới hạn, Lilac 50 là đỉnh cao của công nghệ phún xạ kim loại đa tầng. Với công nghệ QRS độc quyền,
-        cấu trúc 20 lớp ION vàng kết hợp kim loại quý cùng lớp phủ Nano Sapphire, Lilac 50 không chỉ mang lại hiệu quả
-        cách nhiệt vượt trội cho kính lái mà còn kiến tạo một vẻ ngoài sang trọng, độc bản cho chiếc xe của bạn.
-      </p>
-    </div>
-    <!-- Divider -->
-    <div class="relative my-10 flex justify-center itmems-center">
-      <div class="h-[2px] w-2/3 bg-gradient-to-r from-transparent via-cyan-500 to-transparent"></div>
+      <div class="">
+        <h2
+          class="text-3xl md:text-4xl lg:text-4xl font-extrabold italic bg-text-gradient bg-clip-text text-transparent uppercase animate-gradient-move bg-[length:200%_200%]">
+          KIẾN TẠO CHUẨN MỰC MỚI CHO KÍNH LÁI
+        </h2>
+        <p class="text-2xl text-white my-4 font-semibold">Vượt qua giới hạn, định hình giá trị</p>
+        <p class="text-lg text-gray-text max-w-4xl mx-auto leading-relaxed">
+          Phá vỡ mọi giới hạn, Lilac 50 là đỉnh cao của công nghệ phún xạ kim loại đa tầng. Với công nghệ QRS độc quyền,
+          cấu trúc 20 lớp ION vàng kết hợp kim loại quý cùng lớp phủ Nano Sapphire, Lilac 50 không chỉ mang lại hiệu quả
+          cách nhiệt vượt trội cho kính lái mà còn kiến tạo một vẻ ngoài sang trọng, độc bản cho chiếc xe của bạn.
+        </p>
+        <div class="flex justify-center items-center animate-bounce">
+          <img src="./images/icons/arrow-down.svg" alt="icon">
+        </div>
+      </div>
+      <div class="relative w-full pb-[56.25%] h-0 overflow-hidden rounded-xl">
+        <iframe class="absolute top-0 left-0 w-full h-full p-[100px]"
+          src="https://www.youtube-nocookie.com/embed/pamBdRkFTKg" 
+          title="YouTube video player"
+          frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+        </iframe>
+      </div>
     </div>
   </section>
 
   <!-- Technology Section -->
-  <section
-    class="relative py-[200px]  min-h-screen overflow-hidden">
+  <section class="relative py-[200px]  min-h-screen overflow-hidden">
     <img loading="lazy" class="absolute top-0 left-0 lg:block hidden -z-10" src="./images/lilac/phale.png"
       alt="Background Pattern" />
-    <img loading="lazy"  class="relative hidden lg:block lg:absolute top-0 right-0 -z-10"
+    <img loading="lazy" class="relative hidden lg:block lg:absolute top-0 right-0 -z-10"
       src="./images/lilac/lop-ion.png" alt="Car with Sunroof" />
-    <h2 class="absolute bottom-0 left-0 p-2 text-[10rem] md:text-[24rem] leading-[24rem] font-extrabold italic bg-gradient-to-r from-[#B143EC] via-[#4472FC] to-[#02FCFE] bg-clip-text text-transparent opacity-10 select-none pointer-events-none blur-lg">
-      QRS 
+    <h2
+      class="absolute bottom-0 left-0 p-2 text-[10rem] md:text-[24rem] leading-[24rem] font-extrabold italic bg-text-gradient bg-clip-text text-transparent opacity-10 select-none pointer-events-none blur-lg">
+      QRS
     </h2>
     <div class="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center px-6">
       <div class="">
         <!-- Gradient Title -->
         <div class="flex gap-[22px] items-center">
-          <h2 class="text-4xl md:text-7xl font-extrabold italic bg-gradient-to-r from-[#B143EC] via-[#4472FC] to-[#02FCFE] bg-clip-text text-transparent bg-[length:200%_200%] animate-gradient-move p-2">
-            QRS 
+          <h2
+            class="text-4xl md:text-7xl font-extrabold italic bg-text-gradient bg-clip-text text-transparent bg-[length:200%_200%] animate-gradient-move p-2">
+            QRS
           </h2>
           <p class="mt-2 text-xl font-semibold text-gray-400">
             Đột phá công nghệ
           </p>
         </div>
-        <p class="text-3xl md:text-4xl lg:text-4xl font-extrabold italic bg-text-gradient bg-clip-text text-transparent uppercase">
+        <p
+          class="text-3xl md:text-4xl lg:text-4xl font-extrabold italic bg-text-gradient bg-clip-text text-transparent uppercase animate-gradient-move bg-[length:200%_200%]">
           Phún xạ 20 lớp ION Vàng và lớp phủ Sapphire
         </p>
 
@@ -312,7 +309,8 @@
             <ul class="space-y-[16px] list-none text-xl">
               <li class="flex gap-2">
                 <img src="./images/icons/star.svg" alt="icon">
-                Lilac 50 là dòng phim cách nhiệt DUY NHẤT trên thị trường sở hữu công nghệ phún xạ 20 lớp ION Vàng, giúp tối ưu khả năng phản xạ, phân tán và hấp thụ nhiệt mặt trời.
+                Lilac 50 là dòng phim cách nhiệt DUY NHẤT trên thị trường sở hữu công nghệ phún xạ 20 lớp ION Vàng, giúp
+                tối ưu khả năng phản xạ, phân tán và hấp thụ nhiệt mặt trời.
               </li>
               <li class="flex gap-2">
                 <img src="./images/icons/star.svg" alt="icon">
@@ -320,7 +318,8 @@
               </li>
               <li class="flex gap-2">
                 <img src="./images/icons/star.svg" alt="icon">
-                Là công nghệ thường được ứng dụng trong sản xuất tàu vũ trụ, khẳng định sự khác biệt và đẳng cấp thực sự của Lilac 50.
+                Là công nghệ thường được ứng dụng trong sản xuất tàu vũ trụ, khẳng định sự khác biệt và đẳng cấp thực sự
+                của Lilac 50.
               </li>
             </ul>
           </div>
@@ -331,7 +330,8 @@
             <ul class="space-y-[16px] list-none text-xl">
               <li class="flex gap-2">
                 <img src="./images/icons/star.svg" alt="icon">
-                Lớp phủ Nano Sapphire giúp kiểm soát ánh sáng chính xác, giảm phản xạ và tăng cường khả năng truyền sáng, đảm bảo tầm nhìn rõ nét.
+                Lớp phủ Nano Sapphire giúp kiểm soát ánh sáng chính xác, giảm phản xạ và tăng cường khả năng truyền
+                sáng, đảm bảo tầm nhìn rõ nét.
               </li>
               <li class="flex gap-2">
                 <img src="./images/icons/star.svg" alt="icon">
@@ -349,87 +349,88 @@
   </section>
 
   <!-- Benefits Section -->
-  <section class="relative py-[100px] overflow-hidden">
+  <section class="relative py-[100px] overflow-hidden bg-gradient-to-r from-black to-[#100B15]">
     <div class="container text-center mb-16">
-      <h2 class="text-3xl md:text-4xl lg:text-4xl font-extrabold italic bg-text-gradient bg-clip-text text-transparent uppercase">
-        NÂNG TẦM TRẢI NGHIỆM
-      </h2>
-      <p class="text-2xl text-gray-text">Mát hơn, an toàn hơn, bền bỉ hơn</p>
+      <div class="mb-[48px]">
+        <h2
+          class="text-3xl md:text-4xl lg:text-4xl font-extrabold italic bg-text-gradient bg-clip-text text-transparent uppercase animate-gradient-move bg-[length:200%_200%]">
+          NÂNG TẦM TRẢI NGHIỆM
+        </h2>
+        <p class="text-2xl text-white my-4 font-semibold">Mát hơn, an toàn hơn, bền bỉ hơn</p>
+        <div class="flex justify-center items-center animate-bounce">
+          <img src="./images/icons/arrow-down.svg" alt="icon">
+        </div>
+      </div>
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-[104px]">
-        
+
         <!-- Card -->
         <div class="relative rounded-2xl py-[44px] px-[30px] shadow-lg min-h-[350px] min-w-[410px]"
-          style="background-image: url('./images/lilac/bg-card-purple.png'); background-size: cover; background-repeat: no-repeat; background-position: center;"
-        >
+          style="background-image: url('./images/lilac/bg-card-purple.png'); background-size: cover; background-repeat: no-repeat; background-position: center;">
           <div class="text-purple-400 text-4xl mb-4"><img src="./images/icons/clean-car.svg" alt="icon"></div>
           <h3 class="text-xl font-bold text-left">
             <span class="text-purple-400">Thoải Mái</span> Tối Đa
           </h3>
-          <p class="mt-2 text-gray-300 text-sm leading-relaxed text-left">
+          <p class="mt-2 text-gray-300 text-lg leading-relaxed text-left">
             Khả năng cách nhiệt vượt trội giúp khoang xe luôn mát dịu, giảm tải cho điều hòa,
             mang lại hành trình dễ chịu ngay cả trong ngày hè nắng gắt.
           </p>
         </div>
 
         <div class="relative rounded-2xl py-[44px] px-[30px] shadow-lg min-h-[350px] min-w-[410px]"
-          style="background-image: url('./images/lilac/bg-card-purple.png'); background-size: cover; background-repeat: no-repeat; background-position: center;"
-        >
+          style="background-image: url('./images/lilac/bg-card-purple.png'); background-size: cover; background-repeat: no-repeat; background-position: center;">
           <div class="text-purple-400 text-4xl mb-4"><img src="./images/icons/health.svg" alt="icon"></div>
           <h3 class="text-xl font-bold text-left">
             <span class="text-purple-400">Bảo Vệ</span> Sức Khỏe
           </h3>
-          <p class="mt-2 text-gray-300 text-sm leading-relaxed text-left">
+          <p class="mt-2 text-gray-300 text-lg leading-relaxed text-left">
             Ngăn chặn hơn 99% tia UV, hạn chế sạm da, lão hóa và các bệnh lý về mắt –
             lá chắn sức khỏe toàn diện cho bạn và gia đình.
           </p>
         </div>
 
         <div class="relative rounded-2xl py-[44px] px-[30px] shadow-lg min-h-[350px] min-w-[410px]"
-          style="background-image: url('./images/lilac/bg-card-purple.png'); background-size: cover; background-repeat: no-repeat; background-position: center;"
-        >
+          style="background-image: url('./images/lilac/bg-card-purple.png'); background-size: cover; background-repeat: no-repeat; background-position: center;">
           <div class="text-purple-400 text-4xl mb-4"><img src="./images/icons/safe-car.svg" alt="icon"></div>
           <h3 class="text-xl font-bold text-left">
             <span class="text-purple-400">Duy Trì</span> Giá Trị Xe
           </h3>
-          <p class="mt-2 text-gray-300 text-sm leading-relaxed text-left">
+          <p class="mt-2 text-gray-300 text-lg leading-relaxed text-left">
             Chống bạc màu nội thất, bảo vệ da ghế, táp-lô và kính lái, giữ cho chiếc xe luôn
             bền đẹp, sáng bóng và có giá trị lâu dài.
           </p>
         </div>
 
         <div class="relative rounded-2xl py-[44px] px-[30px] shadow-lg min-h-[350px] min-w-[410px]"
-        style="background-image: url('./images/lilac/bg-card-cyan.png'); background-size: cover; background-repeat: no-repeat; background-position: center;"
-        >
+          style="background-image: url('./images/lilac/bg-card-cyan.png'); background-size: cover; background-repeat: no-repeat; background-position: center;">
           <div class="text-cyan-400 text-4xl mb-4"><img src="./images/icons/glass-car.svg" alt="icon"></div>
           <h3 class="text-xl font-bold text-left">
             Tầm Nhìn <span class="text-cyan-400">Cân Bằng</span>
           </h3>
-          <p class="mt-2 text-gray-300 text-sm leading-relaxed text-left">
-            Độ truyền sáng tối ưu 45% giúp không gian trong xe sáng thoáng, đồng thời giảm lóa mắt khi lái ban ngày hay ban đêm.
+          <p class="mt-2 text-gray-300 text-lg leading-relaxed text-left">
+            Độ truyền sáng tối ưu 45% giúp không gian trong xe sáng thoáng, đồng thời giảm lóa mắt khi lái ban ngày hay
+            ban đêm.
           </p>
         </div>
 
         <div class="relative rounded-2xl py-[44px] px-[30px] shadow-lg min-h-[350px] min-w-[410px]"
-        style="background-image: url('./images/lilac/bg-card-cyan.png'); background-size: cover; background-repeat: no-repeat; background-position: center;"
-        >
+          style="background-image: url('./images/lilac/bg-card-cyan.png'); background-size: cover; background-repeat: no-repeat; background-position: center;">
           <div class="text-cyan-400 text-4xl mb-4"><img src="./images/icons/check.svg" alt="icon"></div>
           <h3 class="text-xl font-bold text-left">
             Gia Cường <span class="text-cyan-400">Kính Vượt Trội</span>
           </h3>
-          <p class="mt-2 text-gray-300 text-sm leading-relaxed text-left">
+          <p class="mt-2 text-gray-300 text-lg leading-relaxed text-left">
             Cấu trúc phim nhiều lớp tăng khả năng chịu lực và độ bền cho kính,
             hạn chế nứt vỡ khi va đập, đảm bảo an toàn tối đa trên mọi hành trình.
           </p>
         </div>
 
         <div class="relative rounded-2xl py-[44px] px-[30px] shadow-lg min-h-[350px] min-w-[410px]"
-        style="background-image: url('./images/lilac/bg-card-cyan.png'); background-size: cover; background-repeat: no-repeat; background-position: center;"
-        >
+          style="background-image: url('./images/lilac/bg-card-cyan.png'); background-size: cover; background-repeat: no-repeat; background-position: center;">
           <div class="text-cyan-400 text-4xl mb-4"><img src="./images/icons/like.svg" alt="icon"></div>
           <h3 class="text-xl font-bold text-left">
             Bảo Hành Điện Tử <span class="text-cyan-400">30 Năm</span>
           </h3>
-          <p class="mt-2 text-gray-300 text-sm leading-relaxed text-left">
+          <p class="mt-2 text-gray-300 text-lg leading-relaxed text-left">
             Cam kết chất lượng bền bỉ: không bong tróc, không phai màu,
             bảo hành minh bạch và tiện lợi qua hệ thống điện tử.
           </p>
@@ -440,70 +441,83 @@
   </section>
 
   <!-- Technical Specifications -->
-  <section class="bg-dark-bg overflow-hidden">
+  <section class="bg-dark-bg overflow-hidden bg-[#100B15]">
     <div data-aos="fade-up" class="container mx-auto px-6 text-center py-[100px]">
       <!-- Title -->
-      <h2 class="text-3xl md:text-4xl lg:text-4xl font-extrabold italic bg-text-gradient bg-clip-text text-transparent uppercase">
+      <h2
+        class="text-3xl md:text-4xl lg:text-4xl font-extrabold italic bg-text-gradient bg-clip-text text-transparent uppercase animate-gradient-move bg-[length:200%_200%]">
         THÔNG SỐ KỸ THUẬT CỦA LILAC 50
       </h2>
-      <p class="text-lg text-gray-text mb-12">
+      <p class="text-xl font-bold text-white my-4">
         Minh chứng cho đẳng cấp
       </p>
-
+      <div class="flex justify-center items-center animate-bounce">
+        <img src="./images/icons/arrow-down.svg" alt="icon">
+      </div>
       <!-- Grid 3 trên, 2 dưới -->
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-10 mb-10">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-10 my-[65px]">
         <!-- Spec 1 -->
-        <div>
-          <img loading="lazy" src="./images/do-day.png" alt="Độ dày" class="mx-auto mb-3 w-10 h-10" />
-          <h4 class="text-lg font-bold text-white mb-1">Độ dày 3 mil</h4>
-          <p class="text-gray-text text-sm">
-            Tăng cường an toàn, chống va đập, nứt vỡ kính.
-          </p>
+        <div class="flex justify-start items-center gap-3">
+          <img loading="lazy" src="./images/do-day.png" alt="Độ dày" class=" mb-3 w-10 h-10" />
+          <div class="text-left">
+            <h4 class="text-lg font-bold text-white mb-1">Độ dày 3 mil</h4>
+            <p class="text-gray-text text-sm">
+              Tăng cường an toàn, chống va đập, nứt vỡ kính.
+            </p>
+          </div>
         </div>
 
         <!-- Spec 2 -->
-        <div>
-          <img loading="lazy" src="./images/mat-troi.png" alt="Độ truyền sáng" class="mx-auto mb-3 w-10 h-10" />
-          <h4 class="text-lg font-bold text-white mb-1">
-            Độ truyền sáng 45%
-          </h4>
-          <p class="text-gray-text text-sm">
-            Mang lại khả năng quan sát tối ưu mà không gây chói mắt.
-          </p>
+        <div class="flex justify-start items-center gap-3">
+          <img loading="lazy" src="./images/mat-troi.png" alt="Độ truyền sáng" class=" mb-3 w-10 h-10" />
+          <div class="text-left">
+            <h4 class="text-lg font-bold text-white mb-1">
+              Độ truyền sáng 45%
+            </h4>
+            <p class="text-gray-text text-sm">
+              Mang lại khả năng quan sát tối ưu mà không gây chói mắt.
+            </p>
+          </div>
         </div>
 
         <!-- Spec 3 -->
-        <div>
-          <img loading="lazy" src="./images/phan-xa.png" alt="Phản xạ nhiệt" class="mx-auto mb-3 w-10 h-10" />
-          <h4 class="text-lg font-bold text-white mb-1">Tổng cản nhiệt 73%</h4>
-          <p class="text-gray-text text-sm">
-            Tiết kiệm nhiên liệu hiệu quả.
-          </p>
+        <div class="flex justify-start items-center gap-3">
+          <img loading="lazy" src="./images/phan-xa.png" alt="Phản xạ nhiệt" class=" mb-3 w-10 h-10" />
+          <div class="text-left">
+            <h4 class="text-lg font-bold text-white mb-1">Tổng cản nhiệt 73%</h4>
+            <p class="text-gray-text text-sm">
+              Tiết kiệm nhiên liệu hiệu quả.
+            </p>
+          </div>
         </div>
       </div>
 
       <!-- Hàng thứ 2: 2 mục, căn giữa -->
       <div class="grid grid-cols-1 md:grid-cols-2 gap-10 max-w-3xl mx-auto">
         <!-- Spec 4 -->
-        <div>
-          <img loading="lazy" src="./images/can-nhiet.png" alt="Tổng cản nhiệt" class="mx-auto mb-3 w-10 h-10" />
-          <h4 class="text-lg font-bold text-white mb-1">
-            Cách nhiệt 99.9%
-          </h4>
-          <p class="text-gray-text text-sm">
-            Bảo vệ sức khỏe, chống lão hóa da.
-          </p>
+        <div class="flex justify-start items-center gap-3">
+          <img loading="lazy" src="./images/can-nhiet.png" alt="Tổng cản nhiệt" class=" mb-3 w-10 h-10" />
+          <div class="text-left">
+            <h4 class="text-lg font-bold text-white mb-1">
+              Cách nhiệt 99.9%
+            </h4>
+            <p class="text-gray-text text-sm">
+              Bảo vệ sức khỏe, chống lão hóa da.
+            </p>
+          </div>
         </div>
 
         <!-- Spec 5 -->
-        <div>
-          <img loading="lazy" src="./images/uv.png" alt="Chống tia UV" class="mx-auto mb-3 w-10 h-10" />
-          <h4 class="text-lg font-bold text-white mb-1">
-            Chống tia UV 99.9%
-          </h4>
-          <p class="text-gray-text text-sm">
-            Bảo vệ sức khỏe, chống lão hóa da.
-          </p>
+        <div class="flex justify-start items-center gap-3">
+          <img loading="lazy" src="./images/uv.png" alt="Chống tia UV" class=" mb-3 w-10 h-10" />
+          <div class="text-left">
+            <h4 class="text-lg font-bold text-white mb-1">
+              Chống tia UV 99.9%
+            </h4>
+            <p class="text-gray-text text-sm">
+              Bảo vệ sức khỏe, chống lão hóa da.
+            </p>
+          </div>
         </div>
       </div>
     </div>
@@ -526,7 +540,7 @@
         <div data-aos="fade-left"
           class="bg-black/70 backdrop-blur-md opacity-80 rounded-xl p-8 w-full max-w-md lg:ml-auto mx-auto">
           <h3 class="text-2xl font-bold text-gray-400">Thông số</h3>
-          <h2 class="text-3xl font-bold text-sky-400 mb-6">Kỹ Thuật</h2>
+          <h2 class="text-4xl font-bold bg-text-gradient bg-clip-text text-transparent mb-6">Kỹ Thuật</h2>
 
           <table class="w-full text-sm">
             <thead>
@@ -542,41 +556,50 @@
             <tbody>
               <tr class="border-b border-gray-700">
                 <td class="py-2 text-gray-300">Giảm nhiệt</td>
-                <td class="py-2 text-right">30ºC</td>
+                <td class="py-2 text-right">10ºC</td>
               </tr>
               <tr class="border-b border-gray-700">
                 <td class="py-2 text-gray-300">Độ truyền sáng (VLT)</td>
-                <td class="py-2 text-right">72%</td>
+                <td class="py-2 text-right">45%</td>
               </tr>
               <tr class="border-b border-gray-700">
                 <td class="py-2 text-gray-300">Chống tia UV (UVR)</td>
-                <td class="py-2 text-right">&gt;99%</td>
+                <td class="py-2 text-right">&gt;99.9%</td>
               </tr>
               <tr class="border-b border-gray-700">
                 <td class="py-2 text-gray-300">Độ dày phim</td>
-                <td class="py-2 text-right">7 mil</td>
+                <td class="py-2 text-right">3 mil</td>
               </tr>
               <tr class="border-b border-gray-700">
                 <td class="py-2 text-gray-300">Tổng cản nhiệt (TSER)</td>
-                <td class="py-2 text-right">87%</td>
+                <td class="py-2 text-right">73%</td>
               </tr>
               <tr class="border-b border-gray-700">
                 <td class="py-2 text-gray-300">Gia cường kính</td>
                 <td class="py-2 text-right">
                   Tự lành vết xước nhẹ dưới nhiệt
                 </td>
+              <tr class-="border-b border-gray-700">
+                <td class="py-2 text-gray-300">Tăng chịu lực</td>
+                <td class="py-2 text-right">
+                  150%
+                </td>
               </tr>
-              <tr class="border-b border-gray-700">
-                <td class="py-2 text-gray-300">Độ dày phim</td>
-                <td class="py-2 text-right">7 mil</td>
+              <tr class-="border-b border-gray-700">
+                <td class="py-2 text-gray-300">Chống đâm thủng</td>
+                <td class="py-2 text-right">
+                  200%
+                </td>
               </tr>
+              </tr>
+
               <tr class="border-b border-gray-700">
                 <td class="py-2 text-gray-300">Màu sắc</td>
-                <td class="py-2 text-right">Pacific Blue</td>
+                <td class="py-2 text-right">Tím đế vương</td>
               </tr>
               <tr class="border-b border-sky-400">
                 <td class="py-2 text-gray-300">Vị trí sử dụng</td>
-                <td class="py-2 text-right">Cửa sổ trời</td>
+                <td class="py-2 text-right">Kính lái</td>
               </tr>
             </tbody>
           </table>
@@ -586,115 +609,166 @@
   </section>
 
   <!-- Certifications -->
-  <section class="py-20 bg-dark-bg">
+  <section class="relative py-[102px] bg-dark-bg overflow-hidden">
+    <div
+      class="absolute bottom-1/4 transform translate-y-1/2 -left-1/3 lg:w-[1000px] lg:h-[1000px] w-[500px] w-[500px] bg-[#B143EC] opacity-30 blur-[150px]  rounded-full">
+    </div>
+    <div
+      class="absolute bottom-1/4 transform translate-y-1/2 -right-1/3 lg:w-[1000px] lg:h-[1000px] w-[500px] w-[500px] bg-cyan-400 opacity-30 blur-[150px]  rounded-full">
+    </div>
+    <img loading="lazy" class="absolute bottom-0 right-0 lg:block hidden " src="./images/lilac/phale2.png"
+      alt="Background Pattern" />
     <div data-aos="fade-up" class="container mx-auto px-6">
       <!-- Title -->
       <div class="text-center mb-16">
-        <h2 class="text-3xl md:text-4xl font-bold text-sky-blue mb-4">
+        <h2
+          class="text-3xl md:text-4xl lg:text-4xl font-extrabold italic bg-text-gradient bg-clip-text text-transparent uppercase animate-gradient-move bg-[length:200%_200%]">
           CHỨNG NHẬN VÀ TIÊU CHUẨN QUỐC TẾ
         </h2>
-        <p class="text-xl text-gray-text">
-          Bảo chứng chất lượng với các chứng nhận uy tín toàn cầu
+        <p class="text-xl text-white my-2 font-semibold">
+          Minh chứng chất lượng đạt chuẩn
         </p>
+        <div class="mt-4 flex justify-center items-center animate-bounce">
+          <img src="./images/icons/arrow-down.svg" alt="icon">
+        </div>
       </div>
 
-      <!-- Swiper -->
-      <div class="swiper mySwiper">
-        <div class="swiper-wrapper">
-          <!-- Certificate 1 -->
-          <div class="swiper-slide">
-            <div class="text-left">
-              <div class="rounded-lg flex items-center justify-center mb-4">
-                <img src="./images/cert1.png" alt="Chứng nhận 01" class="h-full object-cover rounded-lg" />
-              </div>
-              <h4 class="text-xl font-semibold text-gray-400 mb-1 text-center">
-                IATF 16949:2016 <br />
-                Certificate of Registration
-              </h4>
+      <div>
+        <div class="mt-12 grid grid-cols-1 md:grid-cols-2 gap-[58px]">
+          <div class="rounded-xl p-[2px] bg-text-gradient text-left shadow-lg">
+            <div class="rounded-xl bg-black p-6">
+              <div class=" text-3xl mb-3"><img src="./images/icons/check-gradient.svg" alt=""></div>
+              <h3
+                class="text-lg md:text-xl lg:text-2xl font-extrabold italic bg-text-gradient bg-clip-text text-transparent">
+                CQ (Certificate of Quality)</h3>
+              <p class="mt-2 text-gray-300 text-sm leading-relaxed">
+                Lilac 50 là dòng phim cách nhiệt DUY NHẤT trên thị trường sở hữu công nghệ phún xạ 20 lớp ION Vàng, giúp
+                tối ưu khả năng phản xạ, phân tán và hấp thụ nhiệt.
+              </p>
             </div>
           </div>
 
-          <!-- Certificate 2 -->
-          <div class="swiper-slide">
-            <div class="text-left">
-              <div class="rounded-lg flex items-center justify-center mb-4">
-                <img src="./images/cert2.png" alt="Chứng nhận 02" class="h-full object-cover rounded-lg" />
-              </div>
-              <h4 class="text-xl font-semibold text-gray-400 mb-1 text-center">
-                Declaration of Quality
-              </h4>
+          <div class="rounded-xl p-[2px] bg-text-gradient text-left shadow-lg">
+            <div class="rounded-xl bg-black p-6">
+              <div class=" text-3xl mb-3"><img src="./images/icons/check-gradient.svg" alt=""></div>
+              <h3
+                class="text-lg md:text-xl lg:text-2xl font-extrabold italic bg-text-gradient bg-clip-text text-transparent">
+                CO (Certificate of Origin)</h3>
+              <p class="mt-2 text-gray-300 text-sm leading-relaxed">
+                Chứng nhận nguồn gốc xuất xứ rõ ràng, khẳng định Lilac 50 là sản phẩm chính hãng, nhập khẩu trực tiếp.
+              </p>
             </div>
           </div>
 
-          <!-- Certificate 3 -->
-          <div class="swiper-slide">
-            <div class="text-left">
-              <div class="rounded-lg flex items-center justify-center mb-4">
-                <img src="./images/cert3.png" alt="Chứng nhận 03" class="h-full object-cover rounded-lg" />
-              </div>
-              <h4 class="text-xl font-semibold text-gray-400 mb-1 text-center">
-                Quality Management <br />
-                System Certificate
-              </h4>
+          <div class="rounded-xl p-[2px] bg-text-gradient text-left shadow-lg">
+            <div class="rounded-xl bg-black p-6">
+              <div class=" text-3xl mb-3"><img src="./images/icons/check-gradient.svg" alt=""></div>
+              <h3
+                class="text-lg md:text-xl lg:text-2xl font-extrabold italic bg-text-gradient bg-clip-text text-transparent">
+                ISO 9001:2008</h3>
+              <p class="mt-2 text-gray-300 text-sm leading-relaxed">
+                Hệ thống quản lý chất lượng toàn cầu, đảm bảo sản phẩm ổn định và đáng tin cậy ở mọi quy trình sản xuất.
+              </p>
             </div>
           </div>
 
-          <!-- Certificate 4 -->
-          <div class="swiper-slide">
-            <div class="text-left">
-              <div class="rounded-lg flex items-center justify-center mb-4">
-                <img src="./images/cert4.png" alt="Chứng nhận 04" class="h-full object-cover rounded-lg" />
-              </div>
-              <h4 class="text-xl font-semibold text-gray-400 mb-1 text-center">
-                Environmental Management <br />
-                System Certificate
-              </h4>
+          <div class="rounded-xl p-[2px] bg-text-gradient text-left shadow-lg">
+            <div class="rounded-xl bg-black p-6">
+              <div class=" text-3xl mb-3"><img src="./images/icons/check-gradient.svg" alt=""></div>
+              <h3
+                class="text-lg md:text-xl lg:text-2xl font-extrabold italic bg-text-gradient bg-clip-text text-transparent">
+                Tiêu chuẩn IWFA</h3>
+              <p class="mt-2 text-gray-300 text-sm leading-relaxed">
+                Tiêu chuẩn IWFA (International Window Film Association): Xác nhận Lilac 50 đáp ứng các yêu cầu khắt khe
+                về an toàn, hiệu suất và độ bền.
+              </p>
             </div>
           </div>
+        </div>
+      </div>
+    </div>
 
-          <!-- Certificate 5 -->
-          <div class="swiper-slide">
-            <div class="text-left">
-              <div class="rounded-lg flex items-center justify-center mb-4">
-                <img src="./images/cert5.png" alt="Chứng nhận 05" class="h-full object-cover rounded-lg" />
-              </div>
-              <h4 class="text-xl font-semibold text-gray-400 mb-1 text-center">
-                Attestation Of Conformity
-              </h4>
+
+  </section>
+
+  <section class="py-[70px]">
+    <div class="swiper mySwiper container">
+      <div class="swiper-wrapper">
+        <!-- Certificate 1 -->
+        <div class="swiper-slide">
+          <div class="text-left">
+            <div class="rounded-lg flex items-center justify-center mb-4">
+              <img src="./images/lilac/car 1.png" alt="xe 01" class="h-full object-cover rounded-lg" />
             </div>
-          </div>
 
-          <!-- Certificate 6 -->
-          <div class="swiper-slide">
-            <div class="text-left">
-              <div class="rounded-lg flex items-center justify-center mb-4">
-                <img src="./images/cert6.png" alt="Chứng nhận 06" class="h-full object-cover rounded-lg" />
-              </div>
-              <h4 class="text-xl font-semibold text-gray-400 mb-1 text-center">
-                Attestation Of Conformity
-              </h4>
+          </div>
+        </div>
+
+        <!-- Certificate 2 -->
+        <div class="swiper-slide">
+          <div class="text-left">
+            <div class="rounded-lg flex items-center justify-center mb-4">
+              <img src="./images/lilac/car 2.png" alt="xe 02" class="h-full object-cover rounded-lg" />
             </div>
           </div>
         </div>
 
-        <!-- Add Pagination -->
-        <div class="swiper-pagination"></div>
+        <!-- Certificate 3 -->
+        <div class="swiper-slide">
+          <div class="text-left">
+            <div class="rounded-lg flex items-center justify-center mb-4">
+              <img src="./images/lilac/car 3.png" alt="xe 03" class="h-full object-cover rounded-lg" />
+            </div>
+          </div>
+        </div>
 
-        <!-- Add Navigation -->
-        <div class="swiper-button-next"></div>
-        <div class="swiper-button-prev"></div>
+        <!-- Certificate 4 -->
+        <div class="swiper-slide">
+          <div class="text-left">
+            <div class="rounded-lg flex items-center justify-center mb-4">
+              <img src="./images/lilac/car 4.png" alt="xe 04" class="h-full object-cover rounded-lg" />
+            </div>
+          </div>
+        </div>
+
+        <!-- Certificate 5 -->
+        <div class="swiper-slide">
+          <div class="text-left">
+            <div class="rounded-lg flex items-center justify-center mb-4">
+              <img src="./images/lilac/car 5.png" alt="xe 05" class="h-full object-cover rounded-lg" />
+            </div>
+          </div>
+        </div>
+
+        <!-- Certificate 6 -->
+        <div class="swiper-slide">
+          <div class="text-left">
+            <div class="rounded-lg flex items-center justify-center mb-4">
+              <img src="./images/lilac/car 6.png" alt="xe 06" class="h-full object-cover rounded-lg" />
+            </div>
+          </div>
+        </div>
       </div>
+
+      <!-- Add Pagination -->
+      <div class="swiper-pagination hidden"></div>
+
+      <!-- Add Navigation -->
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
     </div>
   </section>
-
-
   <!-- Partner Brands -->
   <section data-aos="fade-up" class="py-20 bg-black">
     <div class="container mx-auto px-6">
       <div class="text-center mb-12">
-        <h2 class="text-3xl md:text-4xl lg:text-4xl font-extrabold italic bg-text-gradient bg-clip-text text-transparent uppercase leading-snug">
+        <h2
+          class="text-3xl md:text-4xl lg:text-4xl font-extrabold italic bg-text-gradient bg-clip-text text-transparent uppercase animate-gradient-move bg-[length:200%_200%] leading-snug">
           ĐỒNG HÀNH CÙNG NHIỀU THƯƠNG HIỆU Ô TÔ CAO CẤP
         </h2>
+        <div class="mt-4 flex justify-center items-center animate-bounce">
+          <img src="./images/icons/arrow-down.svg" alt="icon">
+        </div>
       </div>
 
       <div class="flex flex-wrap justify-center items-center gap-12">
@@ -714,91 +788,175 @@
     </div>
   </section>
 
-  <section data-aos="fade-up" class="py-[100px] bg-[#012233]">
+  <section data-aos="fade-up" class="py-[100px] ">
     <div class="container mx-auto px-6">
       <!-- Title -->
       <div class="text-center mb-16">
-        <h2 class="text-3xl md:text-4xl lg:text-4xl font-extrabold italic bg-text-gradient bg-clip-text text-transparent uppercase">
-          BẢNG GIÁ PHIM CÁCH NHIỆT SKYMAGIC
+        <h2
+          class="text-3xl md:text-4xl lg:text-4xl font-extrabold italic bg-text-gradient bg-clip-text text-transparent uppercase animate-gradient-move bg-[length:200%_200%]">
+          BẢNG GIÁ PHIM CÁCH NHIỆT rainier lilac50
         </h2>
+        <div class="mt-4 flex justify-center items-center animate-bounce">
+          <img src="./images/icons/arrow-down.svg" alt="icon">
+        </div>
       </div>
 
       <!-- Pricing Grid -->
-      <div class="grid grid-cols-1 lg:grid-cols-3 gap-[32px] lg:gap-[148px]">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-[32px] lg:gap-[148px]">
         <!-- Sunroof -->
-        <div class="p-auto lg:p-8 rounded-xl text-left">
-          <h3 class="text-sky-400 font-bold text-xl mb-3">SUNROOF</h3>
-          <p class="text-gray-300 text-sm mb-6">
-            Kích thước: 82cm × 48cm (~0,4m²)<br />
-            Dành cho cửa sổ trời nhỏ, phù hợp hàng ghế trước. Giúp giảm nhiệt,
-            chống tia UV, mang lại sự thoải mái khi lái xe.
-          </p>
-          <div class="text-3xl font-extrabold text-white mb-6">
-            4.000.000 <span class="text-lg">VNĐ</span>
+        <div class="grid grid-cols-1 md:grid-cols-2 relative">
+          <div class="relative flex justify-center">
+            <img src="./images/lilac/pngwing.png" alt="swing" class="object-contain max-w-md drop-shadow-2xl -z-10">
+            <div class="absolute inset-y-0 right-0 w-1/3 bg-gradient-to-l from-black/70 via-black/50 to-transparent">
+            </div>
           </div>
-          <a href="#"
-            class="inline-flex items-center justify-between px-6 py-3 bg-sky-400 text-white font-semibold rounded-full w-full hover:bg-sky-500 transition">
-            MUA NGAY
-            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 ml-2" fill="none" viewBox="0 0 24 24"
-              stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
-            </svg>
-          </a>
-        </div>
 
+          <div class="rounded-xl bg-black/70 text-left ">
+            <h3 class="font-extrabold italic italic bg-text-gradient bg-clip-text text-transparent text-xl mb-3">KÍNH
+              LÁI RL50 PLUS</h3>
+            <p class="text-gray-300 text-sm mb-6">
+              Kích thước: <strong>1,02m x 1,54m</strong><br />
+              Phù hợp cho các dòng xe có kính lái nhỏ, cách nhiệt hiệu quả và bảo vệ nội thất.
+            </p>
+            <div class="text-2xl font-medium text-white mb-6">
+              <span class="font-extrabold text-3xl">6.800</span>.000 <span class="text-lg">VNĐ</span>
+            </div>
+            <a href="#"
+              class="inline-flex items-center justify-between px-6 py-3 bg-text-gradient text-white font-semibold rounded-full w-full hover:bg-sky-500 transition hover:animate-gradient-move bg-[length:200%_200%]">
+              MUA NGAY
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 ml-2" fill="none" viewBox="0 0 24 24"
+                stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+              </svg>
+            </a>
+          </div>
+        </div>
         <!-- Panorama -->
-        <div class="p-auto lg:p-8 rounded-xl text-left">
-          <h3 class="text-sky-400 font-bold text-xl mb-3">PANORAMA</h3>
-          <p class="text-gray-300 text-sm mb-6">
-            Kích thước: 125cm × 80cm (~1,0m²)<br />
-            Dành cho cửa sổ trời toàn cảnh, bao phủ cả hai hàng ghế. Tăng thẩm
-            mỹ, tạo không gian thoáng đãng, giảm bức xạ nhiệt hiệu quả.
-          </p>
-          <div class="text-3xl font-extrabold text-white mb-6">
-            7.000.000 <span class="text-lg">VNĐ</span>
+        <div class="grid grid-cols-1 md:grid-cols-2 relative">
+          <div class="relative flex justify-center">
+            <img src="./images/lilac/new-carnival.png" alt="KIA Carnival"
+              class="object-contain max-w-md drop-shadow-2xl -z-10">
+            <div class="absolute inset-y-0 right-0 w-1/3 bg-gradient-to-l from-black/70 via-black/50 to-transparent">
+            </div>
           </div>
-          <a href="#"
-            class="inline-flex items-center justify-between px-6 py-3 bg-sky-400 text-white font-semibold rounded-full w-full hover:bg-sky-500 transition">
-            MUA NGAY
-            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 ml-2" fill="none" viewBox="0 0 24 24"
-              stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
-            </svg>
-          </a>
+
+          <div class="rounded-xl bg-black/70 text-left ">
+            <h3 class="font-extrabold italic italic bg-text-gradient bg-clip-text text-transparent text-xl mb-3">KÍNH
+              LÁI RL50 PLUS</h3>
+            <p class="text-gray-300 text-sm mb-6">
+              Kích thước: <strong>1,02m x 1,54m</strong><br />
+              Phù hợp cho các dòng xe có kính lái nhỏ, cách nhiệt hiệu quả và bảo vệ nội thất.
+            </p>
+            <div class="text-2xl font-medium text-white mb-6">
+              <span class="font-extrabold text-3xl">7.000</span>.000 <span class="text-lg">VNĐ</span>
+            </div>
+            <a href="#"
+              class="inline-flex items-center justify-between px-6 py-3 bg-text-gradient text-white font-semibold rounded-full w-full hover:bg-sky-500 transition hover:animate-gradient-move bg-[length:200%_200%]">
+              MUA NGAY
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 ml-2" fill="none" viewBox="0 0 24 24"
+                stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+              </svg>
+            </a>
+          </div>
         </div>
 
-        <!-- Super Panorama -->
-        <div class="p-auto lg:p-8 rounded-xl text-left">
-          <h3 class="text-sky-400 font-bold text-xl mb-3">SUPER PANORAMA</h3>
-          <p class="text-gray-300 text-sm mb-6">
-            Kích thước: 150cm × 95cm (~1,4m²)<br />
-            Phiên bản mở rộng gần như bao phủ toàn bộ trần kính. Mang lại trải
-            nghiệm sang trọng, không gian rộng rãi tối đa, cách nhiệt vượt
-            trội.
-          </p>
-          <div class="text-3xl font-extrabold text-white mb-6">
-            9.000.000 <span class="text-lg">VNĐ</span>
-          </div>
-          <a href="#"
-            class="inline-flex items-center justify-between px-6 py-3 bg-sky-400 text-white font-semibold rounded-full w-full hover:bg-sky-500 transition">
-            MUA NGAY
-            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 ml-2" fill="none" viewBox="0 0 24 24"
-              stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
-            </svg>
-          </a>
-        </div>
+
       </div>
     </div>
   </section>
 
-  <!-- Testimonials -->
 
-  <section data-aos="fade-up" class="py-[167px] bg-black flex flex-col items-center">
-    <h2 class="text-3xl md:text-4xl lg:text-4xl font-extrabold italic bg-text-gradient bg-clip-text text-transparent uppercase">
-      CẢM NHẬN CỦA KHÁCH HÀNG VỀ LILAC 50
-      </h2>
+  <section data-aos="fade-up" class="py-[100px] ">
     <div class="container mx-auto px-6">
+      <!-- Title -->
+      <div class="text-center mb-16">
+        <h2
+          class="text-3xl md:text-4xl lg:text-4xl font-extrabold italic bg-text-gradient bg-clip-text text-transparent uppercase animate-gradient-move bg-[length:200%_200%]">
+          CHƯƠNG TRÌNH ƯU ĐÃI
+        </h2>
+        <p class="text-xl text-white my-2 font-semibold">
+          Trải nghiệm Lilac 50 và nhận ưu đãi đặc biệt
+        </p>
+        <div class="mt-4 flex justify-center items-center animate-bounce">
+          <img src="./images/icons/arrow-down.svg" alt="icon">
+        </div>
+      </div>
+
+      <!-- Pricing Grid -->
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-[32px] lg:gap-[148px]">
+        <div class="relative rounded-xl overflow-hidden p-[2px] bg-text-gradient">
+          <div class="relative rounded-xl bg-black/70 p-[60px] h-full flex flex-col justify-between">
+            <!-- Background image -->
+            <img src="./images/promo-1.jpg" alt="Rainier StellaMist"
+              class="absolute inset-0 w-full h-full object-cover opacity-40 -z-10">
+
+            <!-- Content -->
+            <div>
+              <p class="text-gray-200 mb-2">
+                Tặng 01 máy khuếch tán tinh dầu Rainier StellaMist trị giá
+              </p>
+              <h3 class="text-2xl font-extrabold bg-text-gradient bg-clip-text text-transparent">
+                <span class="text-4xl">899</span>.000 VNĐ
+              </h3>
+              <p class="mt-2 text-sm text-gray-300">
+                Dành cho 20 khách hàng đầu tiên
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="relative rounded-xl overflow-hidden p-[2px] bg-text-gradient">
+          <div class="relative rounded-xl bg-black/70 p-[60px] h-full flex flex-col justify-between">
+            <!-- Background image -->
+            <img src="./images/promo-2.jpg" alt="Thi công Rainier"
+              class="absolute inset-0 w-full h-full object-cover opacity-40 -z-10">
+
+            <!-- Content -->
+            <div>
+              <p class="text-gray-200 mb-2">
+                Trải nghiệm quy trình thi công chuyên nghiệp, chuẩn xác và an toàn
+              </p>
+              <h3 class="text-xl font-bold leading-snug bg-text-gradient bg-clip-text text-transparent">
+                Chuyên Nghiệp, <br> Chuẩn Xác Và An Toàn
+              </h3>
+              <p class="mt-2 text-sm text-gray-300">
+                theo tiêu chuẩn Rainier.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Conditions -->
+      <div class="container mx-auto px-6 mt-[62px] text-center">
+        <p class="text-lg italic text-gray-400">
+          Điều kiện: Mua 01 cuộn phim cách nhiệt Lilac 50 tại bất kỳ đại lý Rainier trên toàn quốc hoặc qua kênh bán
+          hàng trực tuyến chính thức.<br>
+          👉 Số lượng quà tặng có hạn – nhanh tay để không bỏ lỡ!
+        </p>
+      </div>
+    </div>
+  </section>
+  <!-- Testimonials -->
+  <section data-aos="fade-up" class="relative py-[167px] bg-black flex flex-col items-center overflow-hidden">
+    <div
+      class="absolute bottom-0 -left-1/3 w-[1000px] h-[1000px] bg-[#B143EC] opacity-20 blur-[150px]  rounded-full">
+    </div>
+    <div
+      class="absolute top-0 -right-1/3 w-[1000px] h-[1000px] bg-cyan-400 opacity-20 blur-[150px]  rounded-full">
+    </div>
+    <div class="">
+      <h2
+        class="text-3xl md:text-4xl lg:text-4xl font-extrabold italic bg-text-gradient bg-clip-text text-transparent uppercase animate-gradient-move bg-[length:200%_200%]">
+        CẢM NHẬN CỦA KHÁCH HÀNG VỀ LILAC 50
+      </h2>
+      <div class="my-4 flex justify-center items-center animate-bounce">
+        <img src="./images/icons/arrow-down.svg" alt="icon">
+      </div>
+    </div>
+    <div class="container mx-auto p-6">
       <!-- Wrapper -->
       <div id="ts-wrapper" class="relative">
         <!-- Slides -->

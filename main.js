@@ -112,3 +112,9 @@ menuBtn.addEventListener('click', () => {
     closeIcon.classList.remove('hidden');
   }
 });
+function toggleSubmenu(id) {
+  const submenu = document.getElementById(id);
+  const arrow = event.currentTarget.querySelector('svg');
+  submenu.classList.toggle('hidden');
+  arrow.classList.toggle('rotate-180');
+}
