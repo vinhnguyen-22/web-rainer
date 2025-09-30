@@ -28,6 +28,23 @@
     tailwind.config = {
       theme: {
         extend: {
+          container: {
+            center: true,
+            padding: {
+              DEFAULT: '1rem',
+              sm: '2rem',
+              lg: '4rem',
+              xl: '5rem',
+              '2xl': '6rem',
+            },
+            screens: {
+              sm: '640px',
+              md: '768px',
+              lg: '1024px',
+              xl: '1280px',
+              '2xl': '1440px',
+            },
+          },
           colors: {
             'sky-blue': '#02B5FF',
             'dark-bg': '#020305',
@@ -251,7 +268,7 @@
     <div class="container mx-auto px-6 text-center">
       <div class="">
         <h2
-          class="text-3xl md:text-4xl lg:text-4xl font-extrabold italic bg-text-gradient bg-clip-text text-transparent uppercase animate-gradient-move bg-[length:200%_200%]">
+          class="text-3xl md:text-4xl lg:text-4xl !leading-relaxed font-extrabold italic bg-text-gradient bg-clip-text text-transparent uppercase animate-gradient-move bg-[length:200%_200%]">
           KIẾN TẠO CHUẨN MỰC MỚI CHO KÍNH LÁI
         </h2>
         <p class="text-2xl text-white my-4 font-semibold">Vượt qua giới hạn, định hình giá trị</p>
@@ -297,7 +314,7 @@
           </p>
         </div>
         <p
-          class="text-3xl md:text-4xl lg:text-4xl font-extrabold italic bg-text-gradient bg-clip-text text-transparent uppercase animate-gradient-move bg-[length:200%_200%]">
+          class="text-3xl md:text-4xl lg:text-4xl !leading-relaxed font-extrabold italic bg-text-gradient bg-clip-text text-transparent uppercase animate-gradient-move bg-[length:200%_200%]">
           Phún xạ 20 lớp ION Vàng và lớp phủ Sapphire
         </p>
 
@@ -353,7 +370,7 @@
     <div class="container text-center mb-16">
       <div class="mb-[48px]">
         <h2
-          class="text-3xl md:text-4xl lg:text-4xl font-extrabold italic bg-text-gradient bg-clip-text text-transparent uppercase animate-gradient-move bg-[length:200%_200%]">
+          class="text-3xl md:text-4xl lg:text-4xl !leading-relaxed font-extrabold italic bg-text-gradient bg-clip-text text-transparent uppercase animate-gradient-move bg-[length:200%_200%]">
           NÂNG TẦM TRẢI NGHIỆM
         </h2>
         <p class="text-2xl text-white my-4 font-semibold">Mát hơn, an toàn hơn, bền bỉ hơn</p>
@@ -445,7 +462,7 @@
     <div data-aos="fade-up" class="container mx-auto px-6 text-center py-[100px]">
       <!-- Title -->
       <h2
-        class="text-3xl md:text-4xl lg:text-4xl font-extrabold italic bg-text-gradient bg-clip-text text-transparent uppercase animate-gradient-move bg-[length:200%_200%]">
+        class="text-3xl md:text-4xl lg:text-4xl !leading-relaxed font-extrabold italic bg-text-gradient bg-clip-text text-transparent uppercase animate-gradient-move bg-[length:200%_200%]">
         THÔNG SỐ KỸ THUẬT CỦA LILAC 50
       </h2>
       <p class="text-xl font-bold text-white my-4">
@@ -457,9 +474,9 @@
       <!-- Grid 3 trên, 2 dưới -->
       <div class="grid grid-cols-1 md:grid-cols-3 gap-10 my-[65px]">
         <!-- Spec 1 -->
-        <div class="flex justify-start items-center gap-3">
-          <img loading="lazy" src="./images/do-day.png" alt="Độ dày" class=" mb-3 w-10 h-10" />
-          <div class="text-left">
+        <div >
+          <img loading="lazy" src="./images/do-day.png" alt="Độ dày" class="mx-auto mb-3 w-10 h-10" />
+          <div>
             <h4 class="text-lg font-bold text-white mb-1">Độ dày 3 mil</h4>
             <p class="text-gray-text text-sm">
               Tăng cường an toàn, chống va đập, nứt vỡ kính.
@@ -468,9 +485,9 @@
         </div>
 
         <!-- Spec 2 -->
-        <div class="flex justify-start items-center gap-3">
-          <img loading="lazy" src="./images/mat-troi.png" alt="Độ truyền sáng" class=" mb-3 w-10 h-10" />
-          <div class="text-left">
+        <div >
+          <img loading="lazy" src="./images/mat-troi.png" alt="Độ truyền sáng" class="mx-auto mb-3 w-10 h-10" />
+          <div>
             <h4 class="text-lg font-bold text-white mb-1">
               Độ truyền sáng 45%
             </h4>
@@ -481,9 +498,9 @@
         </div>
 
         <!-- Spec 3 -->
-        <div class="flex justify-start items-center gap-3">
-          <img loading="lazy" src="./images/phan-xa.png" alt="Phản xạ nhiệt" class=" mb-3 w-10 h-10" />
-          <div class="text-left">
+        <div >
+          <img loading="lazy" src="./images/phan-xa.png" alt="Phản xạ nhiệt" class="mx-auto mb-3 w-10 h-10" />
+          <div>
             <h4 class="text-lg font-bold text-white mb-1">Tổng cản nhiệt 73%</h4>
             <p class="text-gray-text text-sm">
               Tiết kiệm nhiên liệu hiệu quả.
@@ -495,9 +512,9 @@
       <!-- Hàng thứ 2: 2 mục, căn giữa -->
       <div class="grid grid-cols-1 md:grid-cols-2 gap-10 max-w-3xl mx-auto">
         <!-- Spec 4 -->
-        <div class="flex justify-start items-center gap-3">
-          <img loading="lazy" src="./images/can-nhiet.png" alt="Tổng cản nhiệt" class=" mb-3 w-10 h-10" />
-          <div class="text-left">
+        <div >
+          <img loading="lazy" src="./images/can-nhiet.png" alt="Tổng cản nhiệt" class="mx-auto mb-3 w-10 h-10" />
+          <div>
             <h4 class="text-lg font-bold text-white mb-1">
               Cách nhiệt 99.9%
             </h4>
@@ -508,9 +525,9 @@
         </div>
 
         <!-- Spec 5 -->
-        <div class="flex justify-start items-center gap-3">
-          <img loading="lazy" src="./images/uv.png" alt="Chống tia UV" class=" mb-3 w-10 h-10" />
-          <div class="text-left">
+        <div >
+          <img loading="lazy" src="./images/uv.png" alt="Chống tia UV" class="mx-auto mb-3 w-10 h-10" />
+          <div>
             <h4 class="text-lg font-bold text-white mb-1">
               Chống tia UV 99.9%
             </h4>
@@ -622,7 +639,7 @@
       <!-- Title -->
       <div class="text-center mb-16">
         <h2
-          class="text-3xl md:text-4xl lg:text-4xl font-extrabold italic bg-text-gradient bg-clip-text text-transparent uppercase animate-gradient-move bg-[length:200%_200%]">
+          class="text-3xl md:text-4xl lg:text-4xl !leading-relaxed font-extrabold italic bg-text-gradient bg-clip-text text-transparent uppercase animate-gradient-move bg-[length:200%_200%]">
           CHỨNG NHẬN VÀ TIÊU CHUẨN QUỐC TẾ
         </h2>
         <p class="text-xl text-white my-2 font-semibold">
@@ -763,7 +780,7 @@
     <div class="container mx-auto px-6">
       <div class="text-center mb-12">
         <h2
-          class="text-3xl md:text-4xl lg:text-4xl font-extrabold italic bg-text-gradient bg-clip-text text-transparent uppercase animate-gradient-move bg-[length:200%_200%] leading-snug">
+          class="text-3xl md:text-4xl lg:text-4xl !leading-relaxed font-extrabold italic bg-text-gradient bg-clip-text text-transparent uppercase animate-gradient-move bg-[length:200%_200%] leading-snug">
           ĐỒNG HÀNH CÙNG NHIỀU THƯƠNG HIỆU Ô TÔ CAO CẤP
         </h2>
         <div class="mt-4 flex justify-center items-center animate-bounce">
@@ -793,7 +810,7 @@
       <!-- Title -->
       <div class="text-center mb-16">
         <h2
-          class="text-3xl md:text-4xl lg:text-4xl font-extrabold italic bg-text-gradient bg-clip-text text-transparent uppercase animate-gradient-move bg-[length:200%_200%]">
+          class="text-3xl md:text-4xl lg:text-4xl !leading-relaxed font-extrabold italic bg-text-gradient bg-clip-text text-transparent uppercase animate-gradient-move bg-[length:200%_200%]">
           BẢNG GIÁ PHIM CÁCH NHIỆT rainier lilac50
         </h2>
         <div class="mt-4 flex justify-center items-center animate-bounce">
@@ -872,7 +889,7 @@
       <!-- Title -->
       <div class="text-center mb-16">
         <h2
-          class="text-3xl md:text-4xl lg:text-4xl font-extrabold italic bg-text-gradient bg-clip-text text-transparent uppercase animate-gradient-move bg-[length:200%_200%]">
+          class="text-3xl md:text-4xl lg:text-4xl !leading-relaxed font-extrabold italic bg-text-gradient bg-clip-text text-transparent uppercase animate-gradient-move bg-[length:200%_200%]">
           CHƯƠNG TRÌNH ƯU ĐÃI
         </h2>
         <p class="text-xl text-white my-2 font-semibold">
