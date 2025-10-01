@@ -274,7 +274,7 @@
   </section>
 
   <!-- Product Introduction -->
-  <section data-aos="fade-up" class="py-[30px] lg:py-[100px] bg-gradient-to-b from-blue-900/10 to-dark-bg">
+  <section data-aos="fade-up" class="py-[30px] lg:py-[100px] bg-[#000000]">
     <div class="container mx-auto px-6 text-center">
       <div class="">
         <h2
@@ -291,13 +291,15 @@
           <img src="./images/icons/arrow-down.svg" alt="icon">
         </div>
       </div>
-      <div class="relative w-full pb-[56.25%] h-0 overflow-hidden rounded-xl">
-        <iframe class="absolute top-0 left-0 w-full h-full md:p-[100px]"
-          src="https://www.youtube-nocookie.com/embed/pamBdRkFTKg" title="YouTube video player" frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
-        </iframe>
-      </div>
+      <div class="relative w-full pb-[56.25%] h-0 overflow-hidden  rounded-xl">
+        <div class="md:p-[100px]">
+          <iframe class="absolute top-0 left-0 w-full h-full  rounded-xl overflow-hidden"
+            src="https://www.youtube-nocookie.com/embed/pamBdRkFTKg" title="YouTube video player" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+          </iframe>
+        </div>
+        </div>
     </div>
   </section>
 
@@ -318,8 +320,7 @@
           <h2
             class="relative text-[5rem] leading-[5rem] md:text-[10rem] md:!leading-[10rem] font-extrabold  bg-text-gradient bg-clip-text text-transparent bg-[length:200%_200%] animate-gradient-move pr-4">
             QRS
-
-            <p class="absolute bottom-0 -right-full md:-right-3/4 mt-2 text-lg font-semibold text-gray-400">
+            <p class="absolute md:bottom-4 bottom-0 -right-full md:-right-3/4 mt-2 text-lg md:text-2xl font-semibold text-gray-400">
               Đột phá công nghệ
             </p>
           </h2>
@@ -393,7 +394,7 @@
   </section>
 
   <!-- Benefits Section -->
-  <section class="relative py-[100px] overflow-hidden bg-gradient-to-r from-black to-[#100B15]">
+  <section class="relative py-[100px] overflow-hidden bg-gradient-to-b from-black to-[#100B15]">
     <div class="container text-center mb-16 p-6">
       <div class="mb-[48px]">
         <h2
@@ -788,6 +789,22 @@
             </div>
           </div>
         </div>
+
+        <div class="swiper-slide">
+          <div class="text-left">
+            <div class="rounded-lg flex items-center justify-center mb-4">
+              <img src="./images/lilac/car 7.png" alt="xe 06" class="h-full object-cover rounded-lg" />
+            </div>
+          </div>
+        </div>
+
+        <div class="swiper-slide">
+          <div class="text-left">
+            <div class="rounded-lg flex items-center justify-center mb-4">
+              <img src="./images/lilac/car 8.png" alt="xe 06" class="h-full object-cover rounded-lg" />
+            </div>
+          </div>
+        </div>
       </div>
 
       <!-- Add Pagination -->
@@ -929,13 +946,14 @@
       <!-- Pricing Grid -->
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-[32px] lg:gap-[148px]">
         <div class="relative rounded-xl overflow-hidden p-[2px] bg-text-gradient">
-          <div class="relative rounded-xl bg-black/70 p-[60px] h-full flex flex-col justify-between">
+          <div class="relative rounded-xl bg-black/70 p-[60px] h-full flex flex-col justify-between overflow-hidden">
             <!-- Background image -->
-            <img src="./images/promo-1.jpg" alt="Rainier StellaMist"
-              class="absolute inset-0 w-full h-full object-cover opacity-40 -z-10">
+            <img src="./images/lilac/film-rainier.png" alt="Rainier StellaMist"
+              class="absolute inset-0 w-full h-full object-cover ">
+            <div class="absolute inset-y-0 left-0 w-full bg-gradient-to-r from-black via-black/70 to-transparent"></div>
 
             <!-- Content -->
-            <div>
+            <div class="z-10">
               <p class="text-gray-200 mb-2">
                 Tặng 01 máy khuếch tán tinh dầu Rainier StellaMist trị giá
               </p>
@@ -951,15 +969,16 @@
 
         <!-- Card 2 -->
         <div class="relative rounded-xl overflow-hidden p-[2px] bg-text-gradient">
-          <div class="relative rounded-xl bg-black/70 p-[60px] h-full flex flex-col justify-between">
+          <div class="relative rounded-xl bg-black/70 p-[60px] h-full flex flex-col justify-between overflow-hidden">
             <!-- Background image -->
-            <img src="./images/promo-2.jpg" alt="Thi công Rainier"
-              class="absolute inset-0 w-full h-full object-cover opacity-40 -z-10">
+            <img src="./images/lilac/dan-film.png" alt="Thi công Rainier"
+              class="absolute inset-0 w-full h-full object-cover ">
+            <div class="absolute inset-y-0 left-0 w-full bg-gradient-to-r from-black via-black/70 to-transparent"></div>
 
             <!-- Content -->
-            <div>
+            <div class="z-10">
               <p class="text-gray-200 mb-2">
-                Trải nghiệm quy trình thi công chuyên nghiệp, chuẩn xác và an toàn
+                Trải nghiệm quy trình thi công chuyên nghiệp,<br> chuẩn xác và an toàn
               </p>
               <h3 class="text-3xl font-bold leading-snug bg-text-gradient bg-clip-text text-transparent">
                 Chuyên Nghiệp, <br> Chuẩn Xác Và An Toàn
@@ -1007,16 +1026,14 @@
           <!-- Slide 1 -->
           <div class="ts-slide opacity-100 transition-opacity duration-300">
             <p class="text-white text-3xl md:text-4xl !leading-relaxed my-6">
-              Xe tôi hay để ngoài trời nắng, trước đây khi mở cửa ra nóng hầm
-              hập. Sau khi dán phim Skymagic cho cửa sổ trời thì xe khoang xe
-              mát hơn hẳn, đặc biệt là xe vẫn sáng, không bị bí bách.
+              "Tôi từng thử nhiều loại phim cách nhiệt, nhưng Lilac 50 thực sự khác biệt. Xe mát hơn hẳn dưới nắng trưa, nội thất không còn bị nóng hầm và da tay cũng được bảo vệ tốt hơn.”
             </p>
             <div class="relative lg:absolute bottom-0 left-0 mt-10 flex items-center gap-4">
               <img loading="lazy" src="./images/chu-xe.png" alt="Anh Phạm Hoàng Minh"
                 class="w-12 h-12 rounded-full object-cover" />
               <div>
-                <h4 class="text-white font-semibold">Anh Phạm Hoàng Minh</h4>
-                <p class="text-gray-400 text-sm">Chủ xe SUV</p>
+                <h4 class="text-white font-semibold">Anh Minh</h4>
+                <p class="text-gray-400 text-sm">Chủ xe Lexus RX350</p>
               </div>
             </div>
           </div>
@@ -1024,51 +1041,44 @@
           <!-- Slide 2 -->
           <div class="ts-slide hidden opacity-0 transition-opacity duration-300">
             <p class="text-white text-3xl md:text-4xl !leading-relaxed my-6">
-              Tôi thích cửa sổ trời vì tạo cảm giác thoáng, nhưng trước đây
-              luôn phải che lại vì nắng nóng. Dùng Skymagic rồi thì tôi có thể
-              thoải mái mở rèm, vừa sáng tự nhiên vừa yên tâm không sợ tia UV
-              hại da.
+              “Điều tôi thích nhất ở Lilac 50 chính là màu tím sang trọng. Vừa đẹp, vừa độc đáo, lại không quá tối khi nhìn từ trong ra ngoài. Thật sự nâng tầm phong cách xe."
             </p>
 
             <div class="relative lg:absolute bottom-0 left-0 mt-10 flex items-center gap-4">
               <img loading="lazy" src="./images/chu-xe2.png" alt="Chị Thuỳ Trang"
                 class="w-12 h-12 rounded-full object-cover" />
               <div>
-                <h4 class="text-white font-semibold">Chị Hạnh</h4>
-                <p class="text-gray-400 text-sm">Nhân viên văn phòng</p>
+                <h4 class="text-white font-semibold">Chị Lan</h4> 
+                <p class="text-gray-400 text-sm">Chủ xe Mercedes S450</p>
               </div>
             </div>
           </div>
           <div class="ts-slide hidden opacity-0 transition-opacity duration-300">
             <p class="text-white text-3xl md:text-4xl !leading-relaxed my-6">
-              Chở khách cả ngày, đặc biệt vào buổi trưa xe nóng rất khó chịu.
-              Giờ thì xe mát hơn, điều hòa chạy cũng nhẹ hơn, chắc chắn sẽ
-              tiết kiệm được xăng.
+              “Điểm tôi yên tâm nhất là kính xe chắc chắn hơn nhiều sau khi dán Lilac 50. Không chỉ chống nóng mà còn tăng độ an toàn khi lái xe đường dài.”
             </p>
 
             <div class="relative lg:absolute bottom-0 left-0 mt-10 flex items-center gap-4">
               <img loading="lazy" src="./images/chu-xe3.png" alt="Anh Tuấn"
                 class="w-12 h-12 rounded-full object-cover" />
               <div>
-                <h4 class="text-white font-semibold">Anh Tuấn</h4>
-                <p class="text-gray-400 text-sm">Tài xế Grabcar</p>
+                <h4 class="text-white font-semibold">Anh Hoàng</h4>
+                <p class="text-gray-400 text-sm">Chủ xe BMW X7</p>
               </div>
             </div>
           </div>
 
           <div class="ts-slide hidden opacity-0 transition-opacity duration-300">
             <p class="text-white text-3xl md:text-4xl !leading-relaxed my-6">
-              Phim Skymagic dễ dán, bám kính chắc, ít bị bọt khí. Đặc biệt là
-              độ trong suốt cao, khách hàng thường rất thích vì không làm thay
-              đổi nhiều màu kính gốc.
+              “Tôi chọn Lilac 50 vì muốn vừa chống nóng tốt, vừa có phong cách riêng. Sau khi dán, xe mát rõ rệt và kính tím ánh sáng rất đẹp, đi đâu cũng nổi bật.”
             </p>
 
             <div class="relative lg:absolute bottom-0 left-0 mt-10 flex items-center gap-4">
               <img loading="lazy" src="./images/chu-xe4.png" alt="Anh Long"
                 class="w-12 h-12 rounded-full object-cover" />
               <div>
-                <h4 class="text-white font-semibold">Anh Long</h4>
-                <p class="text-gray-400 text-sm">Kỹ thuật viên gara ô tô</p>
+                <h4 class="text-white font-semibold">Chị Hương</h4>
+                <p class="text-gray-400 text-sm">Chủ xe VinFast VF3</p>
               </div>
             </div>
           </div>
