@@ -1,3 +1,5 @@
+window.addEventListener('scroll', handler, { passive: true });
+
 AOS.init({
   duration: 800, // thời gian animation
   offset: 100, // khoảng cách trước khi trigger
