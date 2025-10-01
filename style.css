@@ -17,3 +17,8 @@
   background: #0077cc; /* màu khi active */
   opacity: 1;
 }
+.with-dot::before {
+  content: '• ';
+  margin-right: 4px;
+  color: white; /* màu dot */
+}
