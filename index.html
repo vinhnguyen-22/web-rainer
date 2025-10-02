@@ -291,7 +291,7 @@
   </section>
 
   <!-- Product Introduction -->
-  <section data-aos="fade-up" class="py-[30px] lg:py-[100px] bg-[#000000]">
+  <section data-aos="fade-up" class="py-[45px] lg:py-[100px] bg-[#000000]">
     <div class="container mx-auto px-6 text-center">
       <div class="">
         <h2
@@ -308,7 +308,7 @@
           <img loading="lazy" src="./images/icons/arrow-down.svg" alt="icon">
         </div>
       </div>
-      <div class="relative w-full pb-[45.25%] h-0 overflow-hidden  rounded-xl">
+      <div class="relative w-full pb-[65.25%] md:pb-[45.25%] h-0 overflow-hidden  rounded-xl">
         <div class="md:p-[100px]">
           <iframe class="absolute top-0 left-0 w-full h-full  rounded-xl overflow-hidden"
             src="https://www.youtube-nocookie.com/embed/pamBdRkFTKg" title="YouTube video player" frameborder="0"
@@ -321,11 +321,10 @@
   </section>
 
   <!-- Technology Section -->
-  <section class="relative py-[100px] md:py-[200px]  min-h-screen overflow-hidden">
-    <img loading="lazy" class="absolute top-0 left-0 lg:block hidden -z-10" src="./images/lilac/phale.png"
+  <section class="relative py-[45px] md:py-[200px]  min-h-screen overflow-hidden">
+    <img loading="lazy" class="absolute top-0 md:left-0 right-0 w-1/2 md:w-auto -z-10" src="./images/lilac/phale.png"
       alt="Background Pattern" />
-    <img loading="lazy" class="relative hidden lg:block lg:absolute top-0 right-0 -z-10"
-      src="./images/lilac/lop-ion.png" alt="Car with Sunroof" />
+
     <h2
       class="absolute bottom-0 left-0 p-2 text-[10rem] md:text-[24rem] leading-[24rem] font-extrabold  bg-text-gradient bg-clip-text text-transparent opacity-10 select-none pointer-events-none blur-lg">
       QRS
@@ -338,7 +337,7 @@
             class="relative text-[5rem] leading-[5rem] md:text-[10rem] md:!leading-[10rem] font-extrabold  bg-text-gradient bg-clip-text text-transparent bg-[length:200%_200%] animate-gradient-move pr-4">
             QRS
             <p
-              class="absolute md:bottom-4 bottom-0 -right-full md:-right-3/4 mt-2 text-lg md:text-2xl font-semibold text-gray-400">
+              class="md:absolute md:bottom-4 bottom-0 -right-full md:-right-3/4 mt-2 text-3xl md:text-2xl font-semibold text-gray-400">
               Đột phá công nghệ
             </p>
           </h2>
@@ -409,10 +408,12 @@
         </div>
       </div>
     </div>
+    <img loading="lazy" class="relative lg:block lg:absolute top-0 right-0 -z-10"
+      src="./images/lilac/lop-ion.png" alt="Car with Sunroof" />
   </section>
 
   <!-- Benefits Section -->
-  <section class="relative py-[100px] overflow-hidden bg-gradient-to-b from-black to-[#100B15]">
+  <section class="relative py-[45px] md:py-[100px] overflow-hidden bg-gradient-to-b from-black to-[#100B15]">
     <div class="container text-center mb-16 p-6">
       <div class="mb-[48px]">
         <h2
@@ -611,21 +612,23 @@
   </section>
 
 
-  <section class="relative bg-black text-white py-[198px] overflow-hidden" style="
-        background-image: url('./images/lilac/bg-car.png');
-        background-size: cover;
-        background-position: center;
-      ">
+  <section class="relative text-white py-[45px] md:py-[198px] overflow-hidden">
+
+    <img src="./images/lilac/bg-car.png" 
+      alt="Rainier Car Background" 
+      class="absolute md:inset-0 md:w-full md:h-full md:max-w-full max-w-7xl md:transform md:translate-x-0 right-1/4 transform translate-x-1/3 object-center -z-10" 
+      loading="lazy" />
+
     <div class="container mx-auto px-6">
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center justify-center">
         <!-- Cột trái: Hình Sky Magic (ẩn khi mobile) -->
-        <div data-aos="fade-right" class="hidden lg:flex justify-center">
+        <div data-aos="fade-right" class="order-1 lg:flex justify-center">
           <img loading="lazy" src="./images/lilac/rl50.png" alt="Sky Magic" class="object-contain max-w-md h-auto" />
         </div>
 
         <!-- Cột phải: Bảng thông số -->
         <div data-aos="fade-left"
-          class="bg-black/50 backdrop-blur-md opacity-80 rounded-xl p-8 w-full max-w-md lg:ml-auto mx-auto">
+          class="bg-black/50 lg:order-1 backdrop-blur-md opacity-80 rounded-xl p-8 w-full max-w-md lg:ml-auto mx-auto">
           <h3 class="text-2xl font-bold text-gray-400">Thông số</h3>
           <h2 class="text-4xl font-bold bg-text-gradient bg-clip-text text-transparent mb-6">Kỹ Thuật</h2>
 
@@ -696,7 +699,7 @@
   </section>
 
   <!-- Certifications -->
-  <section class="relative py-[102px] bg-dark-bg overflow-hidden">
+  <section class="relative py-[45px] md:py-[102px] bg-dark-bg overflow-hidden">
     <div
       class="absolute bottom-1/4 transform translate-y-1/2 -left-1/3 lg:w-[1000px] lg:h-[1000px] w-[500px] w-[500px] bg-[#B143EC] opacity-30 blur-[150px]  rounded-full">
     </div>
@@ -769,7 +772,7 @@
           </div>
         </div>
       </div> -->
-      <div class="swiper mySwiper">
+      <div class="swiper mySwiper flex justify-center items-center">
         <div class="swiper-wrapper p-6">
           <!-- Certificate 1 -->
           <div class="swiper-slide">
@@ -1043,7 +1046,7 @@
   </section>
 
 
-  <section data-aos="fade-up" class="py-[100px] ">
+  <section data-aos="fade-up" class="py-[45px] lg:py-[100px] ">
     <div class="container mx-auto px-6">
       <!-- Title -->
       <div class="text-center mb-16">
@@ -1062,7 +1065,7 @@
       <!-- Pricing Grid -->
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-[32px] lg:gap-[148px]">
         <div class="relative rounded-xl overflow-hidden p-[2px] bg-text-gradient">
-          <div class="relative rounded-xl bg-black/70 p-[60px] h-full flex flex-col justify-between overflow-hidden">
+          <div class="relative rounded-xl bg-black/70 py-[35px] px-[20px] md:p-[60px] h-full flex flex-col justify-between overflow-hidden">
             <!-- Background image -->
             <img loading="lazy" src="./images/lilac/film-rainier.png" alt="Rainier StellaMist"
               class="absolute inset-0 w-full h-full object-cover ">
@@ -1074,7 +1077,7 @@
                 Tặng 01 máy khuếch tán tinh dầu Rainier StellaMist trị giá
               </p>
               <h3 class="text-3xl font-extrabold bg-text-gradient bg-clip-text text-transparent">
-                <span class="text-5xl lg:text-7xl">899</span>.000 VNĐ
+                <span class="text-4xl lg:text-7xl">899</span>.000 VNĐ
               </h3>
               <p class="mt-2 text-sm text-gray-300">
                 Dành cho 20 khách hàng đầu tiên
@@ -1085,7 +1088,7 @@
 
         <!-- Card 2 -->
         <div class="relative rounded-xl overflow-hidden p-[2px] bg-text-gradient">
-          <div class="relative rounded-xl bg-black/70 p-[60px] h-full flex flex-col justify-between overflow-hidden">
+          <div class="relative rounded-xl bg-black/70 py-[35px] px-[20px] md:p-[60px] h-full flex flex-col justify-between overflow-hidden">
             <!-- Background image -->
             <img loading="lazy" src="./images/lilac/dan-film.png" alt="Thi công Rainier"
               class="absolute inset-0 w-full h-full object-cover ">
@@ -1094,9 +1097,9 @@
             <!-- Content -->
             <div class="z-10">
               <p class="text-gray-200 mb-2">
-                Trải nghiệm quy trình thi công chuyên nghiệp,<br> chuẩn xác và an toàn
+                Trải nghiệm quy trình thi công chuyên nghiệp, chuẩn xác và an toàn
               </p>
-              <h3 class="text-3xl font-bold leading-snug bg-text-gradient bg-clip-text text-transparent">
+              <h3 class="text-xl font-bold leading-snug bg-text-gradient bg-clip-text text-transparent">
                 Chuyên Nghiệp, <br> Chuẩn Xác Và An Toàn
               </h3>
               <p class="mt-2 text-sm text-gray-300">
@@ -1108,8 +1111,8 @@
       </div>
 
       <!-- Conditions -->
-      <div class="container mx-auto px-6 mt-[62px] text-center">
-        <p class="text-lg  text-gray-400">
+      <div class="container mx-auto  mt-[62px] text-center">
+        <p class="md:text-lg text-md text-gray-400">
           Điều kiện: Mua 01 cuộn phim cách nhiệt Lilac 50 tại bất kỳ đại lý Rainier trên toàn quốc hoặc qua kênh bán
           hàng trực tuyến chính thức.<br>
           👉 Số lượng quà tặng có hạn – nhanh tay để không bỏ lỡ!
@@ -1118,7 +1121,7 @@
     </div>
   </section>
   <!-- Testimonials -->
-  <section data-aos="fade-up" class="relative py-[167px] bg-black flex flex-col items-center overflow-hidden">
+  <section data-aos="fade-up" class="relative py-[45px] md:py-[167px] bg-black flex flex-col items-center overflow-hidden">
     <div
       class="absolute bottom-0 -left-1/3 md:w-[1000px] md:h-[1000px] w-[500px] h-[500px] bg-[#B143EC] opacity-20 blur-[150px]  rounded-full">
     </div>
