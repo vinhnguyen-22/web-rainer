@@ -109,7 +109,7 @@ body {
 
 .specs-row > span {
   color: #e978f4;
-  font-size: 24px;
+  font-size: 20px;
   font-weight: 700;
   line-height: 1.2;
   white-space: nowrap;
@@ -321,3 +321,14 @@ body {
     overflow-wrap: break-word;
   }
 }
+
+/* Feature card border */
+.feature-card {
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: transparent;
+}
+.feature-card:hover {
+  border-color: rgba(244, 128, 255, 0.5);
+  background: rgba(255, 255, 255, 0.03);
+}
+

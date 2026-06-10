@@ -70,11 +70,12 @@
 
     /* Feature card border */
     .feature-card {
-      border: 1px solid rgba(244,128,255,0.2);
-      background: rgba(0,0,0,0.75);
+      border: 1px solid rgba(255,255,255,0.1);
+      background: transparent;
     }
     .feature-card:hover {
       border-color: rgba(244,128,255,0.5);
+      background: rgba(255,255,255,0.03);
     }
 
     /* CTA button with bottom border */
@@ -197,13 +198,13 @@
   </header>
 
   <!-- ===== SECTION 1: HERO BANNER ===== -->
-  <section class="relative w-full h-[710px] bg-black overflow-hidden">
+  <section class="relative w-full lg:h-screen lg:min-h-[710px] h-[710px] bg-black overflow-hidden">
     <!-- Background car image -->
     <div class="absolute inset-0 z-0">
       <!-- Dark base layer -->
       <img src="./images/page/rainier lillac 70 1.png" alt="" class="absolute inset-0 w-full h-full object-cover brightness-[0.45]" loading="eager" />
       <!-- Main car image positioned right -->
-      <img src="./images/page/rainier lillac 70 1.png" alt="Rainier Lilac Car" class="hidden lg:block absolute top-0 left-[0%] h-[107%] w-auto max-w-none object-contain brightness-95 scale-x-[-1]" loading="eager" />
+      <img src="./images/page/rainier lillac 70 1.png" alt="Rainier Lilac Car" class="hidden lg:block absolute top-0 right-0 h-full w-auto object-contain brightness-95 scale-x-[-1]" loading="eager" />
       <!-- Left gradient overlay -->
       <div class="absolute inset-0 hero-gradient-left"></div>
       <!-- Bottom gradient overlay -->
@@ -303,58 +304,74 @@
         </div>
       </div>
 
-      <!-- Film roll + zigzag features layout -->
-      <div class="relative flex items-center justify-center mt-[30px] min-h-[600px]">
+      <!-- Responsive Mobile Layout (Visible only on small screens) -->
+      <div class="lg:hidden flex flex-col items-center mt-12 space-y-8 relative z-10">
+        <img loading="lazy" src="./images/page/FILM AND BOX 1.png" alt="Rainier Lilac Film Roll" class="max-h-[400px] object-contain drop-shadow-[0_0_30px_rgba(244,128,255,0.2)]" />
+        <div class="space-y-6 text-center px-4 max-w-md">
+          <p class="text-[16px] leading-[1.6] text-white">
+            <span class="font-normal">Tích hợp </span><span class="font-bold text-lilac">3 lớp Bạc nguyên chất</span><span class="font-normal"> cùng hệ thống </span><span class="font-bold text-lilac">ION Vàng</span><span class="font-normal"> cao cấp giúp phản xạ nhiệt mạnh và chặn đến </span><span class="font-bold text-lilac">99% tia hồng ngoại</span>
+          </p>
+          <p class="text-[16px] leading-[1.6] text-white">
+            <span class="font-normal">Ứng dụng công nghệ phún xạ đa tầng </span><span class="font-bold text-lilac">QRS Quantum Evolution™</span><span class="font-normal"> với cấu trúc </span><span class="font-bold text-lilac">36 lớp siêu mỏng</span>
+          </p>
+          <p class="text-[16px] leading-[1.6] text-white">
+            <span class="font-normal">Kết hợp lớp quang học </span><span class="font-bold text-lilac">Nano Sapphire</span><span class="font-normal"> và liên kết </span><span class="font-bold text-lilac">Oxit Niobium</span><span class="font-normal"> cấp hàng không</span>
+          </p>
+        </div>
+      </div>
+
+      <!-- Desktop Absolute Layout (Matches exact design, visible only on large screens) -->
+      <div class="hidden lg:flex relative items-center justify-center mt-[30px] min-h-[600px] max-w-[1200px] mx-auto">
         <!-- Center: Film roll image -->
         <div class="relative z-10 flex-shrink-0">
           <img src="./images/page/FILM AND BOX 1.png" alt="Rainier Lilac Film & Box"
-            class="h-[600px] lg:h-[700px] w-auto object-contain" loading="lazy" />
+            class="h-[600px] w-auto object-contain" loading="lazy" />
           <!-- Purple accent bar behind roll -->
           <div class="absolute top-[50px] right-[-10px] w-[68px] h-[500px] bg-lilac-dark rounded-sm -z-10"></div>
         </div>
 
         <!-- Left text -->
-        <div class="absolute left-[112px] top-[50%] -translate-y-1/2 max-w-[427px] hidden lg:block" data-aos="fade-right">
-          <p class="text-[20px] leading-[30px] text-center">
-            <span class="text-white font-normal">Tích hợp </span>
+        <div class="absolute left-[30px] top-[50%] -translate-y-1/2 max-w-[340px]" data-aos="fade-right">
+          <p class="text-[18px] leading-[30px] text-left text-white">
+            <span class="font-normal">Tích hợp </span>
             <span class="text-lilac font-bold">3 lớp Bạc nguyên chất</span>
-            <span class="text-white font-normal"> cùng hệ thống </span>
+            <span class="font-normal"> cùng hệ thống </span>
             <span class="text-lilac font-bold">ION Vàng</span>
-            <span class="text-white font-normal"> cao cấp giúp phản xạ nhiệt mạnh và chặn đến </span>
+            <span class="font-normal"> cao cấp giúp phản xạ nhiệt mạnh và chặn đến </span>
             <span class="text-lilac font-bold">99% tia hồng ngoại</span>
           </p>
         </div>
 
         <!-- Right top text -->
-        <div class="absolute right-[80px] top-[80px] max-w-[382px] hidden lg:block" data-aos="fade-left">
-          <p class="text-[20px] leading-[30px] text-center">
-            <span class="text-white font-normal">Ứng dụng công nghệ phún xạ đa tầng </span>
-            <span class="text-lilac font-bold underline">QRS Quantum Evolution™</span>
-            <span class="text-white font-normal"> với cấu trúc </span>
+        <div class="absolute right-[30px] top-[80px] max-w-[340px]" data-aos="fade-left">
+          <p class="text-[18px] leading-[30px] text-left text-white">
+            <span class="font-normal">Ứng dụng công nghệ phún xạ đa tầng </span>
+            <span class="text-lilac font-bold">QRS Quantum Evolution™</span>
+            <span class="font-normal"> với cấu trúc </span>
             <span class="text-lilac font-bold">36 lớp siêu mỏng</span>
           </p>
         </div>
 
         <!-- Right bottom text -->
-        <div class="absolute right-[80px] bottom-[80px] max-w-[391px] hidden lg:block" data-aos="fade-left" data-aos-delay="200">
-          <p class="text-[20px] leading-[30px] text-center">
-            <span class="text-white font-normal">Kết hợp lớp quang học </span>
+        <div class="absolute right-[30px] bottom-[80px] max-w-[340px]" data-aos="fade-left" data-aos-delay="200">
+          <p class="text-[18px] leading-[30px] text-left text-white">
+            <span class="font-normal">Kết hợp lớp quang học </span>
             <span class="text-lilac font-bold">Nano Sapphire</span>
-            <span class="text-white font-normal"> và liên kết </span>
+            <span class="font-normal"> và liên kết </span>
             <span class="text-lilac font-bold">Oxit Niobium</span>
-            <span class="text-white font-normal"> cấp hàng không</span>
+            <span class="font-normal"> cấp hàng không</span>
           </p>
         </div>
 
-        <!-- Zigzag connector SVGs -->
-        <svg class="absolute hidden lg:block" style="top: 120px; right: 620px;" width="128" height="67" viewBox="0 0 128 67">
-          <polyline class="zigzag-line" points="0,33 40,5 88,60 128,33" />
+        <!-- Connector SVGs (Solid lines) -->
+        <svg class="absolute pointer-events-none" style="top: 280px; left: 380px;" width="120" height="40" viewBox="0 0 120 40">
+          <polyline points="0,20 50,20 120,40" stroke="#f480ff" stroke-width="1.5" fill="none" opacity="0.8" />
         </svg>
-        <svg class="absolute hidden lg:block" style="bottom: 140px; right: 520px;" width="128" height="67" viewBox="0 0 128 67">
-          <polyline class="zigzag-line" points="0,33 40,5 88,60 128,33" />
+        <svg class="absolute pointer-events-none" style="top: 110px; right: 380px;" width="120" height="60" viewBox="0 0 120 60">
+          <polyline points="120,20 60,20 0,60" stroke="#f480ff" stroke-width="1.5" fill="none" opacity="0.8" />
         </svg>
-        <svg class="absolute hidden lg:block" style="top: 280px; left: 480px;" width="128" height="67" viewBox="0 0 128 67">
-          <polyline class="zigzag-line" points="0,33 40,60 88,5 128,33" />
+        <svg class="absolute pointer-events-none" style="bottom: 110px; right: 380px;" width="120" height="60" viewBox="0 0 120 60">
+          <polyline points="120,40 60,40 0,0" stroke="#f480ff" stroke-width="1.5" fill="none" opacity="0.8" />
         </svg>
       </div>
     </div>
@@ -506,7 +523,7 @@
   <!-- ===== SECTION 7: LỢI ÍCH VƯỢT TRỘI ===== -->
   <section class="relative w-full bg-black overflow-hidden py-[75px]" data-aos="fade-up">
     <!-- Background -->
-    <img src="./images/page/rainier lillac 70 1 (1).png" alt="" class="absolute inset-0 w-full h-full object-cover opacity-15" loading="lazy" />
+    <img src="./images/page/IMG20260528101110 1.jpg" alt="" class="absolute inset-0 w-full h-full object-cover opacity-40" loading="lazy" />
     <div class="absolute inset-0 bg-black/80"></div>
 
     <div class="relative z-10 max-w-[1440px] mx-auto px-[80px] lg:px-[112px]">
@@ -742,41 +759,41 @@
       <div class="swiper mySwiperCerts">
         <div class="swiper-wrapper">
           <div class="swiper-slide h-auto">
-            <div class="bg-black/60 border border-white/10 rounded-[16px] p-6 flex flex-col items-center h-full hover:border-lilac transition">
-              <div class="aspect-[4/3] w-full bg-black/40 rounded-xl overflow-hidden flex items-center justify-center mb-4">
-                <img src="./images/page/image 85.png" alt="Cert 1" class="max-h-full max-w-full object-contain" loading="lazy" />
+            <div class="flex flex-col items-center h-full transition group">
+              <div class="w-full rounded-xl overflow-hidden flex items-center justify-center mb-4">
+                <img src="./images/page/image 85.png" alt="Cert 1" class="w-full h-auto object-contain transition duration-500 group-hover:scale-105" loading="lazy" />
               </div>
               <h4 class="text-gray-300 text-[14px] font-bold text-center">IATF 16949:2016<br>Certificate of Registration</h4>
             </div>
           </div>
           <div class="swiper-slide h-auto">
-            <div class="bg-black/60 border border-white/10 rounded-[16px] p-6 flex flex-col items-center h-full hover:border-lilac transition">
-              <div class="aspect-[4/3] w-full bg-black/40 rounded-xl overflow-hidden flex items-center justify-center mb-4">
-                <img src="./images/page/image 86.png" alt="Cert 2" class="max-h-full max-w-full object-contain" loading="lazy" />
+            <div class="flex flex-col items-center h-full transition group">
+              <div class="w-full rounded-xl overflow-hidden flex items-center justify-center mb-4">
+                <img src="./images/page/image 86.png" alt="Cert 2" class="w-full h-auto object-contain transition duration-500 group-hover:scale-105" loading="lazy" />
               </div>
               <h4 class="text-gray-300 text-[14px] font-bold text-center">Declaration of Quality</h4>
             </div>
           </div>
           <div class="swiper-slide h-auto">
-            <div class="bg-black/60 border border-white/10 rounded-[16px] p-6 flex flex-col items-center h-full hover:border-lilac transition">
-              <div class="aspect-[4/3] w-full bg-black/40 rounded-xl overflow-hidden flex items-center justify-center mb-4">
-                <img src="./images/page/image 87.png" alt="Cert 3" class="max-h-full max-w-full object-contain" loading="lazy" />
+            <div class="flex flex-col items-center h-full transition group">
+              <div class="w-full rounded-xl overflow-hidden flex items-center justify-center mb-4">
+                <img src="./images/page/image 87.png" alt="Cert 3" class="w-full h-auto object-contain transition duration-500 group-hover:scale-105" loading="lazy" />
               </div>
               <h4 class="text-gray-300 text-[14px] font-bold text-center">Quality Management<br>System Certificate</h4>
             </div>
           </div>
           <div class="swiper-slide h-auto">
-            <div class="bg-black/60 border border-white/10 rounded-[16px] p-6 flex flex-col items-center h-full hover:border-lilac transition">
-              <div class="aspect-[4/3] w-full bg-black/40 rounded-xl overflow-hidden flex items-center justify-center mb-4">
-                <img src="./images/page/image 88.png" alt="Cert 4" class="max-h-full max-w-full object-contain" loading="lazy" />
+            <div class="flex flex-col items-center h-full transition group">
+              <div class="w-full rounded-xl overflow-hidden flex items-center justify-center mb-4">
+                <img src="./images/page/image 88.png" alt="Cert 4" class="w-full h-auto object-contain transition duration-500 group-hover:scale-105" loading="lazy" />
               </div>
-              <h4 class="text-gray-300 text-[14px] font-bold text-center">Environmental Management<br>System Certificate</h4>
+              <h4 class="text-base font-bold text-gray-300 text-center leading-snug">Environmental Management<br>System Certificate</h4>
             </div>
           </div>
           <div class="swiper-slide h-auto">
-            <div class="bg-black/60 border border-white/10 rounded-[16px] p-6 flex flex-col items-center h-full hover:border-lilac transition">
-              <div class="aspect-[4/3] w-full bg-black/40 rounded-xl overflow-hidden flex items-center justify-center mb-4">
-                <img src="./images/page/image 89.png" alt="Cert 5" class="max-h-full max-w-full object-contain" loading="lazy" />
+            <div class="flex flex-col items-center h-full transition group">
+              <div class="w-full rounded-xl overflow-hidden flex items-center justify-center mb-4">
+                <img src="./images/page/image 89.png" alt="Cert 5" class="w-full h-auto object-contain transition duration-500 group-hover:scale-105" loading="lazy" />
               </div>
               <h4 class="text-gray-300 text-[14px] font-bold text-center">Attestation Of Conformity</h4>
             </div>
