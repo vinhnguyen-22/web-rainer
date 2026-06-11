@@ -68,10 +68,15 @@ body {
   background:
     linear-gradient(#1a1a1a, #1a1a1a) padding-box,
     linear-gradient(90deg, #80458b 0%, #ec65f7 100%) border-box;
+  transition: all 0.3s ease;
 }
 
 .pricing-outline-btn:hover {
-  box-shadow: 0 0 24px rgba(236, 101, 247, 0.22);
+  background:
+    linear-gradient(135deg, #120216, #6b1e77) padding-box,
+    linear-gradient(90deg, #80458b 0%, #ec65f7 100%) border-box;
+  box-shadow: 0 0 24px rgba(236, 101, 247, 0.35);
+  color: #ffffff !important;
 }
 
 .specs-product-image {
