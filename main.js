@@ -21,22 +21,20 @@ if (header) {
   });
 }
 
-// Initialize Swiper for Certificates
+// Initialize Swiper for Certificates (Marquee Continuous Infinite Scroll)
 var swiperCertificates = new Swiper('.mySwiperCertificates', {
-  slidesPerView: 1,
+  slidesPerView: 1.5,
   spaceBetween: 20,
   loop: true,
+  freeMode: true,
+  speed: 8000, // speed of continuous scroll in ms (higher = slower)
   autoplay: {
-    delay: 3000,
+    delay: 0,
     disableOnInteraction: false,
   },
-  pagination: {
-    el: '.mySwiperCertificates .swiper-pagination',
-    clickable: true,
-  },
   breakpoints: {
-    640: { slidesPerView: 2, spaceBetween: 20 },
-    1024: { slidesPerView: 4, spaceBetween: 20 },
+    640: { slidesPerView: 3, spaceBetween: 20 },
+    1024: { slidesPerView: 5, spaceBetween: 30 },
   },
 });
 

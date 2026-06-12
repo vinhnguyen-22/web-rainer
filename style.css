@@ -7,19 +7,19 @@ body {
 .swiper-button-prev {
   visibility: hidden;
 }
-.mySwiper .swiper-pagination {
+.swiper-pagination {
   position: relative;
   margin-top: 30px; /* tăng khoảng cách tùy ý */
   text-align: center;
 }
 
-.mySwiper .swiper-pagination-bullet {
+.swiper-pagination-bullet {
   background: gray; /* đổi màu bullet */
   opacity: 0.7;
 }
 
-.mySwiper .swiper-pagination-bullet-active {
-  background: #0077cc; /* màu khi active */
+.swiper-pagination-bullet-active {
+  background: #f480ff !important; /* màu khi active - Lilac */
   opacity: 1;
 }
 .with-dot::before {
@@ -46,7 +46,7 @@ body {
 }
 
 .hero-spec-card {
-  background: linear-gradient(90deg, rgba(14, 11, 24, 0.82), rgba(73, 20, 76, 0.62));
+  background: linear-gradient(90deg, rgba(14, 11, 24, 0.158), rgba(73, 20, 76, 0.144));
   border: 1px solid rgba(244, 128, 255, 0.72);
   border-radius: 8px;
   box-shadow: 0 0 16px rgba(244, 128, 255, 0.24), inset 0 0 12px rgba(244, 128, 255, 0.12);
@@ -56,8 +56,8 @@ body {
   white-space: nowrap;
 }
 
-.pricing-title {
-  background: linear-gradient(90deg, #80458b 0%, #ec65f7 100%);
+.text-gradient-lilac {
+  background: linear-gradient(90deg, #a041b1 0%, #ec65f7 100%);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
@@ -128,12 +128,6 @@ body {
   border-bottom: 0;
 }
 
-.testimonial-title span {
-  background: linear-gradient(90deg, #80458b 0%, #ec65f7 100%);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-}
 
 .testimonial-track {
   width: 100vw;
@@ -330,10 +324,42 @@ body {
 /* Feature card border */
 .feature-card {
   border: 1px solid rgba(255, 255, 255, 0.1);
-  background: transparent;
 }
 .feature-card:hover {
   border-color: rgba(244, 128, 255, 0.5);
-  background: rgba(255, 255, 255, 0.03);
+}
+
+/* Responsive connector lines for Sputtering showcase */
+.connector-left {
+  top: 205px;
+  left: calc(50% - 200px);
+}
+.connector-right-top {
+  top: 75px;
+  right: calc(50% - 200px);
+}
+.connector-right-bottom {
+  bottom: 75px;
+  right: calc(50% - 200px);
+}
+
+@media (min-width: 1280px) {
+  .connector-left {
+    top: 280px;
+    left: calc(50% - 220px);
+  }
+  .connector-right-top {
+    top: 110px;
+    right: calc(50% - 220px);
+  }
+  .connector-right-bottom {
+    bottom: 110px;
+    right: calc(50% - 220px);
+  }
+}
+
+/* Linear timing for Certificates infinite marquee scroller */
+.mySwiperCertificates .swiper-wrapper {
+  transition-timing-function: linear !important;
 }
 
