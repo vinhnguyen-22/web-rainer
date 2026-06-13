@@ -129,60 +129,86 @@
 <body class="bg-[#020305] text-white font-inter overflow-y-hidden">
   <!-- Header Navigation -->
   <header class="bg-black/20 border-b border-transparent fixed w-full z-30 transition-all duration-300" id="main-header">
-    <div class="w-full max-w-[1216px] mx-auto flex items-center justify-between px-6 xl:px-0 py-4">
-      <!-- Logo -->
-      <a href="https://rainier.vn/" class="flex items-center">
-        <img loading="eager" src="./images/page/Logo 1.png" alt="Rainier Logo" class="h-8" />
-      </a>
+    <div class="max-w-[1216px] mx-auto px-6 xl:px-0 py-4 relative">
+      <div class="flex items-center justify-between relative w-full">
 
-      <!-- Navigation Desktop -->
-      <nav class="hidden lg:flex items-center lg:space-x-1 xl:space-x-2 text-white font-semibold lg:text-xs xl:text-sm">
-        <a href="https://rainier.vn/" class="hover:text-gradient-lilac lg:px-2 xl:px-4 py-2 transition duration-200">TRANG CHỦ</a>
+        <!-- Mobile Hamburger (Left on mobile, hidden on desktop) -->
+        <button id="menu-btn" class="lg:hidden relative z-50 flex h-10 w-10 items-center justify-start text-white focus:outline-none" aria-label="Mở menu">
+          <svg id="hamburger-icon" class="w-7 h-7 block transition-transform duration-300" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+          <svg id="close-icon" class="w-7 h-7 hidden transition-transform duration-300" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
 
-        <!-- Dropdown Sản phẩm -->
-        <div class="relative group">
-          <button class="hover:text-gradient-lilac lg:px-2 xl:px-4 py-2 flex items-center focus:outline-none transition duration-200">
-            SẢN PHẨM
-            <svg class="w-4 h-4 ml-1 transform group-hover:rotate-180 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+        <!-- Desktop Navigation: Logo + Links -->
+        <div class="hidden lg:flex items-center space-x-6 xl:space-x-8">
+          <a href="https://rainier.vn/" class="flex items-center">
+            <img loading="eager" src="./images/page/Logo 1.png" alt="Rainier Logo" class="h-8" />
+          </a>
+          <!-- Navigation Desktop -->
+          <nav class="flex items-center lg:space-x-1 xl:space-x-2 text-white font-semibold lg:text-xs xl:text-sm">
+            <a href="https://rainier.vn/" class="hover:text-gradient-lilac lg:px-2 xl:px-4 py-2 transition duration-200">TRANG CHỦ</a>
+
+            <!-- Dropdown Sản phẩm -->
+            <div class="relative group">
+              <button class="hover:text-gradient-lilac lg:px-2 xl:px-4 py-2 flex items-center focus:outline-none transition duration-200">
+                SẢN PHẨM
+                <svg class="w-4 h-4 ml-1 transform group-hover:rotate-180 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                </svg>
+              </button>
+              <div class="absolute left-0 top-full mt-2 w-64 bg-black/95 border border-white/10 rounded-lg shadow-xl py-2 hidden group-hover:block transition duration-200">
+                <a href="https://rainier.vn/product-category/phim-cach-nhiet-nha-kinh" class="block px-4 py-2 text-gray-300 hover:text-white hover:bg-white/10 transition capitalize">Phim cách nhiệt nhà kính</a>
+                <a href="https://rainier.vn/product-category/phim-cach-nhiet-o-to" class="block px-4 py-2 text-gray-300 hover:text-white hover:bg-white/10 transition capitalize">Phim cách nhiệt ô tô</a>
+                <a href="https://rainier.vn/sieu-phim-kinh-lai-lilac50" class="block px-4 py-2 text-gray-300 hover:text-white hover:bg-white/10 transition capitalize">Siêu Phim Kính Lái LILAC50</a>
+                <a href="https://rainier.vn/phim-cach-nhiet-cua-so-troi-sky-magic/" class="block px-4 py-2 text-gray-300 hover:text-white hover:bg-white/10 transition capitalize">Phim Cửa Sổ Trời SKYMAGIC</a>
+              </div>
+            </div>
+
+            <a href="https://rainier.vn/category/du-an/du-an-nha-kinh" class="hover:text-gradient-lilac lg:px-2 xl:px-4 py-2 transition duration-200">DỰ ÁN</a>
+            <a href="https://rainier.vn/he-thong-dai-ly" class="hover:text-gradient-lilac lg:px-2 xl:px-4 py-2 transition duration-200">ĐẠI LÝ</a>
+            <a href="https://rainier.vn/category/tin-tuc-chung" class="hover:text-gradient-lilac lg:px-2 xl:px-4 py-2 transition duration-200">KINH NGHIỆM</a>
+            <a href="https://rainier.vn/lien-he" class="hover:text-gradient-lilac lg:px-2 xl:px-4 py-2 transition duration-200">LIÊN HỆ</a>
+          </nav>
+        </div>
+
+        <!-- Center: Logo (Mobile only) -->
+        <div class="lg:hidden absolute left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 flex items-center justify-center">
+          <a href="https://rainier.vn/">
+            <img src="./images/page/Logo 1.png" alt="Rainier Logo" class="h-8 w-auto" loading="eager" />
+          </a>
+        </div>
+
+        <!-- Right: Shopping Bag Icon + Badge "1" (Mobile only) -->
+        <div class="lg:hidden flex items-center justify-end">
+          <a href="https://rainier.vn/gio-hang" class="relative w-10 h-10 rounded-full flex items-center justify-center bg-white/10 border border-white/20 backdrop-blur-md">
+            <svg class="w-5 h-5 text-white/80" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
             </svg>
-          </button>
-          <div class="absolute left-0 top-full mt-2 w-64 bg-black/95 border border-white/10 rounded-lg shadow-xl py-2 hidden group-hover:block transition duration-200">
-            <a href="https://rainier.vn/product-category/phim-cach-nhiet-nha-kinh" class="block px-4 py-2 text-gray-300 hover:text-white hover:bg-white/10 transition capitalize">Phim cách nhiệt nhà kính</a>
-            <a href="https://rainier.vn/product-category/phim-cach-nhiet-o-to" class="block px-4 py-2 text-gray-300 hover:text-white hover:bg-white/10 transition capitalize">Phim cách nhiệt ô tô</a>
-            <a href="https://rainier.vn/sieu-phim-kinh-lai-lilac50" class="block px-4 py-2 text-gray-300 hover:text-white hover:bg-white/10 transition capitalize">Siêu Phim Kính Lái LILAC50</a>
-            <a href="https://rainier.vn/phim-cach-nhiet-cua-so-troi-sky-magic/" class="block px-4 py-2 text-gray-300 hover:text-white hover:bg-white/10 transition capitalize">Phim Cửa Sổ Trời SKYMAGIC</a>
+            <span class="absolute -top-1 -right-1 w-[18px] h-[18px] bg-[#E88C00] text-white text-[10px] font-bold rounded-full flex items-center justify-center border border-black/20">
+              1
+            </span>
+          </a>
+        </div>
+
+        <!-- Right: Hotline (Desktop/Tablet) -->
+        <div class="hidden md:flex items-center space-x-3 text-right">
+          <div class="flex items-center space-x-3 text-right">
+            <div class="w-8 h-8 rounded-full flex items-center justify-center bg-sky-blue">
+              <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.3 11.3 0 005.455 5.455l.773-1.548a1 1 0 011.06-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 6V3z" />
+              </svg>
+            </div>
+            <div>
+              <p class="text-xs font-vietnam font-medium text-gray-400">Hotline: 0934 194 088</p>
+              <p class="text-sky-blue font-vietnam text-xl font-bold">0934 194 088</p>
+            </div>
           </div>
         </div>
 
-        <a href="https://rainier.vn/category/du-an/du-an-nha-kinh" class="hover:text-gradient-lilac lg:px-2 xl:px-4 py-2 transition duration-200">DỰ ÁN</a>
-        <a href="https://rainier.vn/he-thong-dai-ly" class="hover:text-gradient-lilac lg:px-2 xl:px-4 py-2 transition duration-200">ĐẠI LÝ</a>
-        <a href="https://rainier.vn/category/tin-tuc-chung" class="hover:text-gradient-lilac lg:px-2 xl:px-4 py-2 transition duration-200">KINH NGHIỆM</a>
-        <a href="https://rainier.vn/lien-he" class="hover:text-gradient-lilac lg:px-2 xl:px-4 py-2 transition duration-200">LIÊN HỆ</a>
-      </nav>
-
-      <!-- Hotline -->
-      <div class="hidden md:flex items-center space-x-3 text-right">
-        <div class="w-8 h-8 rounded-full flex items-center justify-center bg-sky-blue">
-          <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
-            <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.3 11.3 0 005.455 5.455l.773-1.548a1 1 0 011.06-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 6V3z" />
-          </svg>
-        </div>
-        <div>
-          <p class="text-xs font-vietnam font-medium text-gray-400">Hotline: 0934 194 088</p>
-          <p class="text-sky-blue font-vietnam text-xl font-bold">0934 194 088</p>
-        </div>
       </div>
-
-      <!-- Hamburger Mobile -->
-      <button id="menu-btn" class="relative z-50 flex h-10 w-10 items-center justify-center text-white focus:outline-none lg:hidden" aria-label="Mở menu">
-        <svg id="hamburger-icon" class="w-7 h-7 block transition-transform duration-300" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
-        </svg>
-        <svg id="close-icon" class="w-7 h-7 hidden transition-transform duration-300" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
-        </svg>
-      </button>
     </div>
 
     <!-- Mobile Menu -->
@@ -219,30 +245,31 @@
     </div>
   </header>
 
-  <section class="relative lg:h-screen lg:min-h-[710px] min-h-[710px] flex items-stretch bg-black overflow-hidden pt-24 lg:pt-0">
+  <section class="relative h-screen lg:h-screen lg:min-h-[710px] min-h-[710px] flex items-stretch bg-black overflow-hidden pt-24 lg:pt-0">
     <!-- Background Image -->
     <div class="absolute inset-0 z-0">
       <!-- Mobile Background -->
-      <img loading="eager" src="./images/page/rainier lillac 70 1.png" alt="Rainier Lilac" class="scale-x-[-1] hero-bg-mobile w-full h-full object-cover object-center filter brightness-90 lg:hidden block" />
+      <img loading="eager" src="./images/page/bg-mb.png" alt="Rainier Lilac" class="absolute top-0 left-0 w-full object-cover object-[28%_90%]  filter brightness-90 lg:hidden block" />
       <!-- Desktop Background -->
       <img loading="eager" src="./images/page/rainier lillac 70 1.png" alt="Rainier Lilac" class="scale-x-[-1] absolute inset-0 w-full h-full object-cover object-center filter brightness-[0.45] lg:block hidden" />
       <img loading="eager" src="./images/page/rainier lillac 70 1.png" alt="Rainier Lilac" class="scale-x-[-1] hero-bg-desktop absolute top-0 right-0 h-full w-auto object-cover filter lg:brightness-[0.6] xl:brightness-95 lg:block hidden" />
-      <div class="hero-left-overlay absolute inset-0"></div>
-      <div class="hero-bottom-overlay absolute inset-0"></div>
+      <div class="hero-left-overlay md:block hidden absolute inset-0"></div>
+      <div class="hero-bottom-overlay md:block hidden absolute inset-0"></div>
+      <div class="bg-gradient-to-b from-black to-transparent  absolute inset-0"></div>
     </div>
 
     <!-- Content Container -->
-    <div class="max-w-[1216px] mx-auto px-6 xl:px-0 relative z-10 w-full lg:min-h-screen flex flex-col justify-center py-16 lg:py-0">
+    <div class="max-w-[1216px] mx-auto px-6 xl:px-0 relative z-10 w-full lg:min-h-screen flex flex-col justify-start md:justify-center md:py-16 lg:py-0">
       <!-- Main Content (Text Left) -->
-      <div class="w-full lg:max-w-2xl space-y-4 text-left pt-6 lg:pt-6 lg:-translate-y-6">
+      <div class="w-full lg:max-w-2xl space-y-4 text-left  md:pt-[140px] lg:pt-6 lg:-translate-y-6">
         <div class="text-gradient-lilac font-mono text-sm tracking-[0.25em] lg:tracking-[0.35em] uppercase font-medium">
           RAINIER LILAC60
         </div>
-        <h1 class="text-4xl md:text-5xl lg:text-[48px] lg:leading-[57px] font-bold text-white font-inter">
-          Kiến Tạo Chuẩn Mực Mới<br />
+        <h1 class="text-[32px] sm:text-[40px] lg:text-[48px] leading-[42px] sm:leading-[50px] lg:leading-[57px] font-bold text-white font-inter">
+          Kiến Tạo Chuẩn Mực Mới<br class="hidden md:block" />
           Cho Kính Lái Thượng Lưu
         </h1>
-        <p class="text-base md:text-lg lg:text-xl text-[#b0b0b0] max-w-xl leading-relaxed lg:leading-[30px]">
+        <p class="text-[16px] sm:text-[18px] lg:text-xl text-[#b0b0b0] max-w-xl leading-[26px] lg:leading-[30px]">
           Tái định nghĩa giới hạn phún xạ đa tầng, thách thức mọi<br class="lg:block hidden" /> nguồn nhiệt, nâng tầm đẳng cấp xe sang.
         </p>
 
@@ -250,27 +277,27 @@
         <div class="pt-4">
           <a target="_blank" href="https://zalo.me/0934194088" class="inline-flex items-center space-x-2 pb-1 border-b border-lilac text-gradient-lilac font-bold text-lg hover:text-white hover:border-white transition duration-300 group">
             <span>TƯ VẤN NGAY</span>
-            <svg class="w-5 h-5 transform group-hover:translate-x-1.5 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg class="w-5 h-5 text-lilac transform group-hover:translate-x-1.5 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
             </svg>
           </a>
         </div>
       </div>
 
-      <!-- Spec Badges Row (Bottom Right on Desktop) -->
-      <div class="hero-spec-row flex min-w-0 flex-wrap lg:flex-nowrap justify-end gap-3 w-full max-w-full mt-10 lg:mt-0 lg:absolute lg:right-6 lg:bottom-12 xl:right-[-32px] xl:bottom-[158px]">
+      <!-- Spec Badges Row (Bottom Right on Desktop) - Hidden on Mobile -->
+      <div class="hero-spec-row  flex min-w-0 flex-wrap lg:flex-nowrap justify-start md:justify-end gap-3 w-full max-w-full mt-10 lg:mt-0 absolute  left-5 bottom-5  lg:right-6 lg:bottom-12 xl:right-[-32px] xl:bottom-[158px]">
         <!-- Badge 1 -->
-        <div class="hero-spec-card min-w-0 px-3 py-1.5 flex items-center justify-between w-full sm:w-[182px] h-[40px] backdrop-blur-md">
+        <div class="hero-spec-card min-w-0 px-3 py-1.5 flex items-center justify-between sm:w-[182px] h-[40px] backdrop-blur-md">
           <span class="min-w-0 text-[12px] text-white font-semibold">VLT (Truyền sáng)</span>
           <span class="ml-2 shrink-0 text-[13px] font-bold text-gradient-lilac">60%</span>
         </div>
         <!-- Badge 2 -->
-        <div class="hero-spec-card min-w-0 px-3 py-1.5 flex items-center justify-between w-full sm:w-[223px] h-[40px] backdrop-blur-md">
+        <div class="hero-spec-card min-w-0 px-3 py-1.5 flex items-center justify-between sm:w-[223px] h-[40px] backdrop-blur-md">
           <span class="min-w-0 text-[12px] text-white font-semibold">IRR (Cản tia hồng ngoại)</span>
           <span class="ml-2 shrink-0 text-[13px] font-bold text-gradient-lilac">99%</span>
         </div>
         <!-- Badge 3 -->
-        <div class="hero-spec-card min-w-0 px-3 py-1.5 flex items-center justify-between w-full sm:w-[185px] h-[40px] backdrop-blur-md">
+        <div class="hero-spec-card min-w-0 px-3 py-1.5 flex items-center justify-between sm:w-[185px] h-[40px] backdrop-blur-md">
           <span class="min-w-0 text-[12px] text-white font-semibold">UVR (Cản tia UV)</span>
           <span class="ml-2 shrink-0 text-[13px] font-bold text-gradient-lilac">99.9%</span>
         </div>
@@ -283,32 +310,46 @@
     <!-- Overlay -->
     <div class="absolute inset-0 bg-black/80 z-0"></div>
 
-    <div class="container mx-auto px-6 lg:px-12 relative z-10">
+    <div class="container mx-auto px-4 lg:px-12 relative z-10">
       <!-- Section Header -->
-      <div class="max-w-3xl mx-auto text-center mb-16 space-y-4" data-aos="fade-up">
-        <div class="text-gradient-lilac font-mono text-lg uppercase">
+      <div class="max-w-3xl mx-auto text-center mb-10 lg:mb-16 space-y-4" data-aos="fade-up">
+        <div class="text-gradient-lilac font-mono text-sm sm:text-lg uppercase">
           RAINIER LILAC60
         </div>
-        <h2 class="text-3xl md:text-4xl font-extrabold text-white">
+        <h2 class="text-2xl sm:text-3xl md:text-4xl font-extrabold text-white leading-tight">
           Phá Vỡ Giới Hạn Để Tạo Chuẩn Mực Mới<br />dòng phim <span class="text-gradient-lilac">Phún Xạ Kim Loại</span> 
         </h2>
-        <p class="text-[#b0b0b0] text-base md:text-lg leading-relaxed">
+        <p class="text-[#b0b0b0] text-[15px] sm:text-base md:text-lg leading-relaxed">
           Vượt xa giới hạn của một dòng phim cách nhiệt thông thường, Rainier Lilac60 là thế hệ nâng cấp mới dành riêng cho kính lái xe sang với hiệu suất cách nhiệt, độ trong quang học và tính thẩm mỹ phải đạt đến sự cân bằng gần như hoàn hảo.
         </p>
       </div>
 
       <!-- Responsive Mobile Layout (Visible only on small screens) -->
-      <div class="lg:hidden flex flex-col items-center mt-12 space-y-8 relative z-10">
-        <img loading="lazy" src="./images/page/FILM AND BOX 1.png" alt="Rainier Lilac Film Roll" class="max-h-[400px] object-contain drop-shadow-[0_0_30px_rgba(244,128,255,0.2)]" />
-        <div class="space-y-6 text-center px-4 max-w-md">
-          <p class="text-[16px] leading-[1.6] text-white">
-            <span class="font-normal">Tích hợp </span><span class="font-bold text-lilac">3 lớp Bạc nguyên chất</span><span class="font-normal"> cùng hệ thống </span><span class="font-bold text-lilac">ION Vàng</span><span class="font-normal"> cao cấp giúp phản xạ nhiệt mạnh và chặn đến </span><span class="font-bold text-lilac">99% tia hồng ngoại</span>
+      <div class="lg:hidden flex items-start gap-4 mt-8 px-4 relative z-10">
+        <!-- Left: Image of Film & Box -->
+        <div class="w-[100px] sm:w-[130px] flex-shrink-0">
+          <img loading="lazy" src="./images/page/FILM AND BOX 1.png" alt="Rainier Lilac Film Roll" class="w-full h-auto object-contain" />
+        </div>
+        <!-- Right: Spec descriptions -->
+        <div class="flex-grow space-y-6 text-left text-sm sm:text-base leading-relaxed">
+          <p class="text-white">
+            Ứng dụng công nghệ phún xạ đa tầng 
+            <span class="text-lilac font-bold underline">QRS Quantum Evolution™</span> 
+            với cấu trúc 36 lớp siêu mỏng
           </p>
-          <p class="text-[16px] leading-[1.6] text-white">
-            <span class="font-normal">Ứng dụng công nghệ phún xạ đa tầng </span><span class="font-bold text-lilac">QRS Quantum Evolution™</span><span class="font-normal"> với cấu trúc </span><span class="font-bold text-lilac">36 lớp siêu mỏng</span>
+          <p class="text-white">
+            <span class="text-lilac font-bold">Tích hợp 3 lớp Bạc nguyên chất</span> 
+            cùng hệ thống 
+            <span class="text-lilac font-bold">ION Vàng</span> 
+            cao cấp giúp phản xạ nhiệt mạnh và chặn đến 
+            <span class="text-lilac font-semibold italic">99% tia hồng ngoại</span>
           </p>
-          <p class="text-[16px] leading-[1.6] text-white">
-            <span class="font-normal">Kết hợp lớp quang học </span><span class="font-bold text-lilac">Nano Sapphire</span><span class="font-normal"> và liên kết </span><span class="font-bold text-lilac">Oxit Niobium</span><span class="font-normal"> cấp hàng không</span>
+          <p class="text-white">
+            Kết hợp lớp 
+            <span class="text-lilac font-bold">quang học Nano Sapphire</span> 
+            và 
+            <span class="text-lilac font-bold">liên kết Oxit Niobium</span> 
+            cấp hàng không
           </p>
         </div>
       </div>
@@ -376,16 +417,14 @@
     <div class="absolute inset-0 bg-black/40 z-0"></div>
     <div class="absolute inset-x-0 bottom-0 h-[116px] bg-gradient-to-t from-[#020305] to-transparent z-0"></div>
 
-    <div class="relative container mx-auto px-6 z-10 text-start flex flex-col items-start justify-center h-[466px]" data-aos="zoom-in-up">
-      <div class="max-w-[850px] mx-auto">
-        <p class="text-[20px] md:text-[24px] leading-[30px] md:leading-[36px] text-white text-center">
-          <span class="font-bold text-gradient-lilac">RAINIER LILAC60</span> được đánh giá là dòng phim phản xạ nhiệt dễ thi công nhất thị trường Việt Nam hiện tại. Đồng thời tạo nên hiệu ứng <span class="font-bold">Hồng Ngọc Đế Vương</span> sang trọng và khác biệt cho kính lái xe sang.
-        </p>
-      </div>
+    <div class="relative container mx-auto px-6 z-10 text-center flex flex-col items-center justify-between h-[466px] pt-[65px] pb-[100px]" data-aos="zoom-in-up">
+      <p class="text-[18px] sm:text-[22px] lg:text-[24px] font-bold leading-[28px] sm:leading-[36px] tracking-[-0.02em] text-center text-white max-w-[850px] mx-auto">
+        <span class="text-lilac">RAINIER LILAC60</span> được đánh giá là dòng phim phản xạ nhiệt dễ thi công nhất thị trường Việt Nam hiện tại. Đồng thời tạo nên hiệu ứng Hồng Ngọc Đế Vương sang trọng và khác biệt cho kính lái xe sang.
+      </p>
 
       <!-- Bottom Label -->
       <div class="absolute bottom-[10px] left-1/2 -translate-x-1/2">
-        <span class="text-gradient-lilac font-mono text-[16px] font-bold tracking-[0.25em] uppercase">RAINIER LILAC60</span>
+        <span class="text-lilac font-mono text-[14px] sm:text-[16px] font-bold tracking-[0.25em] uppercase">RAINIER LILAC60</span>
       </div>
     </div>
   </section>
@@ -512,9 +551,9 @@
   </section>
 
   <!-- Section 5: Lợi ích vượt trội -->
-  <section class="relative py-20 lg:py-32 overflow-hidden bg-cover bg-center" style="background-image: url('./images/page/rainier lillac 70 1.png');" data-aos="fade-up">
+  <section class="relative py-20 lg:py-32 overflow-hidden bg-cover bg-center bg-fixed lg:bg-scroll" style="background-image: url('./images/page/rainier lillac 70 1.png');" data-aos="fade-up">
     <!-- Overlay -->
-    <div class="absolute inset-0  z-0"></div>
+    <div class="absolute inset-0 bg-black/80 lg:bg-transparent z-0"></div>
 
     <div class="container mx-auto px-6 lg:px-12 relative z-10">
       <!-- Section Header -->
@@ -530,15 +569,22 @@
         </p>
       </div>
 
-      <!-- Feature cards grid (2 cols, 3 rows) -->
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-[56px] max-w-[1118px] mx-auto">
+      <!-- Desktop layout (Grid): Visible on Desktop only -->
+      <div class="hidden lg:grid grid-cols-2 gap-[56px] max-w-[1118px] mx-auto">
         <!-- Card 1 -->
         <div class="feature-card rounded-[8px] p-[32px] backdrop-blur-md transition-all duration-300 bg-black/70 hover:bg-black/20" data-aos="fade-up">
-          <!-- Icon -->
           <div class="w-[32px] h-[32px] mb-[8px]">
-            <svg class="w-[32px] h-[32px] text-gradient-lilac" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z" />
-              <path stroke-linecap="round" stroke-linejoin="round" d="M10 14l-4 4" />
+            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <g clip-path="url(#clip0_1086_2724)">
+              <path d="M30.0885 20.8057C28.4425 19.1584 26.1584 18.4605 23.2251 19.2467L12.7652 8.77617L12.9035 8.25342C13.5059 5.99305 12.855 3.56336 11.2052 1.91361C9.52548 0.232548 7.13748 -0.384265 4.87904 0.23611C4.55698 0.324548 4.30629 0.57761 4.22098 0.900548C4.13567 1.22349 4.22923 1.56674 4.46529 1.80292L6.98385 4.32149C7.72017 5.05961 7.71298 6.24174 6.98567 6.97099C6.2641 7.69449 5.05123 7.69336 4.33254 6.9728L1.81348 4.45355C1.57729 4.21724 1.23304 4.12455 0.910105 4.21036C0.587105 4.29611 0.33498 4.54742 0.246855 4.8698C-0.364457 7.10342 0.236918 9.50624 1.92473 11.194C3.57011 12.8406 5.85129 13.541 8.78636 12.7532L19.247 23.2237C18.4664 26.1561 19.1398 28.418 20.808 30.0862C22.4899 31.7694 24.879 32.3816 27.1325 31.7633C27.4546 31.6749 27.7054 31.4218 27.7907 31.0989C27.8761 30.7759 27.7826 30.4326 27.5464 30.1964L25.0284 27.6784C24.2921 26.9402 24.2993 25.758 25.0266 25.0289C25.7572 24.302 26.9674 24.3136 27.6797 25.0279L30.199 27.5465C30.4352 27.7827 30.7794 27.8754 31.1023 27.7895C31.4252 27.7037 31.6774 27.4525 31.7655 27.1302C32.3768 24.897 31.7755 22.4935 30.0885 20.8057Z" fill="#F480FF"/>
+              <path d="M10.0339 16.6611L1.09692 25.5993C-0.365641 27.0618 -0.365641 29.4402 1.09692 30.9027C2.55948 32.3653 4.93786 32.3653 6.40036 30.9027L15.3372 21.9648L10.0339 16.6611ZM5.51961 27.9933C5.15336 28.3595 4.56023 28.3595 4.19398 27.9933C3.8278 27.6271 3.8278 27.0338 4.19398 26.6676L9.88023 20.9803C10.2464 20.6141 10.8397 20.6141 11.2059 20.9803C11.572 21.3465 11.572 21.9398 11.2059 22.3059L5.51961 27.9933Z" fill="#F480FF"/>
+              <path d="M31.7257 1.89082L30.1095 0.274634C29.8053 -0.0295531 29.3332 -0.0876781 28.9644 0.133509L23.9927 3.1162C23.4695 3.43001 23.3807 4.1517 23.812 4.58301L24.2077 4.97863L17.8965 11.2641L20.5487 13.9163L26.8599 7.63082L27.4174 8.18839C27.8487 8.61957 28.5704 8.53082 28.8842 8.0077L31.8669 3.03601C32.088 2.66707 32.0299 2.19501 31.7257 1.89082Z" fill="#F480FF"/>
+              </g>
+              <defs>
+              <clipPath id="clip0_1086_2724">
+              <rect width="32" height="32" fill="white"/>
+              </clipPath>
+              </defs>
             </svg>
           </div>
           <h3 class="text-gradient-lilac text-[20.78px] font-bold leading-[30.52px] tracking-[-0.02em] mt-[8px]">
@@ -551,11 +597,18 @@
 
         <!-- Card 2 -->
         <div class="feature-card rounded-[8px] p-[32px] backdrop-blur-md transition-all duration-300 bg-black/70 hover:bg-black/20" data-aos="fade-up" data-aos-delay="100">
-          <!-- Icon -->
           <div class="w-[32px] h-[32px] mb-[8px]">
-            <svg class="w-[32px] h-[32px] text-gradient-lilac" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z" />
-              <path stroke-linecap="round" stroke-linejoin="round" d="M10 14l-4 4" />
+            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <g clip-path="url(#clip0_1086_2724)">
+              <path d="M30.0885 20.8057C28.4425 19.1584 26.1584 18.4605 23.2251 19.2467L12.7652 8.77617L12.9035 8.25342C13.5059 5.99305 12.855 3.56336 11.2052 1.91361C9.52548 0.232548 7.13748 -0.384265 4.87904 0.23611C4.55698 0.324548 4.30629 0.57761 4.22098 0.900548C4.13567 1.22349 4.22923 1.56674 4.46529 1.80292L6.98385 4.32149C7.72017 5.05961 7.71298 6.24174 6.98567 6.97099C6.2641 7.69449 5.05123 7.69336 4.33254 6.9728L1.81348 4.45355C1.57729 4.21724 1.23304 4.12455 0.910105 4.21036C0.587105 4.29611 0.33498 4.54742 0.246855 4.8698C-0.364457 7.10342 0.236918 9.50624 1.92473 11.194C3.57011 12.8406 5.85129 13.541 8.78636 12.7532L19.247 23.2237C18.4664 26.1561 19.1398 28.418 20.808 30.0862C22.4899 31.7694 24.879 32.3816 27.1325 31.7633C27.4546 31.6749 27.7054 31.4218 27.7907 31.0989C27.8761 30.7759 27.7826 30.4326 27.5464 30.1964L25.0284 27.6784C24.2921 26.9402 24.2993 25.758 25.0266 25.0289C25.7572 24.302 26.9674 24.3136 27.6797 25.0279L30.199 27.5465C30.4352 27.7827 30.7794 27.8754 31.1023 27.7895C31.4252 27.7037 31.6774 27.4525 31.7655 27.1302C32.3768 24.897 31.7755 22.4935 30.0885 20.8057Z" fill="#F480FF"/>
+              <path d="M10.0339 16.6611L1.09692 25.5993C-0.365641 27.0618 -0.365641 29.4402 1.09692 30.9027C2.55948 32.3653 4.93786 32.3653 6.40036 30.9027L15.3372 21.9648L10.0339 16.6611ZM5.51961 27.9933C5.15336 28.3595 4.56023 28.3595 4.19398 27.9933C3.8278 27.6271 3.8278 27.0338 4.19398 26.6676L9.88023 20.9803C10.2464 20.6141 10.8397 20.6141 11.2059 20.9803C11.572 21.3465 11.572 21.9398 11.2059 22.3059L5.51961 27.9933Z" fill="#F480FF"/>
+              <path d="M31.7257 1.89082L30.1095 0.274634C29.8053 -0.0295531 29.3332 -0.0876781 28.9644 0.133509L23.9927 3.1162C23.4695 3.43001 23.3807 4.1517 23.812 4.58301L24.2077 4.97863L17.8965 11.2641L20.5487 13.9163L26.8599 7.63082L27.4174 8.18839C27.8487 8.61957 28.5704 8.53082 28.8842 8.0077L31.8669 3.03601C32.088 2.66707 32.0299 2.19501 31.7257 1.89082Z" fill="#F480FF"/>
+              </g>
+              <defs>
+              <clipPath id="clip0_1086_2724">
+              <rect width="32" height="32" fill="white"/>
+              </clipPath>
+              </defs>
             </svg>
           </div>
           <h3 class="text-gradient-lilac text-[20.78px] font-bold leading-[30.52px] tracking-[-0.02em] mt-[8px]">
@@ -568,11 +621,18 @@
 
         <!-- Card 3 -->
         <div class="feature-card rounded-[8px] p-[32px] backdrop-blur-md transition-all duration-300 bg-black/70 hover:bg-black/20" data-aos="fade-up" data-aos-delay="200">
-          <!-- Icon -->
           <div class="w-[32px] h-[32px] mb-[8px]">
-            <svg class="w-[32px] h-[32px] text-gradient-lilac" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z" />
-              <path stroke-linecap="round" stroke-linejoin="round" d="M10 14l-4 4" />
+            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <g clip-path="url(#clip0_1086_2724)">
+              <path d="M30.0885 20.8057C28.4425 19.1584 26.1584 18.4605 23.2251 19.2467L12.7652 8.77617L12.9035 8.25342C13.5059 5.99305 12.855 3.56336 11.2052 1.91361C9.52548 0.232548 7.13748 -0.384265 4.87904 0.23611C4.55698 0.324548 4.30629 0.57761 4.22098 0.900548C4.13567 1.22349 4.22923 1.56674 4.46529 1.80292L6.98385 4.32149C7.72017 5.05961 7.71298 6.24174 6.98567 6.97099C6.2641 7.69449 5.05123 7.69336 4.33254 6.9728L1.81348 4.45355C1.57729 4.21724 1.23304 4.12455 0.910105 4.21036C0.587105 4.29611 0.33498 4.54742 0.246855 4.8698C-0.364457 7.10342 0.236918 9.50624 1.92473 11.194C3.57011 12.8406 5.85129 13.541 8.78636 12.7532L19.247 23.2237C18.4664 26.1561 19.1398 28.418 20.808 30.0862C22.4899 31.7694 24.879 32.3816 27.1325 31.7633C27.4546 31.6749 27.7054 31.4218 27.7907 31.0989C27.8761 30.7759 27.7826 30.4326 27.5464 30.1964L25.0284 27.6784C24.2921 26.9402 24.2993 25.758 25.0266 25.0289C25.7572 24.302 26.9674 24.3136 27.6797 25.0279L30.199 27.5465C30.4352 27.7827 30.7794 27.8754 31.1023 27.7895C31.4252 27.7037 31.6774 27.4525 31.7655 27.1302C32.3768 24.897 31.7755 22.4935 30.0885 20.8057Z" fill="#F480FF"/>
+              <path d="M10.0339 16.6611L1.09692 25.5993C-0.365641 27.0618 -0.365641 29.4402 1.09692 30.9027C2.55948 32.3653 4.93786 32.3653 6.40036 30.9027L15.3372 21.9648L10.0339 16.6611ZM5.51961 27.9933C5.15336 28.3595 4.56023 28.3595 4.19398 27.9933C3.8278 27.6271 3.8278 27.0338 4.19398 26.6676L9.88023 20.9803C10.2464 20.6141 10.8397 20.6141 11.2059 20.9803C11.572 21.3465 11.572 21.9398 11.2059 22.3059L5.51961 27.9933Z" fill="#F480FF"/>
+              <path d="M31.7257 1.89082L30.1095 0.274634C29.8053 -0.0295531 29.3332 -0.0876781 28.9644 0.133509L23.9927 3.1162C23.4695 3.43001 23.3807 4.1517 23.812 4.58301L24.2077 4.97863L17.8965 11.2641L20.5487 13.9163L26.8599 7.63082L27.4174 8.18839C27.8487 8.61957 28.5704 8.53082 28.8842 8.0077L31.8669 3.03601C32.088 2.66707 32.0299 2.19501 31.7257 1.89082Z" fill="#F480FF"/>
+              </g>
+              <defs>
+              <clipPath id="clip0_1086_2724">
+              <rect width="32" height="32" fill="white"/>
+              </clipPath>
+              </defs>
             </svg>
           </div>
           <h3 class="text-gradient-lilac text-[20.78px] font-bold leading-[30.52px] tracking-[-0.02em] mt-[8px]">
@@ -585,11 +645,18 @@
 
         <!-- Card 4 -->
         <div class="feature-card rounded-[8px] p-[32px] backdrop-blur-md transition-all duration-300 bg-black/70 hover:bg-black/20" data-aos="fade-up" data-aos-delay="300">
-          <!-- Icon -->
           <div class="w-[32px] h-[32px] mb-[8px]">
-            <svg class="w-[32px] h-[32px] text-gradient-lilac" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z" />
-              <path stroke-linecap="round" stroke-linejoin="round" d="M10 14l-4 4" />
+            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <g clip-path="url(#clip0_1086_2724)">
+              <path d="M30.0885 20.8057C28.4425 19.1584 26.1584 18.4605 23.2251 19.2467L12.7652 8.77617L12.9035 8.25342C13.5059 5.99305 12.855 3.56336 11.2052 1.91361C9.52548 0.232548 7.13748 -0.384265 4.87904 0.23611C4.55698 0.324548 4.30629 0.57761 4.22098 0.900548C4.13567 1.22349 4.22923 1.56674 4.46529 1.80292L6.98385 4.32149C7.72017 5.05961 7.71298 6.24174 6.98567 6.97099C6.2641 7.69449 5.05123 7.69336 4.33254 6.9728L1.81348 4.45355C1.57729 4.21724 1.23304 4.12455 0.910105 4.21036C0.587105 4.29611 0.33498 4.54742 0.246855 4.8698C-0.364457 7.10342 0.236918 9.50624 1.92473 11.194C3.57011 12.8406 5.85129 13.541 8.78636 12.7532L19.247 23.2237C18.4664 26.1561 19.1398 28.418 20.808 30.0862C22.4899 31.7694 24.879 32.3816 27.1325 31.7633C27.4546 31.6749 27.7054 31.4218 27.7907 31.0989C27.8761 30.7759 27.7826 30.4326 27.5464 30.1964L25.0284 27.6784C24.2921 26.9402 24.2993 25.758 25.0266 25.0289C25.7572 24.302 26.9674 24.3136 27.6797 25.0279L30.199 27.5465C30.4352 27.7827 30.7794 27.8754 31.1023 27.7895C31.4252 27.7037 31.6774 27.4525 31.7655 27.1302C32.3768 24.897 31.7755 22.4935 30.0885 20.8057Z" fill="#F480FF"/>
+              <path d="M10.0339 16.6611L1.09692 25.5993C-0.365641 27.0618 -0.365641 29.4402 1.09692 30.9027C2.55948 32.3653 4.93786 32.3653 6.40036 30.9027L15.3372 21.9648L10.0339 16.6611ZM5.51961 27.9933C5.15336 28.3595 4.56023 28.3595 4.19398 27.9933C3.8278 27.6271 3.8278 27.0338 4.19398 26.6676L9.88023 20.9803C10.2464 20.6141 10.8397 20.6141 11.2059 20.9803C11.572 21.3465 11.572 21.9398 11.2059 22.3059L5.51961 27.9933Z" fill="#F480FF"/>
+              <path d="M31.7257 1.89082L30.1095 0.274634C29.8053 -0.0295531 29.3332 -0.0876781 28.9644 0.133509L23.9927 3.1162C23.4695 3.43001 23.3807 4.1517 23.812 4.58301L24.2077 4.97863L17.8965 11.2641L20.5487 13.9163L26.8599 7.63082L27.4174 8.18839C27.8487 8.61957 28.5704 8.53082 28.8842 8.0077L31.8669 3.03601C32.088 2.66707 32.0299 2.19501 31.7257 1.89082Z" fill="#F480FF"/>
+              </g>
+              <defs>
+              <clipPath id="clip0_1086_2724">
+              <rect width="32" height="32" fill="white"/>
+              </clipPath>
+              </defs>
             </svg>
           </div>
           <h3 class="text-gradient-lilac text-[20.78px] font-bold leading-[30.52px] tracking-[-0.02em] mt-[8px]">
@@ -602,11 +669,18 @@
 
         <!-- Card 5 -->
         <div class="feature-card rounded-[8px] p-[32px] backdrop-blur-md transition-all duration-300 bg-black/70 hover:bg-black/20" data-aos="fade-up" data-aos-delay="400">
-          <!-- Icon -->
           <div class="w-[32px] h-[32px] mb-[8px]">
-            <svg class="w-[32px] h-[32px] text-gradient-lilac" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z" />
-              <path stroke-linecap="round" stroke-linejoin="round" d="M10 14l-4 4" />
+            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <g clip-path="url(#clip0_1086_2724)">
+              <path d="M30.0885 20.8057C28.4425 19.1584 26.1584 18.4605 23.2251 19.2467L12.7652 8.77617L12.9035 8.25342C13.5059 5.99305 12.855 3.56336 11.2052 1.91361C9.52548 0.232548 7.13748 -0.384265 4.87904 0.23611C4.55698 0.324548 4.30629 0.57761 4.22098 0.900548C4.13567 1.22349 4.22923 1.56674 4.46529 1.80292L6.98385 4.32149C7.72017 5.05961 7.71298 6.24174 6.98567 6.97099C6.2641 7.69449 5.05123 7.69336 4.33254 6.9728L1.81348 4.45355C1.57729 4.21724 1.23304 4.12455 0.910105 4.21036C0.587105 4.29611 0.33498 4.54742 0.246855 4.8698C-0.364457 7.10342 0.236918 9.50624 1.92473 11.194C3.57011 12.8406 5.85129 13.541 8.78636 12.7532L19.247 23.2237C18.4664 26.1561 19.1398 28.418 20.808 30.0862C22.4899 31.7694 24.879 32.3816 27.1325 31.7633C27.4546 31.6749 27.7054 31.4218 27.7907 31.0989C27.8761 30.7759 27.7826 30.4326 27.5464 30.1964L25.0284 27.6784C24.2921 26.9402 24.2993 25.758 25.0266 25.0289C25.7572 24.302 26.9674 24.3136 27.6797 25.0279L30.199 27.5465C30.4352 27.7827 30.7794 27.8754 31.1023 27.7895C31.4252 27.7037 31.6774 27.4525 31.7655 27.1302C32.3768 24.897 31.7755 22.4935 30.0885 20.8057Z" fill="#F480FF"/>
+              <path d="M10.0339 16.6611L1.09692 25.5993C-0.365641 27.0618 -0.365641 29.4402 1.09692 30.9027C2.55948 32.3653 4.93786 32.3653 6.40036 30.9027L15.3372 21.9648L10.0339 16.6611ZM5.51961 27.9933C5.15336 28.3595 4.56023 28.3595 4.19398 27.9933C3.8278 27.6271 3.8278 27.0338 4.19398 26.6676L9.88023 20.9803C10.2464 20.6141 10.8397 20.6141 11.2059 20.9803C11.572 21.3465 11.572 21.9398 11.2059 22.3059L5.51961 27.9933Z" fill="#F480FF"/>
+              <path d="M31.7257 1.89082L30.1095 0.274634C29.8053 -0.0295531 29.3332 -0.0876781 28.9644 0.133509L23.9927 3.1162C23.4695 3.43001 23.3807 4.1517 23.812 4.58301L24.2077 4.97863L17.8965 11.2641L20.5487 13.9163L26.8599 7.63082L27.4174 8.18839C27.8487 8.61957 28.5704 8.53082 28.8842 8.0077L31.8669 3.03601C32.088 2.66707 32.0299 2.19501 31.7257 1.89082Z" fill="#F480FF"/>
+              </g>
+              <defs>
+              <clipPath id="clip0_1086_2724">
+              <rect width="32" height="32" fill="white"/>
+              </clipPath>
+              </defs>
             </svg>
           </div>
           <h3 class="text-gradient-lilac text-[20.78px] font-bold leading-[30.52px] tracking-[-0.02em] mt-[8px]">
@@ -619,11 +693,18 @@
 
         <!-- Card 6 -->
         <div class="feature-card rounded-[8px] p-[32px] backdrop-blur-md transition-all duration-300 bg-black/70 hover:bg-black/20" data-aos="fade-up" data-aos-delay="500">
-          <!-- Icon -->
           <div class="w-[32px] h-[32px] mb-[8px]">
-            <svg class="w-[32px] h-[32px] text-gradient-lilac" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z" />
-              <path stroke-linecap="round" stroke-linejoin="round" d="M10 14l-4 4" />
+            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <g clip-path="url(#clip0_1086_2724)">
+              <path d="M30.0885 20.8057C28.4425 19.1584 26.1584 18.4605 23.2251 19.2467L12.7652 8.77617L12.9035 8.25342C13.5059 5.99305 12.855 3.56336 11.2052 1.91361C9.52548 0.232548 7.13748 -0.384265 4.87904 0.23611C4.55698 0.324548 4.30629 0.57761 4.22098 0.900548C4.13567 1.22349 4.22923 1.56674 4.46529 1.80292L6.98385 4.32149C7.72017 5.05961 7.71298 6.24174 6.98567 6.97099C6.2641 7.69449 5.05123 7.69336 4.33254 6.9728L1.81348 4.45355C1.57729 4.21724 1.23304 4.12455 0.910105 4.21036C0.587105 4.29611 0.33498 4.54742 0.246855 4.8698C-0.364457 7.10342 0.236918 9.50624 1.92473 11.194C3.57011 12.8406 5.85129 13.541 8.78636 12.7532L19.247 23.2237C18.4664 26.1561 19.1398 28.418 20.808 30.0862C22.4899 31.7694 24.879 32.3816 27.1325 31.7633C27.4546 31.6749 27.7054 31.4218 27.7907 31.0989C27.8761 30.7759 27.7826 30.4326 27.5464 30.1964L25.0284 27.6784C24.2921 26.9402 24.2993 25.758 25.0266 25.0289C25.7572 24.302 26.9674 24.3136 27.6797 25.0279L30.199 27.5465C30.4352 27.7827 30.7794 27.8754 31.1023 27.7895C31.4252 27.7037 31.6774 27.4525 31.7655 27.1302C32.3768 24.897 31.7755 22.4935 30.0885 20.8057Z" fill="#F480FF"/>
+              <path d="M10.0339 16.6611L1.09692 25.5993C-0.365641 27.0618 -0.365641 29.4402 1.09692 30.9027C2.55948 32.3653 4.93786 32.3653 6.40036 30.9027L15.3372 21.9648L10.0339 16.6611ZM5.51961 27.9933C5.15336 28.3595 4.56023 28.3595 4.19398 27.9933C3.8278 27.6271 3.8278 27.0338 4.19398 26.6676L9.88023 20.9803C10.2464 20.6141 10.8397 20.6141 11.2059 20.9803C11.572 21.3465 11.572 21.9398 11.2059 22.3059L5.51961 27.9933Z" fill="#F480FF"/>
+              <path d="M31.7257 1.89082L30.1095 0.274634C29.8053 -0.0295531 29.3332 -0.0876781 28.9644 0.133509L23.9927 3.1162C23.4695 3.43001 23.3807 4.1517 23.812 4.58301L24.2077 4.97863L17.8965 11.2641L20.5487 13.9163L26.8599 7.63082L27.4174 8.18839C27.8487 8.61957 28.5704 8.53082 28.8842 8.0077L31.8669 3.03601C32.088 2.66707 32.0299 2.19501 31.7257 1.89082Z" fill="#F480FF"/>
+              </g>
+              <defs>
+              <clipPath id="clip0_1086_2724">
+              <rect width="32" height="32" fill="white"/>
+              </clipPath>
+              </defs>
             </svg>
           </div>
           <h3 class="text-gradient-lilac text-[20.78px] font-bold leading-[30.52px] tracking-[-0.02em] mt-[8px]">
@@ -634,82 +715,266 @@
           </p>
         </div>
       </div>
+
+      <!-- Mobile layout (Swiper Slider): Visible on Mobile/Tablet only -->
+      <div class="swiper mySwiperBenefits lg:hidden max-w-[800px] mx-auto h-[420px] md:h-[500px] overflow-hidden">
+        <div class="swiper-wrapper">
+          <!-- Slide 1 -->
+          <div class="swiper-slide h-auto pb-4">
+            <div class="feature-card relative h-full rounded-[8px] p-6 backdrop-blur-md transition-all duration-300 bg-black/70 hover:bg-black/20 flex flex-col justify-start">
+              <div class="flex items-center space-x-3 mb-3">
+                <div class="w-[32px] h-[32px] flex-shrink-0">
+                  <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_1086_2724_mobile)">
+                    <path d="M30.0885 20.8057C28.4425 19.1584 26.1584 18.4605 23.2251 19.2467L12.7652 8.77617L12.9035 8.25342C13.5059 5.99305 12.855 3.56336 11.2052 1.91361C9.52548 0.232548 7.13748 -0.384265 4.87904 0.23611C4.55698 0.324548 4.30629 0.57761 4.22098 0.900548C4.13567 1.22349 4.22923 1.56674 4.46529 1.80292L6.98385 4.32149C7.72017 5.05961 7.71298 6.24174 6.98567 6.97099C6.2641 7.69449 5.05123 7.69336 4.33254 6.9728L1.81348 4.45355C1.57729 4.21724 1.23304 4.12455 0.910105 4.21036C0.587105 4.29611 0.33498 4.54742 0.246855 4.8698C-0.364457 7.10342 0.236918 9.50624 1.92473 11.194C3.57011 12.8406 5.85129 13.541 8.78636 12.7532L19.247 23.2237C18.4664 26.1561 19.1398 28.418 20.808 30.0862C22.4899 31.7694 24.879 32.3816 27.1325 31.7633C27.4546 31.6749 27.7054 31.4218 27.7907 31.0989C27.8761 30.7759 27.7826 30.4326 27.5464 30.1964L25.0284 27.6784C24.2921 26.9402 24.2993 25.758 25.0266 25.0289C25.7572 24.302 26.9674 24.3136 27.6797 25.0279L30.199 27.5465C30.4352 27.7827 30.7794 27.8754 31.1023 27.7895C31.4252 27.7037 31.6774 27.4525 31.7655 27.1302C32.3768 24.897 31.7755 22.4935 30.0885 20.8057Z" fill="#F480FF"/>
+                    <path d="M10.0339 16.6611L1.09692 25.5993C-0.365641 27.0618 -0.365641 29.4402 1.09692 30.9027C2.55948 32.3653 4.93786 32.3653 6.40036 30.9027L15.3372 21.9648L10.0339 16.6611ZM5.51961 27.9933C5.15336 28.3595 4.56023 28.3595 4.19398 27.9933C3.8278 27.6271 3.8278 27.0338 4.19398 26.6676L9.88023 20.9803C10.2464 20.6141 10.8397 20.6141 11.2059 20.9803C11.572 21.3465 11.572 21.9398 11.2059 22.3059L5.51961 27.9933Z" fill="#F480FF"/>
+                    <path d="M31.7257 1.89082L30.1095 0.274634C29.8053 -0.0295531 29.3332 -0.0876781 28.9644 0.133509L23.9927 3.1162C23.4695 3.43001 23.3807 4.1517 23.812 4.58301L24.2077 4.97863L17.8965 11.2641L20.5487 13.9163L26.8599 7.63082L27.4174 8.18839C27.8487 8.61957 28.5704 8.53082 28.8842 8.0077L31.8669 3.03601C32.088 2.66707 32.0299 2.19501 31.7257 1.89082Z" fill="#F480FF"/>
+                    </g>
+                    <defs>
+                    <clipPath id="clip0_1086_2724_mobile">
+                    <rect width="32" height="32" fill="white"/>
+                    </clipPath>
+                    </defs>
+                  </svg>
+                </div>
+                <h3 class="text-gradient-lilac text-[18px] font-bold leading-snug tracking-[-0.02em]">
+                  Dễ thi công HÀNG ĐẦU Việt Nam
+                </h3>
+              </div>
+              <p class="text-white text-sm md:text-[16px] font-normal leading-relaxed">
+                Cấu trúc vật liệu ổn định giúp phim bám form đẹp, hạn chế viền trắng và mang lại độ hoàn thiện tinh tế cho kính lái xe sang.
+              </p>
+            </div>
+          </div>
+
+          <!-- Slide 2 -->
+          <div class="swiper-slide h-auto pb-4">
+            <div class="feature-card relative h-full rounded-[8px] p-6 backdrop-blur-md transition-all duration-300 bg-black/70 hover:bg-black/20 flex flex-col justify-start">
+              <div class="flex items-center space-x-3 mb-3">
+                <div class="w-[32px] h-[32px] flex-shrink-0">
+                  <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_1086_2724_mobile)">
+                    <path d="M30.0885 20.8057C28.4425 19.1584 26.1584 18.4605 23.2251 19.2467L12.7652 8.77617L12.9035 8.25342C13.5059 5.99305 12.855 3.56336 11.2052 1.91361C9.52548 0.232548 7.13748 -0.384265 4.87904 0.23611C4.55698 0.324548 4.30629 0.57761 4.22098 0.900548C4.13567 1.22349 4.22923 1.56674 4.46529 1.80292L6.98385 4.32149C7.72017 5.05961 7.71298 6.24174 6.98567 6.97099C6.2641 7.69449 5.05123 7.69336 4.33254 6.9728L1.81348 4.45355C1.57729 4.21724 1.23304 4.12455 0.910105 4.21036C0.587105 4.29611 0.33498 4.54742 0.246855 4.8698C-0.364457 7.10342 0.236918 9.50624 1.92473 11.194C3.57011 12.8406 5.85129 13.541 8.78636 12.7532L19.247 23.2237C18.4664 26.1561 19.1398 28.418 20.808 30.0862C22.4899 31.7694 24.879 32.3816 27.1325 31.7633C27.4546 31.6749 27.7054 31.4218 27.7907 31.0989C27.8761 30.7759 27.7826 30.4326 27.5464 30.1964L25.0284 27.6784C24.2921 26.9402 24.2993 25.758 25.0266 25.0289C25.7572 24.302 26.9674 24.3136 27.6797 25.0279L30.199 27.5465C30.4352 27.7827 30.7794 27.8754 31.1023 27.7895C31.4252 27.7037 31.6774 27.4525 31.7655 27.1302C32.3768 24.897 31.7755 22.4935 30.0885 20.8057Z" fill="#F480FF"/>
+                    <path d="M10.0339 16.6611L1.09692 25.5993C-0.365641 27.0618 -0.365641 29.4402 1.09692 30.9027C2.55948 32.3653 4.93786 32.3653 6.40036 30.9027L15.3372 21.9648L10.0339 16.6611ZM5.51961 27.9933C5.15336 28.3595 4.56023 28.3595 4.19398 27.9933C3.8278 27.6271 3.8278 27.0338 4.19398 26.6676L9.88023 20.9803C10.2464 20.6141 10.8397 20.6141 11.2059 20.9803C11.572 21.3465 11.572 21.9398 11.2059 22.3059L5.51961 27.9933Z" fill="#F480FF"/>
+                    <path d="M31.7257 1.89082L30.1095 0.274634C29.8053 -0.0295531 29.3332 -0.0876781 28.9644 0.133509L23.9927 3.1162C23.4695 3.43001 23.3807 4.1517 23.812 4.58301L24.2077 4.97863L17.8965 11.2641L20.5487 13.9163L26.8599 7.63082L27.4174 8.18839C27.8487 8.61957 28.5704 8.53082 28.8842 8.0077L31.8669 3.03601C32.088 2.66707 32.0299 2.19501 31.7257 1.89082Z" fill="#F480FF"/>
+                    </g>
+                    <defs>
+                    <clipPath id="clip0_1086_2724_mobile">
+                    <rect width="32" height="32" fill="white"/>
+                    </clipPath>
+                    </defs>
+                  </svg>
+                </div>
+                <h3 class="text-gradient-lilac text-[18px] font-bold leading-snug tracking-[-0.02em]">
+                  Tầm nhìn trong trẻo, sắc nét cả ngày lẫn đêm
+                </h3>
+              </div>
+              <p class="text-white text-sm md:text-[16px] font-normal leading-relaxed">
+                Độ xuyên sáng lý tưởng kết hợp chuẩn quang học cao cấp giúp hình ảnh hiển thị sáng rõ, giảm chói hiệu quả và mang lại cảm giác quan sát dễ chịu hơn khi vận hành.
+              </p>
+            </div>
+          </div>
+
+          <!-- Slide 3 -->
+          <div class="swiper-slide h-auto pb-4">
+            <div class="feature-card relative h-full rounded-[8px] p-6 backdrop-blur-md transition-all duration-300 bg-black/70 hover:bg-black/20 flex flex-col justify-start">
+              <div class="flex items-center space-x-3 mb-3">
+                <div class="w-[32px] h-[32px] flex-shrink-0">
+                  <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_1086_2724_mobile)">
+                    <path d="M30.0885 20.8057C28.4425 19.1584 26.1584 18.4605 23.2251 19.2467L12.7652 8.77617L12.9035 8.25342C13.5059 5.99305 12.855 3.56336 11.2052 1.91361C9.52548 0.232548 7.13748 -0.384265 4.87904 0.23611C4.55698 0.324548 4.30629 0.57761 4.22098 0.900548C4.13567 1.22349 4.22923 1.56674 4.46529 1.80292L6.98385 4.32149C7.72017 5.05961 7.71298 6.24174 6.98567 6.97099C6.2641 7.69449 5.05123 7.69336 4.33254 6.9728L1.81348 4.45355C1.57729 4.21724 1.23304 4.12455 0.910105 4.21036C0.587105 4.29611 0.33498 4.54742 0.246855 4.8698C-0.364457 7.10342 0.236918 9.50624 1.92473 11.194C3.57011 12.8406 5.85129 13.541 8.78636 12.7532L19.247 23.2237C18.4664 26.1561 19.1398 28.418 20.808 30.0862C22.4899 31.7694 24.879 32.3816 27.1325 31.7633C27.4546 31.6749 27.7054 31.4218 27.7907 31.0989C27.8761 30.7759 27.7826 30.4326 27.5464 30.1964L25.0284 27.6784C24.2921 26.9402 24.2993 25.758 25.0266 25.0289C25.7572 24.302 26.9674 24.3136 27.6797 25.0279L30.199 27.5465C30.4352 27.7827 30.7794 27.8754 31.1023 27.7895C31.4252 27.7037 31.6774 27.4525 31.7655 27.1302C32.3768 24.897 31.7755 22.4935 30.0885 20.8057Z" fill="#F480FF"/>
+                    <path d="M10.0339 16.6611L1.09692 25.5993C-0.365641 27.0618 -0.365641 29.4402 1.09692 30.9027C2.55948 32.3653 4.93786 32.3653 6.40036 30.9027L15.3372 21.9648L10.0339 16.6611ZM5.51961 27.9933C5.15336 28.3595 4.56023 28.3595 4.19398 27.9933C3.8278 27.6271 3.8278 27.0338 4.19398 26.6676L9.88023 20.9803C10.2464 20.6141 10.8397 20.6141 11.2059 20.9803C11.572 21.3465 11.572 21.9398 11.2059 22.3059L5.51961 27.9933Z" fill="#F480FF"/>
+                    <path d="M31.7257 1.89082L30.1095 0.274634C29.8053 -0.0295531 29.3332 -0.0876781 28.9644 0.133509L23.9927 3.1162C23.4695 3.43001 23.3807 4.1517 23.812 4.58301L24.2077 4.97863L17.8965 11.2641L20.5487 13.9163L26.8599 7.63082L27.4174 8.18839C27.8487 8.61957 28.5704 8.53082 28.8842 8.0077L31.8669 3.03601C32.088 2.66707 32.0299 2.19501 31.7257 1.89082Z" fill="#F480FF"/>
+                    </g>
+                    <defs>
+                    <clipPath id="clip0_1086_2724_mobile">
+                    <rect width="32" height="32" fill="white"/>
+                    </clipPath>
+                    </defs>
+                  </svg>
+                </div>
+                <h3 class="text-gradient-lilac text-[18px] font-bold leading-snug tracking-[-0.02em]">
+                  Độ mờ cực thấp &lt;0.5%
+                </h3>
+              </div>
+              <p class="text-white text-sm md:text-[16px] font-normal leading-relaxed">
+                Cho cảm giác liền lạc, trong trẻo và cao cấp như kính nguyên bản của những dòng xe sang thế hệ mới.
+              </p>
+            </div>
+          </div>
+
+          <!-- Slide 4 -->
+          <div class="swiper-slide h-auto pb-4">
+            <div class="feature-card relative h-full rounded-[8px] p-6 backdrop-blur-md transition-all duration-300 bg-black/70 hover:bg-black/20 flex flex-col justify-start">
+              <div class="flex items-center space-x-3 mb-3">
+                <div class="w-[32px] h-[32px] flex-shrink-0">
+                  <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_1086_2724_mobile)">
+                    <path d="M30.0885 20.8057C28.4425 19.1584 26.1584 18.4605 23.2251 19.2467L12.7652 8.77617L12.9035 8.25342C13.5059 5.99305 12.855 3.56336 11.2052 1.91361C9.52548 0.232548 7.13748 -0.384265 4.87904 0.23611C4.55698 0.324548 4.30629 0.57761 4.22098 0.900548C4.13567 1.22349 4.22923 1.56674 4.46529 1.80292L6.98385 4.32149C7.72017 5.05961 7.71298 6.24174 6.98567 6.97099C6.2641 7.69449 5.05123 7.69336 4.33254 6.9728L1.81348 4.45355C1.57729 4.21724 1.23304 4.12455 0.910105 4.21036C0.587105 4.29611 0.33498 4.54742 0.246855 4.8698C-0.364457 7.10342 0.236918 9.50624 1.92473 11.194C3.57011 12.8406 5.85129 13.541 8.78636 12.7532L19.247 23.2237C18.4664 26.1561 19.1398 28.418 20.808 30.0862C22.4899 31.7694 24.879 32.3816 27.1325 31.7633C27.4546 31.6749 27.7054 31.4218 27.7907 31.0989C27.8761 30.7759 27.7826 30.4326 27.5464 30.1964L25.0284 27.6784C24.2921 26.9402 24.2993 25.758 25.0266 25.0289C25.7572 24.302 26.9674 24.3136 27.6797 25.0279L30.199 27.5465C30.4352 27.7827 30.7794 27.8754 31.1023 27.7895C31.4252 27.7037 31.6774 27.4525 31.7655 27.1302C32.3768 24.897 31.7755 22.4935 30.0885 20.8057Z" fill="#F480FF"/>
+                    <path d="M10.0339 16.6611L1.09692 25.5993C-0.365641 27.0618 -0.365641 29.4402 1.09692 30.9027C2.55948 32.3653 4.93786 32.3653 6.40036 30.9027L15.3372 21.9648L10.0339 16.6611ZM5.51961 27.9933C5.15336 28.3595 4.56023 28.3595 4.19398 27.9933C3.8278 27.6271 3.8278 27.0338 4.19398 26.6676L9.88023 20.9803C10.2464 20.6141 10.8397 20.6141 11.2059 20.9803C11.572 21.3465 11.572 21.9398 11.2059 22.3059L5.51961 27.9933Z" fill="#F480FF"/>
+                    <path d="M31.7257 1.89082L30.1095 0.274634C29.8053 -0.0295531 29.3332 -0.0876781 28.9644 0.133509L23.9927 3.1162C23.4695 3.43001 23.3807 4.1517 23.812 4.58301L24.2077 4.97863L17.8965 11.2641L20.5487 13.9163L26.8599 7.63082L27.4174 8.18839C27.8487 8.61957 28.5704 8.53082 28.8842 8.0077L31.8669 3.03601C32.088 2.66707 32.0299 2.19501 31.7257 1.89082Z" fill="#F480FF"/>
+                    </g>
+                    <defs>
+                    <clipPath id="clip0_1086_2724_mobile">
+                    <rect width="32" height="32" fill="white"/>
+                    </clipPath>
+                    </defs>
+                  </svg>
+                </div>
+                <h3 class="text-gradient-lilac text-[18px] font-bold leading-snug tracking-[-0.02em]">
+                  Vật liệu thế hệ mới chống oxy hóa vượt trội
+                </h3>
+              </div>
+              <p class="text-white text-sm md:text-[16px] font-normal leading-relaxed">
+                Hạn chế rỉ biên, chống ăn mòn và duy trì vẻ đẹp cùng hiệu suất ổn định theo thời gian.
+              </p>
+            </div>
+          </div>
+
+          <!-- Slide 5 -->
+          <div class="swiper-slide h-auto pb-4">
+            <div class="feature-card relative h-full rounded-[8px] p-6 backdrop-blur-md transition-all duration-300 bg-black/70 hover:bg-black/20 flex flex-col justify-start">
+              <div class="flex items-center space-x-3 mb-3">
+                <div class="w-[32px] h-[32px] flex-shrink-0">
+                  <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_1086_2724_mobile)">
+                    <path d="M30.0885 20.8057C28.4425 19.1584 26.1584 18.4605 23.2251 19.2467L12.7652 8.77617L12.9035 8.25342C13.5059 5.99305 12.855 3.56336 11.2052 1.91361C9.52548 0.232548 7.13748 -0.384265 4.87904 0.23611C4.55698 0.324548 4.30629 0.57761 4.22098 0.900548C4.13567 1.22349 4.22923 1.56674 4.46529 1.80292L6.98385 4.32149C7.72017 5.05961 7.71298 6.24174 6.98567 6.97099C6.2641 7.69449 5.05123 7.69336 4.33254 6.9728L1.81348 4.45355C1.57729 4.21724 1.23304 4.12455 0.910105 4.21036C0.587105 4.29611 0.33498 4.54742 0.246855 4.8698C-0.364457 7.10342 0.236918 9.50624 1.92473 11.194C3.57011 12.8406 5.85129 13.541 8.78636 12.7532L19.247 23.2237C18.4664 26.1561 19.1398 28.418 20.808 30.0862C22.4899 31.7694 24.879 32.3816 27.1325 31.7633C27.4546 31.6749 27.7054 31.4218 27.7907 31.0989C27.8761 30.7759 27.7826 30.4326 27.5464 30.1964L25.0284 27.6784C24.2921 26.9402 24.2993 25.758 25.0266 25.0289C25.7572 24.302 26.9674 24.3136 27.6797 25.0279L30.199 27.5465C30.4352 27.7827 30.7794 27.8754 31.1023 27.7895C31.4252 27.7037 31.6774 27.4525 31.7655 27.1302C32.3768 24.897 31.7755 22.4935 30.0885 20.8057Z" fill="#F480FF"/>
+                    <path d="M10.0339 16.6611L1.09692 25.5993C-0.365641 27.0618 -0.365641 29.4402 1.09692 30.9027C2.55948 32.3653 4.93786 32.3653 6.40036 30.9027L15.3372 21.9648L10.0339 16.6611ZM5.51961 27.9933C5.15336 28.3595 4.56023 28.3595 4.19398 27.9933C3.8278 27.6271 3.8278 27.0338 4.19398 26.6676L9.88023 20.9803C10.2464 20.6141 10.8397 20.6141 11.2059 20.9803C11.572 21.3465 11.572 21.9398 11.2059 22.3059L5.51961 27.9933Z" fill="#F480FF"/>
+                    <path d="M31.7257 1.89082L30.1095 0.274634C29.8053 -0.0295531 29.3332 -0.0876781 28.9644 0.133509L23.9927 3.1162C23.4695 3.43001 23.3807 4.1517 23.812 4.58301L24.2077 4.97863L17.8965 11.2641L20.5487 13.9163L26.8599 7.63082L27.4174 8.18839C27.8487 8.61957 28.5704 8.53082 28.8842 8.0077L31.8669 3.03601C32.088 2.66707 32.0299 2.19501 31.7257 1.89082Z" fill="#F480FF"/>
+                    </g>
+                    <defs>
+                    <clipPath id="clip0_1086_2724_mobile">
+                    <rect width="32" height="32" fill="white"/>
+                    </clipPath>
+                    </defs>
+                  </svg>
+                </div>
+                <h3 class="text-gradient-lilac text-[18px] font-bold leading-snug tracking-[-0.02em]">
+                  Công nghệ và nguyên liệu nhập khẩu 100% từ Mỹ
+                </h3>
+              </div>
+              <p class="text-white text-sm md:text-[16px] font-normal leading-relaxed">
+                Bảo chứng cho tiêu chuẩn vật liệu cao cấp và độ ổn định vượt trội của dòng phim kính lái thế hệ mới.
+              </p>
+            </div>
+          </div>
+
+          <!-- Slide 6 -->
+          <div class="swiper-slide h-auto pb-4">
+            <div class="feature-card relative h-full rounded-[8px] p-6 backdrop-blur-md transition-all duration-300 bg-black/70 hover:bg-black/20 flex flex-col justify-start">
+              <div class="flex items-center space-x-3 mb-3">
+                <div class="w-[32px] h-[32px] flex-shrink-0">
+                  <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_1086_2724_mobile)">
+                    <path d="M30.0885 20.8057C28.4425 19.1584 26.1584 18.4605 23.2251 19.2467L12.7652 8.77617L12.9035 8.25342C13.5059 5.99305 12.855 3.56336 11.2052 1.91361C9.52548 0.232548 7.13748 -0.384265 4.87904 0.23611C4.55698 0.324548 4.30629 0.57761 4.22098 0.900548C4.13567 1.22349 4.22923 1.56674 4.46529 1.80292L6.98385 4.32149C7.72017 5.05961 7.71298 6.24174 6.98567 6.97099C6.2641 7.69449 5.05123 7.69336 4.33254 6.9728L1.81348 4.45355C1.57729 4.21724 1.23304 4.12455 0.910105 4.21036C0.587105 4.29611 0.33498 4.54742 0.246855 4.8698C-0.364457 7.10342 0.236918 9.50624 1.92473 11.194C3.57011 12.8406 5.85129 13.541 8.78636 12.7532L19.247 23.2237C18.4664 26.1561 19.1398 28.418 20.808 30.0862C22.4899 31.7694 24.879 32.3816 27.1325 31.7633C27.4546 31.6749 27.7054 31.4218 27.7907 31.0989C27.8761 30.7759 27.7826 30.4326 27.5464 30.1964L25.0284 27.6784C24.2921 26.9402 24.2993 25.758 25.0266 25.0289C25.7572 24.302 26.9674 24.3136 27.6797 25.0279L30.199 27.5465C30.4352 27.7827 30.7794 27.8754 31.1023 27.7895C31.4252 27.7037 31.6774 27.4525 31.7655 27.1302C32.3768 24.897 31.7755 22.4935 30.0885 20.8057Z" fill="#F480FF"/>
+                    <path d="M10.0339 16.6611L1.09692 25.5993C-0.365641 27.0618 -0.365641 29.4402 1.09692 30.9027C2.55948 32.3653 4.93786 32.3653 6.40036 30.9027L15.3372 21.9648L10.0339 16.6611ZM5.51961 27.9933C5.15336 28.3595 4.56023 28.3595 4.19398 27.9933C3.8278 27.6271 3.8278 27.0338 4.19398 26.6676L9.88023 20.9803C10.2464 20.6141 10.8397 20.6141 11.2059 20.9803C11.572 21.3465 11.572 21.9398 11.2059 22.3059L5.51961 27.9933Z" fill="#F480FF"/>
+                    <path d="M31.7257 1.89082L30.1095 0.274634C29.8053 -0.0295531 29.3332 -0.0876781 28.9644 0.133509L23.9927 3.1162C23.4695 3.43001 23.3807 4.1517 23.812 4.58301L24.2077 4.97863L17.8965 11.2641L20.5487 13.9163L26.8599 7.63082L27.4174 8.18839C27.8487 8.61957 28.5704 8.53082 28.8842 8.0077L31.8669 3.03601C32.088 2.66707 32.0299 2.19501 31.7257 1.89082Z" fill="#F480FF"/>
+                    </g>
+                    <defs>
+                    <clipPath id="clip0_1086_2724_mobile">
+                    <rect width="32" height="32" fill="white"/>
+                    </clipPath>
+                    </defs>
+                  </svg>
+                </div>
+                <h3 class="text-gradient-lilac text-[18px] font-bold leading-snug tracking-[-0.02em]">
+                  BẢO HÀNH TRỌN ĐỜI chính hãng
+                </h3>
+              </div>
+              <p class="text-white text-sm md:text-[16px] font-normal leading-relaxed">
+                Khẳng định chất lượng công nghệ và giá trị sử dụng bền vững theo thời gian.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
   <!-- Section 6: Thông số kỹ thuật -->
-  <section class="specs-section relative bg-black overflow-hidden py-20 lg:py-[120px]">
+  <section class="specs-section relative bg-black overflow-hidden py-14 lg:py-[120px]">
     <div class="mx-auto max-w-[1216px] px-6 xl:px-0">
       <div class="grid grid-cols-1 items-center gap-14 lg:grid-cols-[360px_1fr] xl:grid-cols-[430px_1fr]">
-        <!-- Product visual -->
-        <div class="flex justify-center lg:justify-start">
+        <!-- Product visual - Hidden on mobile -->
+        <div class="hidden lg:flex justify-center lg:justify-start">
           <img loading="lazy" src="./images/page/FILM AND BOX 1.png" alt="Rainier Lilac60 Film Box" class="specs-product-image h-[480px] w-auto object-contain md:h-[560px] lg:h-[650px]" />
         </div>
 
         <!-- Specs content -->
         <div>
-          <div class="mb-10 text-center lg:text-right">
-            <div class="font-mono text-sm uppercase tracking-[0.5em] text-[#b764bd] md:text-[18px]">
+          <div class="mb-10 text-center lg:text-center">
+            <div class="font-mono text-sm uppercase tracking-[0.5em] text-[#b764bd] md:text-[18px] text-center">
               RAINIER LILAC60
             </div>
-            <h2 class="specs-heading mt-3 text-[34px] font-extrabold uppercase leading-tight text-gradient-lilac md:text-[46px] lg:text-[40px]">
+            <h2 class="specs-heading mt-3 text-[28px] sm:text-[34px] font-extrabold uppercase leading-tight text-gradient-lilac text-center">
               THÔNG SỐ KỸ THUẬT
             </h2>
           </div>
 
-          <div class="specs-list font-mono">
-            <div class="specs-row">
-              <div>
-                <h3>Độ xuyên sáng (VLT)</h3>
-                <p>Sáng thoáng, dễ chịu và tối ưu tầm nhìn cho kính lái cao cấp</p>
+          <div class="specs-list font-mono specs-monospace">
+            <div class="divide-y specs-divider">
+              <!-- VLT -->
+              <div class="py-[16px]">
+                <div class="flex justify-between items-center">
+                  <span class="text-lilac text-[16px] font-bold leading-[32px] tracking-[-0.02em]">Độ xuyên sáng (VLT)</span>
+                  <span class="text-lilac text-[16px] font-bold leading-[32px] tracking-[-0.02em]">60%</span>
+                </div>
+                <p class="font-sans italic text-[#b0b0b0] text-[13px] sm:text-[14px] leading-[22px] mt-[4px]">Sáng thoáng, dễ chịu và tối ưu tầm nhìn cho kính lái cao cấp</p>
               </div>
-              <span>60%</span>
-            </div>
-
-            <div class="specs-row">
-              <div>
-                <h3>Chống tia UV (UVR)</h3>
-                <p>Hạn chế tối đa nhiệt lượng và tia UV dưới nắng gắt</p>
+              <!-- UVR -->
+              <div class="py-[16px]">
+                <div class="flex justify-between items-center">
+                  <span class="text-lilac text-[16px] font-bold leading-[32px] tracking-[-0.02em]">Chống tia UV (UVR)</span>
+                  <span class="text-lilac text-[16px] font-bold leading-[32px] tracking-[-0.02em]">100%</span>
+                </div>
+                <p class="font-sans italic text-[#b0b0b0] text-[13px] sm:text-[14px] leading-[22px] mt-[4px]">Hạn chế tối đa nhiệt lượng và tia UV dưới nắng gắt</p>
               </div>
-              <span>100%</span>
-            </div>
-
-            <div class="specs-row">
-              <div>
-                <h3>Độ trong quang học (Haze)</h3>
-                <p>Độ trong quang học cực cao, mang lại cảm giác sắc nét như kính nguyên bản</p>
+              <!-- Haze -->
+              <div class="py-[16px]">
+                <div class="flex justify-between items-center">
+                  <span class="text-lilac text-[16px] font-bold leading-[32px] tracking-[-0.02em]">Độ trong quang học (Haze)</span>
+                  <span class="text-lilac text-[16px] font-bold leading-[32px] tracking-[-0.02em]">&lt;0.5%</span>
+                </div>
+                <p class="font-sans italic text-[#b0b0b0] text-[13px] sm:text-[14px] leading-[22px] mt-[4px]">Độ trong quang học cực cao, mang lại cảm giác sắc nét như kính nguyên bản</p>
               </div>
-              <span>&lt;0.5%</span>
-            </div>
-
-            <div class="specs-row">
-              <div>
-                <h3>Tổng cản nhiệt (TSER)</h3>
-                <p>Độ trong quang học cực cao, mang lại cảm giác sắc</p>
+              <!-- TSER -->
+              <div class="py-[16px]">
+                <div class="flex justify-between items-center">
+                  <span class="text-lilac text-[16px] font-bold leading-[32px] tracking-[-0.02em]">Tổng cản nhiệt (TSER)</span>
+                  <span class="text-lilac text-[16px] font-bold leading-[32px] tracking-[-0.02em]">60%</span>
+                </div>
+                <p class="font-sans italic text-[#b0b0b0] text-[13px] sm:text-[14px] leading-[22px] mt-[4px]">Độ trong quang học cực cao, mang lại cảm giác sắc</p>
               </div>
-              <span>60%</span>
-            </div>
-
-            <div class="specs-row specs-row-compact">
-              <div>
-                <h3>Độ dày phim</h3>
+              <!-- Độ dày phim -->
+              <div class="py-[16px]">
+                <div class="flex justify-between items-center">
+                  <span class="text-lilac text-[16px] font-bold leading-[32px] tracking-[-0.02em]">Độ dày phim</span>
+                  <span class="text-lilac text-[16px] font-bold leading-[32px] tracking-[-0.02em]">2 mil</span>
+                </div>
               </div>
-              <span>2 mil</span>
-            </div>
-
-            <div class="specs-row specs-row-compact">
-              <div>
-                <h3>Vị trí sử dụng</h3>
+              <!-- Vị trí sử dụng -->
+              <div class="py-[16px]">
+                <div class="flex justify-between items-center">
+                  <span class="text-lilac text-[16px] font-bold leading-[32px] tracking-[-0.02em]">Vị trí sử dụng</span>
+                  <span class="text-lilac text-[16px] font-bold leading-[32px] tracking-[-0.02em]">Kính lái</span>
+                </div>
               </div>
-              <span>Kính lái</span>
-            </div>
-
-            <div class="specs-row specs-row-last">
-              <div>
-                <h3>Bảo hành chính hãng</h3>
-                <p>Bảo chứng cho chất lượng và giá trị sử dụng bền vững</p>
+              <!-- Kích thước -->
+              <div class="py-[16px]">
+                <div class="flex justify-between items-center">
+                  <span class="text-lilac text-[16px] font-bold leading-[32px] tracking-[-0.02em]">Kích thước</span>
+                  <span class="text-lilac text-[16px] font-bold leading-[32px] tracking-[-0.02em]">1m52 x 30m</span>
+                </div>
+                <p class="font-sans italic text-[#b0b0b0] text-[13px] sm:text-[14px] leading-[22px] mt-[4px]">Tối ưu hiệu quả thi công cho hệ thống đại lý chuyên nghiệp</p>
               </div>
-              <span>Trọn đời</span>
+              <!-- Bảo hành -->
+              <div class="py-[16px]">
+                <div class="flex justify-between items-center">
+                  <span class="text-lilac text-[16px] font-bold leading-[32px] tracking-[-0.02em]">Bảo hành chính hãng</span>
+                  <span class="text-lilac text-[16px] font-bold leading-[32px] tracking-[-0.02em]">Trọn đời</span>
+                </div>
+                <p class="font-sans italic text-[#b0b0b0] text-[13px] sm:text-[14px] leading-[22px] mt-[4px]">Tối ưu hiệu quả thi công cho hệ thống đại lý chuyên nghiệp</p>
+              </div>
             </div>
           </div>
         </div>

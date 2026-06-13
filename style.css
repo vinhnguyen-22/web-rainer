@@ -179,23 +179,17 @@ body {
 @media (max-width: 1023px) {
   #menu-btn {
     display: flex !important;
-    position: fixed;
-    right: 24px;
-    top: 16px;
+    position: relative;
+    right: auto;
+    top: auto;
   }
 
   #hamburger-icon {
-    display: none !important;
+    display: block !important;
   }
 
   #menu-btn::before {
-    content: '';
-    display: block;
-    width: 24px;
-    height: 2px;
-    background: #fff;
-    border-radius: 999px;
-    box-shadow: 0 -7px 0 #fff, 0 7px 0 #fff;
+    display: none !important;
   }
 
   #menu-btn.menu-open::before {
@@ -212,9 +206,6 @@ body {
   }
 
   .hero-spec-row .hero-spec-card {
-    flex: 0 0 calc(100vw - 48px);
-    width: calc(100vw - 48px) !important;
-    max-width: calc(100vw - 48px) !important;
     justify-content: flex-start;
   }
 
@@ -230,10 +221,6 @@ body {
 }
 
 @media (max-width: 639px) {
-  #menu-btn {
-    right: max(24px, calc(100vw - 366px));
-  }
-
   .specs-row {
     grid-template-columns: 1fr;
     gap: 8px;
@@ -359,5 +346,13 @@ body {
 /* Linear timing for Certificates infinite marquee scroller */
 .mySwiperCertificates .swiper-wrapper {
   transition-timing-function: linear !important;
+}
+
+/* Technical Specifications Monospace font and colors */
+.specs-monospace {
+  font-family: 'Courier New', Courier, monospace;
+}
+.specs-divider {
+  border-color: rgba(244, 128, 255, 0.35) !important;
 }
 

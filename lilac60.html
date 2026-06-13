@@ -119,18 +119,28 @@
 
   <!-- ===== HEADER ===== -->
   <header class="fixed w-full z-50 transition-all duration-300 bg-black/20 border-b border-transparent" id="main-header">
-    <div class="max-w-[1440px] mx-auto px-[80px] lg:px-[112px]">
-      <div class="flex items-center justify-between h-[80px]">
+    <div class="max-w-[1440px] mx-auto px-6 lg:px-[112px]">
+      <div class="flex items-center justify-between h-[80px] relative">
 
-        <!-- Left: Logo + Nav -->
-        <div class="flex items-center gap-[306px]">
+        <!-- Mobile Hamburger (Left on mobile, hidden on desktop) -->
+        <button id="menu-btn" class="lg:hidden relative z-50 flex h-10 w-10 items-center justify-start text-white focus:outline-none" aria-label="Mở menu">
+          <svg id="hamburger-icon" class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+          <svg id="close-icon" class="w-7 h-7 hidden" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+
+        <!-- Left: Logo + Nav (Desktop) -->
+        <div class="hidden lg:flex items-center gap-[306px]">
           <!-- Logo -->
           <a href="https://rainier.vn/" class="flex-shrink-0">
             <img src="./images/page/Logo 1.png" alt="Rainier Logo" class="h-[32px] w-auto" loading="eager" />
           </a>
 
           <!-- Desktop Nav -->
-          <nav class="hidden lg:flex items-center gap-[20px]">
+          <nav class="flex items-center gap-[20px]">
             <a href="https://rainier.vn/" class="text-white font-semibold text-[16px] leading-[24px] hover:text-lilac transition">TRANG CHỦ</a>
 
             <!-- Dropdown SẢN PHẨM -->
@@ -155,7 +165,26 @@
           </nav>
         </div>
 
-        <!-- Right: Hotline -->
+        <!-- Center: Logo (Mobile only) -->
+        <div class="lg:hidden absolute left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 flex items-center justify-center">
+          <a href="https://rainier.vn/">
+            <img src="./images/page/Logo 1.png" alt="Rainier Logo" class="h-8 w-auto" loading="eager" />
+          </a>
+        </div>
+
+        <!-- Right: Shopping Bag Icon + Badge "1" (Mobile only) -->
+        <div class="lg:hidden flex items-center justify-end">
+          <a href="https://rainier.vn/gio-hang" class="relative w-10 h-10 rounded-full flex items-center justify-center bg-white/10 border border-white/20 backdrop-blur-md">
+            <svg class="w-5 h-5 text-white/80" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
+            </svg>
+            <span class="absolute -top-1 -right-1 w-[18px] h-[18px] bg-[#E88C00] text-white text-[10px] font-bold rounded-full flex items-center justify-center border border-black/20">
+              1
+            </span>
+          </a>
+        </div>
+
+        <!-- Right: Hotline (Desktop only) -->
         <div class="hidden lg:flex items-center gap-[10px]">
           <!-- Phone icon circle -->
           <div class="w-[32px] h-[32px] rounded-full bg-second-color flex items-center justify-center flex-shrink-0">
@@ -169,15 +198,6 @@
           </div>
         </div>
 
-        <!-- Mobile Hamburger -->
-        <button id="menu-btn" class="lg:hidden relative z-50 flex h-10 w-10 items-center justify-center text-white focus:outline-none" aria-label="Mở menu">
-          <svg id="hamburger-icon" class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
-          </svg>
-          <svg id="close-icon" class="w-7 h-7 hidden" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
-          </svg>
-        </button>
       </div>
     </div>
 
@@ -202,7 +222,7 @@
     <!-- Background car image -->
     <div class="absolute inset-0 z-0">
       <!-- Dark base layer -->
-      <img src="./images/page/rainier lillac 70 1.png" alt="" class="absolute inset-0 w-full h-full object-cover brightness-[0.45]" loading="eager" />
+      <img src="./images/page/rainier lillac 70 1.png" alt="" class="absolute inset-0 w-full h-full object-cover object-[30%_center] scale-x-[-1] brightness-[0.55]" loading="eager" />
       <!-- Main car image positioned right -->
       <img src="./images/page/rainier lillac 70 1.png" alt="Rainier Lilac Car" class="hidden lg:block absolute top-0 right-0 h-full w-auto object-contain brightness-95 scale-x-[-1]" loading="eager" />
       <!-- Left gradient overlay -->
@@ -212,31 +232,31 @@
     </div>
 
     <!-- Content -->
-    <div class="relative z-10 max-w-[1440px] mx-auto px-[80px] lg:px-[64px] h-full flex items-center">
-      <div class="max-w-[1280px] mx-auto w-full px-[32px]">
+    <div class="relative z-10 max-w-[1440px] mx-auto px-6 lg:px-[64px] h-full flex items-center">
+      <div class="max-w-[1280px] mx-auto w-full px-0 lg:px-[32px]">
         <!-- Text content -->
-        <div class="max-w-[600px] space-y-0 pt-[208px] lg:pt-0 lg:mt-[-40px]">
+        <div class="max-w-[600px] space-y-0 pt-[140px] lg:pt-0 lg:mt-[-40px]">
           <!-- Subtitle -->
-          <p class="text-lilac font-mono text-[16px] font-bold leading-[31.64px] tracking-[0.25em] uppercase mb-0">
+          <p class="text-lilac font-mono text-[14px] sm:text-[16px] font-bold leading-[31.64px] tracking-[0.25em] uppercase mb-0">
             RAINIER LILAC60
           </p>
 
           <!-- Main heading -->
-          <h1 class="text-[48px] font-bold text-white leading-[57px] tracking-[-0.02em] mt-0">
-            Kiến Tạo Chuẩn Mực Mới<br>Cho Kính Lái Thượng Lưu
+          <h1 class="text-[32px] sm:text-[40px] lg:text-[48px] font-bold text-white leading-[42px] sm:leading-[50px] lg:leading-[57px] tracking-[-0.02em] mt-0">
+            Kiến Tạo Chuẩn Mực Mới<br class="hidden md:block">Cho Kính Lái Thượng Lưu
           </h1>
 
           <!-- Supporting text -->
-          <p class="text-[#b0b0b0] text-[20px] font-normal leading-[30px] max-w-[587px] mt-[24px]">
-            Tái định nghĩa giới hạn phún xạ đa tầng, thách thức mọi nguồn nhiệt, nâng tầm đẳng cấp xe sang
+          <p class="text-[#b0b0b0] text-[16px] sm:text-[18px] lg:text-[20px] font-normal leading-[26px] lg:leading-[30px] max-w-[587px] mt-[16px] lg:mt-[24px]">
+            Tái định nghĩa giới hạn phún xạ đa tầng, thách thức mọi nguồn nhiệt, nâng tầm đẳng cấp xe sang.
           </p>
 
           <!-- CTA Link -->
-          <div class="mt-[84px]">
+          <div class="mt-[40px] sm:mt-[60px] lg:mt-[84px]">
             <a href="https://zalo.me/0934194088" target="_blank"
               class="cta-link inline-flex items-center gap-[8px] text-lilac font-bold text-[16px] tracking-[-0.02em] leading-[140%] hover:text-white hover:border-white transition-colors duration-300 group py-[8px]">
               <span>TƯ VẤN NGAY</span>
-              <svg class="w-[24px] h-[24px] transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg class="w-[24px] h-[24px] text-lilac transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14M12 5l7 7-7 7" />
               </svg>
             </a>
@@ -262,8 +282,8 @@
       </div>
     </div>
 
-    <!-- Mobile spec badges -->
-    <div class="absolute bottom-6 left-6 right-6 z-10 flex flex-col gap-2 lg:hidden">
+    <!-- Mobile spec badges - Hidden to match Figma screenshot -->
+    <div class="absolute bottom-6 left-6 right-6 z-10 flex-col gap-2 hidden">
       <div class="spec-badge flex items-center justify-between px-4 py-2">
         <span class="text-[#b0b0b0] text-[12px] font-semibold">VLT (Truyền sáng)</span>
         <span class="text-lilac text-[13px] font-bold ml-2">60%</span>
@@ -288,34 +308,48 @@
     <img src="./images/page/376580 1.jpg" alt="" class="absolute inset-0 w-full h-full object-cover opacity-30" loading="lazy" />
     <div class="absolute inset-0 bg-black/70"></div>
 
-    <div class="relative z-10 max-w-[1440px] mx-auto px-[80px] lg:px-[112px]">
+    <div class="relative z-10 max-w-[1440px] mx-auto px-4 lg:px-[112px]">
       <!-- Section header -->
-      <div class="text-center pt-[75px] pb-[30px]">
-        <div class="max-w-[1216px] mx-auto px-[32px]">
-          <p class="text-lilac font-mono text-[16px] font-bold leading-[31.64px] tracking-[0.25em] uppercase text-center">
+      <div class="text-center pt-[50px] lg:pt-[75px] pb-[20px] lg:pb-[30px]">
+        <div class="max-w-[1216px] mx-auto px-4 sm:px-[32px]">
+          <p class="text-lilac font-mono text-[14px] sm:text-[16px] font-bold leading-[31.64px] tracking-[0.25em] uppercase text-center">
             RAINIER LILAC60
           </p>
-          <h2 class="text-[32px] font-bold text-white leading-[47px] tracking-[-0.02em] text-center mt-[0]">
+          <h2 class="text-[24px] sm:text-[32px] font-bold text-white leading-[34px] sm:leading-[47px] tracking-[-0.02em] text-center mt-[0]">
             Phá vỡ giới hạn để tạo chuẩn mực mới<br>dòng phim <span class="text-lilac">Phún Xạ Kim Loại</span>
           </h2>
-          <p class="text-[#b0b0b0] text-[20px] font-normal leading-[30px] text-center max-w-[955px] mx-auto mt-[24px]">
+          <p class="text-[#b0b0b0] text-[15px] sm:text-[18px] lg:text-[20px] font-normal leading-[24px] sm:leading-[30px] text-center max-w-[955px] mx-auto mt-[16px] lg:mt-[24px]">
             Vượt xa giới hạn của một dòng phim cách nhiệt thông thường, Rainier Lilac60 là thế hệ nâng cấp mới dành riêng cho kính lái xe sang với hiệu suất cách nhiệt, độ trong quang học và tính thẩm mỹ phải đạt đến sự cân bằng gần như hoàn hảo.
           </p>
         </div>
       </div>
 
       <!-- Responsive Mobile Layout (Visible only on small screens) -->
-      <div class="lg:hidden flex flex-col items-center mt-12 space-y-8 relative z-10">
-        <img loading="lazy" src="./images/page/FILM AND BOX 1.png" alt="Rainier Lilac Film Roll" class="max-h-[400px] object-contain drop-shadow-[0_0_30px_rgba(244,128,255,0.2)]" />
-        <div class="space-y-6 text-center px-4 max-w-md">
-          <p class="text-[16px] leading-[1.6] text-white">
-            <span class="font-normal">Tích hợp </span><span class="font-bold text-lilac">3 lớp Bạc nguyên chất</span><span class="font-normal"> cùng hệ thống </span><span class="font-bold text-lilac">ION Vàng</span><span class="font-normal"> cao cấp giúp phản xạ nhiệt mạnh và chặn đến </span><span class="font-bold text-lilac">99% tia hồng ngoại</span>
+      <div class="lg:hidden flex items-start gap-4 mt-8 px-4 relative z-10">
+        <!-- Left: Image of Film & Box -->
+        <div class="w-[100px] sm:w-[130px] flex-shrink-0">
+          <img loading="lazy" src="./images/page/FILM AND BOX 1.png" alt="Rainier Lilac Film Roll" class="w-full h-auto object-contain" />
+        </div>
+        <!-- Right: Spec descriptions -->
+        <div class="flex-grow space-y-6 text-left text-sm sm:text-base leading-relaxed">
+          <p class="text-white">
+            Ứng dụng công nghệ phún xạ đa tầng 
+            <span class="text-lilac font-bold underline">QRS Quantum Evolution™</span> 
+            với cấu trúc 36 lớp siêu mỏng
           </p>
-          <p class="text-[16px] leading-[1.6] text-white">
-            <span class="font-normal">Ứng dụng công nghệ phún xạ đa tầng </span><span class="font-bold text-lilac">QRS Quantum Evolution™</span><span class="font-normal"> với cấu trúc </span><span class="font-bold text-lilac">36 lớp siêu mỏng</span>
+          <p class="text-white">
+            <span class="text-lilac font-bold">Tích hợp 3 lớp Bạc nguyên chất</span> 
+            cùng hệ thống 
+            <span class="text-lilac font-bold">ION Vàng</span> 
+            cao cấp giúp phản xạ nhiệt mạnh và chặn đến 
+            <span class="text-lilac font-semibold italic">99% tia hồng ngoại</span>
           </p>
-          <p class="text-[16px] leading-[1.6] text-white">
-            <span class="font-normal">Kết hợp lớp quang học </span><span class="font-bold text-lilac">Nano Sapphire</span><span class="font-normal"> và liên kết </span><span class="font-bold text-lilac">Oxit Niobium</span><span class="font-normal"> cấp hàng không</span>
+          <p class="text-white">
+            Kết hợp lớp 
+            <span class="text-lilac font-bold">quang học Nano Sapphire</span> 
+            và 
+            <span class="text-lilac font-bold">liên kết Oxit Niobium</span> 
+            cấp hàng không
           </p>
         </div>
       </div>
@@ -389,16 +423,10 @@
     <div class="absolute inset-0 bg-black/40 z-[1]"></div>
 
     <div class="relative z-10 max-w-[850px] mx-auto px-6 text-center pt-[65px] pb-[100px] flex flex-col items-center justify-between min-h-[380px]">
-      <p class="text-[24px] font-bold leading-[36px] tracking-[-0.02em] text-center">
-        <span class="text-lilac">RAINIER LILAC60</span>
-        <span class="text-white"> được đánh giá là dòng phim phản xạ nhiệt dễ thi công nhất</span>
-        <br>
-        <span class="text-white">thị trường Việt Nam hiện tại. Đồng thời tạo nên hiệu ứng </span>
-        <span class="text-lilac">Hồng Ngọc Đế Vương</span>
-        <br>
-        <span class="text-white">sang trọng và khác biệt cho kính lái xe sang</span>
+      <p class="text-[18px] sm:text-[22px] lg:text-[24px] font-bold leading-[28px] sm:leading-[36px] tracking-[-0.02em] text-center text-white">
+        <span class="text-lilac">RAINIER LILAC60</span> được đánh giá là dòng phim phản xạ nhiệt dễ thi công nhất thị trường Việt Nam hiện tại. Đồng thời tạo nên hiệu ứng Hồng Ngọc Đế Vương sang trọng và khác biệt cho kính lái xe sang
       </p>
-      <p class="text-lilac font-mono text-[16px] font-bold leading-[31.64px] tracking-[0.25em] uppercase mt-12 lg:mt-24">
+      <p class="text-lilac font-mono text-[14px] sm:text-[16px] font-bold leading-[31.64px] tracking-[0.25em] uppercase mt-12 lg:mt-24">
         RAINIER LILAC60
       </p>
     </div>
@@ -639,7 +667,7 @@
   </section>
 
   <!-- ===== SECTION 8: THÔNG SỐ KỸ THUẬT ===== -->
-  <section class="relative w-full bg-[#020305] overflow-hidden py-[94px]" data-aos="fade-up">
+  <section class="relative w-full bg-[#020305] overflow-hidden py-[60px] lg:py-[94px]" data-aos="fade-up">
     <!-- Film box background -->
     <div class="absolute right-0 top-0 bottom-0 w-[40%] hidden lg:block">
       <div class="relative h-full flex items-center justify-center">
@@ -649,28 +677,28 @@
       </div>
     </div>
 
-    <div class="max-w-[1440px] mx-auto px-[80px] lg:px-[112px]">
-      <div class="max-w-[1280px] mx-auto px-[32px]">
+    <div class="max-w-[1440px] mx-auto px-6 lg:px-[112px]">
+      <div class="max-w-[1280px] mx-auto px-0 lg:px-[32px]">
         <!-- Header -->
-        <div class="mb-[48px]">
-          <p class="text-lilac font-mono text-[16px] font-bold leading-[31.64px] tracking-[0.25em] uppercase">
+        <div class="text-center mb-[48px]">
+          <p class="text-lilac font-mono text-[14px] sm:text-[16px] font-bold leading-[31.64px] tracking-[0.25em] uppercase">
             RAINIER LILAC60
           </p>
-          <h2 class="text-[32px] font-bold text-white leading-[47px] tracking-[-0.02em] mt-0">
+          <h2 class="text-[28px] sm:text-[32px] font-bold text-white leading-[38px] sm:leading-[47px] tracking-[-0.02em] mt-0">
             THÔNG SỐ KỸ THUẬT
           </h2>
         </div>
 
         <!-- Specs list with descriptions -->
-        <div class="max-w-[780px] relative z-10">
-          <div class="divide-y divide-white/10">
+        <div class="max-w-[780px] relative z-10 specs-monospace">
+          <div class="divide-y specs-divider">
             <!-- VLT -->
             <div class="py-[16px]">
               <div class="flex justify-between items-center">
                 <span class="text-lilac text-[16px] font-bold leading-[32px] tracking-[-0.02em]">Độ xuyên sáng (VLT)</span>
                 <span class="text-lilac text-[16px] font-bold leading-[32px] tracking-[-0.02em]">60%</span>
               </div>
-              <p class="text-[#b0b0b0] text-[14px] leading-[22px] mt-[4px]">Sáng thoáng, dễ chịu và tối ưu tầm nhìn cho kính lái cao cấp</p>
+              <p class="font-sans italic text-[#b0b0b0] text-[13px] sm:text-[14px] leading-[22px] mt-[4px]">Sáng thoáng, dễ chịu và tối ưu tầm nhìn cho kính lái cao cấp</p>
             </div>
             <!-- UVR -->
             <div class="py-[16px]">
@@ -678,7 +706,7 @@
                 <span class="text-lilac text-[16px] font-bold leading-[32px] tracking-[-0.02em]">Chống tia UV (UVR)</span>
                 <span class="text-lilac text-[16px] font-bold leading-[32px] tracking-[-0.02em]">100%</span>
               </div>
-              <p class="text-[#b0b0b0] text-[14px] leading-[22px] mt-[4px]">Hạn chế tối đa nhiệt lượng và tia UV dưới nắng gắt</p>
+              <p class="font-sans italic text-[#b0b0b0] text-[13px] sm:text-[14px] leading-[22px] mt-[4px]">Hạn chế tối đa nhiệt lượng và tia UV dưới nắng gắt</p>
             </div>
             <!-- Haze -->
             <div class="py-[16px]">
@@ -686,7 +714,7 @@
                 <span class="text-lilac text-[16px] font-bold leading-[32px] tracking-[-0.02em]">Độ trong quang học (Haze)</span>
                 <span class="text-lilac text-[16px] font-bold leading-[32px] tracking-[-0.02em]">&lt;0.5%</span>
               </div>
-              <p class="text-[#b0b0b0] text-[14px] leading-[22px] mt-[4px]">Độ trong quang học cực cao, mang lại cảm giác sắc nét như kính nguyên bản</p>
+              <p class="font-sans italic text-[#b0b0b0] text-[13px] sm:text-[14px] leading-[22px] mt-[4px]">Độ trong quang học cực cao, mang lại cảm giác sắc nét như kính nguyên bản</p>
             </div>
             <!-- TSER -->
             <div class="py-[16px]">
@@ -694,7 +722,7 @@
                 <span class="text-lilac text-[16px] font-bold leading-[32px] tracking-[-0.02em]">Tổng cản nhiệt (TSER)</span>
                 <span class="text-lilac text-[16px] font-bold leading-[32px] tracking-[-0.02em]">60%</span>
               </div>
-              <p class="text-[#b0b0b0] text-[14px] leading-[22px] mt-[4px]">Độ trong quang học cực cao, mang lại cảm giác sắc</p>
+              <p class="font-sans italic text-[#b0b0b0] text-[13px] sm:text-[14px] leading-[22px] mt-[4px]">Độ trong quang học cực cao, mang lại cảm giác sắc</p>
             </div>
             <!-- Độ dày phim -->
             <div class="py-[16px]">
@@ -716,7 +744,7 @@
                 <span class="text-lilac text-[16px] font-bold leading-[32px] tracking-[-0.02em]">Kích thước</span>
                 <span class="text-lilac text-[16px] font-bold leading-[32px] tracking-[-0.02em]">1m52 x 30m</span>
               </div>
-              <p class="text-[#b0b0b0] text-[14px] leading-[22px] mt-[4px]">Tối ưu hiệu quả thi công cho hệ thống đại lý chuyên nghiệp</p>
+              <p class="font-sans italic text-[#b0b0b0] text-[13px] sm:text-[14px] leading-[22px] mt-[4px]">Tối ưu hiệu quả thi công cho hệ thống đại lý chuyên nghiệp</p>
             </div>
             <!-- Bảo hành -->
             <div class="py-[16px]">
@@ -724,13 +752,13 @@
                 <span class="text-lilac text-[16px] font-bold leading-[32px] tracking-[-0.02em]">Bảo hành chính hãng</span>
                 <span class="text-lilac text-[16px] font-bold leading-[32px] tracking-[-0.02em]">Trọn đời</span>
               </div>
-              <p class="text-[#b0b0b0] text-[14px] leading-[22px] mt-[4px]">Tối ưu hiệu quả thi công cho hệ thống đại lý chuyên nghiệp</p>
+              <p class="font-sans italic text-[#b0b0b0] text-[13px] sm:text-[14px] leading-[22px] mt-[4px]">Tối ưu hiệu quả thi công cho hệ thống đại lý chuyên nghiệp</p>
             </div>
           </div>
         </div>
 
-        <!-- Mobile Film box image -->
-        <div class="lg:hidden flex justify-center mt-12" data-aos="fade-up">
+        <!-- Mobile Film box image - Hidden to match Figma screenshot -->
+        <div class="hidden lg:hidden flex justify-center mt-12" data-aos="fade-up">
           <div class="relative">
             <div class="absolute inset-0 bg-lilac/10 rounded-full blur-[65px] opacity-60"></div>
             <img src="./images/page/FILM AND BOX 1.png" alt="Rainier Lilac Film"

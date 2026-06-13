@@ -58,6 +58,30 @@ var swiperTestimonials = new Swiper('.mySwiperTestimonials', {
   },
 });
 
+// Initialize Swiper for Benefits (Vertical Scroll, Autoplay, max 3 slides)
+var swiperBenefits = new Swiper('.mySwiperBenefits', {
+  direction: 'vertical',
+  slidesPerView: 2,
+  spaceBetween: 16,
+  loop: true,
+  observer: true,
+  observeParents: true,
+  autoplay: {
+    delay: 3000,
+    disableOnInteraction: false,
+  },
+  breakpoints: {
+    320: {
+      slidesPerView: 2,
+      spaceBetween: 16,
+    },
+    768: {
+      slidesPerView: 2.5,
+      spaceBetween: 16,
+    }
+  }
+});
+
 // Mobile menu toggle logic
 const menuBtn = document.getElementById('menu-btn');
 const mobileMenu = document.getElementById('mobile-menu');
