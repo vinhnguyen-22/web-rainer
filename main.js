@@ -65,6 +65,10 @@ var swiperBenefits = new Swiper('.mySwiperBenefits', {
   spaceBetween: 16,
   observer: true,
   observeParents: true,
+  touchReleaseOnEdges: true,
+  mousewheel: {
+    releaseOnEdges: true,
+  },
   autoplay: {
     delay: 3000,
     disableOnInteraction: false,
