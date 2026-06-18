@@ -249,13 +249,13 @@
     <!-- Background Image -->
     <div class="absolute inset-0 z-0">
       <!-- Mobile Background -->
-      <img loading="eager" src="./images/page/bg-mb.png" alt="Rainier Lilac" class="absolute top-0 left-0 w-full object-cover object-[28%_90%]  filter brightness-90 lg:hidden block" />
+      <img loading="eager" src="./images/page/bg-mb.png" alt="Rainier Lilac" class="absolute top-0 left-0 w-full object-cover lg:hidden block" />
       <!-- Desktop Background -->
       <img loading="eager" src="./images/page/rainier lillac 70 1.png" alt="Rainier Lilac" class="scale-x-[-1] absolute inset-0 w-full h-full object-cover object-center filter brightness-[0.45] lg:block hidden" />
       <img loading="eager" src="./images/page/rainier lillac 70 1.png" alt="Rainier Lilac" class="scale-x-[-1] hero-bg-desktop absolute top-0 right-0 h-full w-auto object-cover filter lg:brightness-[0.6] xl:brightness-95 lg:block hidden" />
       <div class="hero-left-overlay md:block hidden absolute inset-0"></div>
       <div class="hero-bottom-overlay md:block hidden absolute inset-0"></div>
-      <div class="bg-gradient-to-b from-black to-transparent  absolute inset-0"></div>
+      <div class="bg-gradient-to-b from-black via-black/30 to-transparent lg:hidden absolute inset-0"></div>
     </div>
 
     <!-- Content Container -->
@@ -285,19 +285,19 @@
       </div>
 
       <!-- Spec Badges Row (Bottom Right on Desktop) - Hidden on Mobile -->
-      <div class="hero-spec-row  flex min-w-0 flex-wrap lg:flex-nowrap justify-start md:justify-end gap-3 w-full max-w-full mt-10 lg:mt-0 absolute  left-5 bottom-5  lg:right-6 lg:bottom-12 xl:right-[-32px] xl:bottom-[158px]">
+      <div class="hero-spec-row flex flex-col  md:flex-row min-w-0 flex-wrap lg:flex-nowrap justify-start md:justify-end gap-3 w-full max-w-full mt-10 lg:mt-0 absolute  left-5 bottom-5  lg:right-6 lg:bottom-12 xl:right-[-32px] xl:bottom-[158px]">
         <!-- Badge 1 -->
-        <div class="hero-spec-card min-w-0 px-3 py-1.5 flex items-center justify-between sm:w-[182px] h-[40px] backdrop-blur-md">
+        <div class="hero-spec-card min-w-0 px-3 py-1.5 flex items-center justify-between w-fit gap-4 h-[40px] backdrop-blur-md">
           <span class="min-w-0 text-[12px] text-white font-semibold">VLT (Truyền sáng)</span>
           <span class="ml-2 shrink-0 text-[13px] font-bold text-gradient-lilac">60%</span>
         </div>
         <!-- Badge 2 -->
-        <div class="hero-spec-card min-w-0 px-3 py-1.5 flex items-center justify-between sm:w-[223px] h-[40px] backdrop-blur-md">
+        <div class="hero-spec-card min-w-0 px-3 py-1.5 flex items-center justify-between w-fit gap-4 h-[40px] backdrop-blur-md">
           <span class="min-w-0 text-[12px] text-white font-semibold">IRR (Cản tia hồng ngoại)</span>
           <span class="ml-2 shrink-0 text-[13px] font-bold text-gradient-lilac">99%</span>
         </div>
         <!-- Badge 3 -->
-        <div class="hero-spec-card min-w-0 px-3 py-1.5 flex items-center justify-between sm:w-[185px] h-[40px] backdrop-blur-md">
+        <div class="hero-spec-card min-w-0 px-3 py-1.5 flex items-center justify-between w-fit gap-4 h-[40px] backdrop-blur-md">
           <span class="min-w-0 text-[12px] text-white font-semibold">UVR (Cản tia UV)</span>
           <span class="ml-2 shrink-0 text-[13px] font-bold text-gradient-lilac">99.9%</span>
         </div>
@@ -331,10 +331,10 @@
           <img loading="lazy" src="./images/page/FILM AND BOX 1.png" alt="Rainier Lilac Film Roll" class="w-full h-auto object-contain" />
         </div>
         <!-- Right: Spec descriptions -->
-        <div class="flex-grow space-y-6 text-left text-sm sm:text-base leading-relaxed">
+        <div class="flex-grow my-auto space-y-6 text-left text-sm sm:text-base leading-relaxed">
           <p class="text-white">
             Ứng dụng công nghệ phún xạ đa tầng 
-            <span class="text-lilac font-bold underline">QRS Quantum Evolution™</span> 
+            <span class="text-lilac font-bold">QRS Quantum Evolution™</span> 
             với cấu trúc 36 lớp siêu mỏng
           </p>
           <p class="text-white">
@@ -551,12 +551,12 @@
   </section>
 
   <!-- Section 5: Lợi ích vượt trội -->
-  <section class="relative py-20 lg:py-32 overflow-hidden bg-cover bg-center bg-fixed lg:bg-scroll" style="background-image: url('./images/page/rainier lillac 70 1.png');" data-aos="fade-up">
+  <section class="relative h-screen lg:h-auto py-0 lg:py-32 overflow-hidden bg-cover bg-center bg-fixed lg:bg-scroll flex lg:block items-end lg:items-center justify-center pb-0" style="background-image: url('./images/page/rainier lillac 70 1.png');" data-aos="fade-up">
     <!-- Overlay -->
 
     <div class="container mx-auto px-6 lg:px-12 relative z-10">
       <!-- Section Header -->
-      <div class="text-center mb-[64px] space-y-2">
+      <div class="hidden lg:block text-center mb-[64px] space-y-2">
         <p class="text-gradient-lilac font-mono text-[16px] font-bold leading-[31.64px] tracking-[0.25em] uppercase text-center mb-0">
           RAINIER LILAC60
         </p>
@@ -716,11 +716,25 @@
       </div>
 
       <!-- Mobile layout (Swiper Slider): Visible on Mobile/Tablet only -->
-      <div class="swiper mySwiperBenefits lg:hidden max-w-[800px] mx-auto h-[420px] md:h-[500px] overflow-hidden">
+      <div class="swiper mySwiperBenefits lg:hidden max-w-[800px] mx-auto h-[calc(100vh-100px)] overflow-hidden">
         <div class="swiper-wrapper">
+          <!-- Slide 0: Section Header -->
+          <div class="swiper-slide !h-auto flex flex-col justify-center items-center text-center">
+            <div class="space-y-2 py-4">
+              <p class="text-gradient-lilac font-mono text-[16px] font-bold leading-[31.64px] tracking-[0.25em] uppercase text-center mb-0">
+                RAINIER LILAC60
+              </p>
+              <h2 class="text-white text-[32px] md:text-[40px] font-bold leading-tight tracking-[-0.02em] text-center mt-0">
+                LỢI ÍCH VƯỢT TRỘI CỦA LILAC60
+              </h2>
+              <p class="text-gradient-lilac text-[18px] md:text-[20px] font-medium leading-[30px] text-center uppercase tracking-wider">
+                CHUẨN KÍNH LÁI THƯỢNG LƯU THẾ HỆ MỚI
+              </p>
+            </div>
+          </div>
           <!-- Slide 1 -->
-          <div class="swiper-slide h-auto pb-4">
-            <div class="feature-card relative h-full rounded-[8px] p-6 backdrop-blur-md transition-all duration-300 bg-black/70 hover:bg-black/20 flex flex-col justify-start">
+          <div class="swiper-slide !h-auto">
+            <div class="feature-card relative h-auto rounded-[8px] p-6 backdrop-blur-md transition-all duration-300 bg-black/70 hover:bg-black/20 flex flex-col justify-start">
               <div class="flex items-center space-x-3 mb-3">
                 <div class="w-[32px] h-[32px] flex-shrink-0">
                   <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -747,8 +761,8 @@
           </div>
 
           <!-- Slide 2 -->
-          <div class="swiper-slide h-auto pb-4">
-            <div class="feature-card relative h-full rounded-[8px] p-6 backdrop-blur-md transition-all duration-300 bg-black/70 hover:bg-black/20 flex flex-col justify-start">
+          <div class="swiper-slide !h-auto">
+            <div class="feature-card relative h-auto rounded-[8px] p-6 backdrop-blur-md transition-all duration-300 bg-black/70 hover:bg-black/20 flex flex-col justify-start">
               <div class="flex items-center space-x-3 mb-3">
                 <div class="w-[32px] h-[32px] flex-shrink-0">
                   <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -775,8 +789,8 @@
           </div>
 
           <!-- Slide 3 -->
-          <div class="swiper-slide h-auto pb-4">
-            <div class="feature-card relative h-full rounded-[8px] p-6 backdrop-blur-md transition-all duration-300 bg-black/70 hover:bg-black/20 flex flex-col justify-start">
+          <div class="swiper-slide !h-auto">
+            <div class="feature-card relative h-auto rounded-[8px] p-6 backdrop-blur-md transition-all duration-300 bg-black/70 hover:bg-black/20 flex flex-col justify-start">
               <div class="flex items-center space-x-3 mb-3">
                 <div class="w-[32px] h-[32px] flex-shrink-0">
                   <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -803,8 +817,8 @@
           </div>
 
           <!-- Slide 4 -->
-          <div class="swiper-slide h-auto pb-4">
-            <div class="feature-card relative h-full rounded-[8px] p-6 backdrop-blur-md transition-all duration-300 bg-black/70 hover:bg-black/20 flex flex-col justify-start">
+          <div class="swiper-slide !h-auto">
+            <div class="feature-card relative h-auto rounded-[8px] p-6 backdrop-blur-md transition-all duration-300 bg-black/70 hover:bg-black/20 flex flex-col justify-start">
               <div class="flex items-center space-x-3 mb-3">
                 <div class="w-[32px] h-[32px] flex-shrink-0">
                   <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -831,8 +845,8 @@
           </div>
 
           <!-- Slide 5 -->
-          <div class="swiper-slide h-auto pb-4">
-            <div class="feature-card relative h-full rounded-[8px] p-6 backdrop-blur-md transition-all duration-300 bg-black/70 hover:bg-black/20 flex flex-col justify-start">
+          <div class="swiper-slide !h-auto">
+            <div class="feature-card relative h-auto rounded-[8px] p-6 backdrop-blur-md transition-all duration-300 bg-black/70 hover:bg-black/20 flex flex-col justify-start">
               <div class="flex items-center space-x-3 mb-3">
                 <div class="w-[32px] h-[32px] flex-shrink-0">
                   <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -859,8 +873,8 @@
           </div>
 
           <!-- Slide 6 -->
-          <div class="swiper-slide h-auto pb-4">
-            <div class="feature-card relative h-full rounded-[8px] p-6 backdrop-blur-md transition-all duration-300 bg-black/70 hover:bg-black/20 flex flex-col justify-start">
+          <div class="swiper-slide !h-auto">
+            <div class="feature-card relative h-auto rounded-[8px] p-6 backdrop-blur-md transition-all duration-300 bg-black/70 hover:bg-black/20 flex flex-col justify-start">
               <div class="flex items-center space-x-3 mb-3">
                 <div class="w-[32px] h-[32px] flex-shrink-0">
                   <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -877,7 +891,7 @@
                   </svg>
                 </div>
                 <h3 class="text-gradient-lilac text-[18px] font-bold leading-snug tracking-[-0.02em]">
-                  BẢO HÀNH TRỌN ĐỜI chính hãng
+                  BẢO HÀNH 30 NĂM chính hãng
                 </h3>
               </div>
               <p class="text-white text-sm md:text-[16px] font-normal leading-relaxed">
@@ -1002,7 +1016,7 @@
       <div class="swiper mySwiperCertificates">
         <div class="swiper-wrapper py-6">
           <!-- Slide 1: IATF -->
-          <div class="swiper-slide h-auto">
+          <div class="swiper-slide ">
             <div class="transition duration-300 flex flex-col justify-between h-full group">
               <div class="rounded-xl overflow-hidden mb-6 flex items-center justify-center">
                 <img loading="lazy" src="./images/page/image 85.png" alt="IATF 16949:2016" class="w-full h-auto object-contain transition duration-500 group-hover:scale-105 cursor-zoom-in" onclick="openModal(this.src)" />
@@ -1014,7 +1028,7 @@
           </div>
  
           <!-- Slide 2: Declaration of Quality -->
-          <div class="swiper-slide h-auto">
+          <div class="swiper-slide ">
             <div class="transition duration-300 flex flex-col justify-between h-full group">
               <div class="rounded-xl overflow-hidden mb-6 flex items-center justify-center">
                 <img loading="lazy" src="./images/page/image 86.png" alt="Declaration of Quality" class="w-full h-auto object-contain transition duration-500 group-hover:scale-105 cursor-zoom-in" onclick="openModal(this.src)" />
@@ -1026,7 +1040,7 @@
           </div>
  
           <!-- Slide 3: Quality Management -->
-          <div class="swiper-slide h-auto">
+          <div class="swiper-slide ">
             <div class="transition duration-300 flex flex-col justify-between h-full group">
               <div class="rounded-xl overflow-hidden mb-6 flex items-center justify-center">
                 <img loading="lazy" src="./images/page/image 87.png" alt="Quality Management System" class="w-full h-auto object-contain transition duration-500 group-hover:scale-105 cursor-zoom-in" onclick="openModal(this.src)" />
@@ -1038,7 +1052,7 @@
           </div>
  
           <!-- Slide 4: Environmental Management -->
-          <div class="swiper-slide h-auto">
+          <div class="swiper-slide ">
             <div class="transition duration-300 flex flex-col justify-between h-full group">
               <div class="rounded-xl overflow-hidden mb-6 flex items-center justify-center">
                 <img loading="lazy" src="./images/page/Image_20250922092655_4_3 1.jpg" alt="Environmental Management System" class="w-full h-auto object-contain transition duration-500 group-hover:scale-105 cursor-zoom-in" onclick="openModal(this.src)" />
@@ -1050,7 +1064,7 @@
           </div>
  
           <!-- Slide 5: Attestation of Conformity 1 -->
-          <div class="swiper-slide h-auto">
+          <div class="swiper-slide ">
             <div class="transition duration-300 flex flex-col justify-between h-full group">
               <div class="rounded-xl overflow-hidden mb-6 flex items-center justify-center">
                 <img loading="lazy" src="./images/page/image 88.png" alt="Attestation Of Conformity" class="w-full h-auto object-contain transition duration-500 group-hover:scale-105 cursor-zoom-in" onclick="openModal(this.src)" />
@@ -1062,7 +1076,7 @@
           </div>
  
           <!-- Slide 6: Attestation of Conformity 2 -->
-          <div class="swiper-slide h-auto">
+          <div class="swiper-slide ">
             <div class="transition duration-300 flex flex-col justify-between h-full group">
               <div class="rounded-xl overflow-hidden mb-6 flex items-center justify-center">
                 <img loading="lazy" src="./images/page/image 89.png" alt="Attestation of Conformity" class="w-full h-auto object-contain transition duration-500 group-hover:scale-105 cursor-zoom-in" onclick="openModal(this.src)" />
@@ -1120,7 +1134,7 @@
     <div class="swiper mySwiperTestimonials max-w-[1216px] mx-auto px-6 xl:px-0">
       <div class="swiper-wrapper py-6">
         <!-- Slide 1 -->
-        <div class="swiper-slide h-auto">
+        <div class="swiper-slide !h-[200px]">
           <article class="testimonial-card mx-auto">
             <img loading="lazy" src="./images/page/Rectangle 23935.png" alt="Khách hàng Rainier Lilac60" />
             <p>
@@ -1131,7 +1145,7 @@
         </div>
 
         <!-- Slide 2 -->
-        <div class="swiper-slide h-auto">
+        <div class="swiper-slide !h-[200px]">
           <article class="testimonial-card mx-auto">
             <img loading="lazy" src="./images/page/Rectangle 23935 (1).png" alt="Khách hàng Rainier Lilac60" />
             <p>
@@ -1143,7 +1157,7 @@
         </div>
 
         <!-- Slide 3 -->
-        <div class="swiper-slide h-auto">
+        <div class="swiper-slide !h-[200px]">
           <article class="testimonial-card mx-auto">
             <img loading="lazy" src="./images/page/Rectangle 23935 (2).png" alt="Khách hàng Rainier Lilac60" />
             <p>
@@ -1154,7 +1168,7 @@
         </div>
 
         <!-- Slide 4 -->
-        <div class="swiper-slide h-auto">
+        <div class="swiper-slide !h-[200px]">
           <article class="testimonial-card mx-auto">
             <img loading="lazy" src="./images/page/Rectangle 23935 (3).png" alt="Khách hàng Rainier Lilac60" />
             <p>

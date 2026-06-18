@@ -61,9 +61,8 @@ var swiperTestimonials = new Swiper('.mySwiperTestimonials', {
 // Initialize Swiper for Benefits (Vertical Scroll, Autoplay, max 3 slides)
 var swiperBenefits = new Swiper('.mySwiperBenefits', {
   direction: 'vertical',
-  slidesPerView: 2,
+  slidesPerView: 'auto',
   spaceBetween: 16,
-  loop: true,
   observer: true,
   observeParents: true,
   autoplay: {
@@ -72,11 +71,11 @@ var swiperBenefits = new Swiper('.mySwiperBenefits', {
   },
   breakpoints: {
     320: {
-      slidesPerView: 2,
+      slidesPerView: 'auto',
       spaceBetween: 16,
     },
     768: {
-      slidesPerView: 2.5,
+      slidesPerView: 'auto',
       spaceBetween: 16,
     }
   }
