@@ -85,6 +85,23 @@ var swiperBenefits = new Swiper('.mySwiperBenefits', {
   }
 });
 
+// Initialize Swiper for Videos (Mobile only slider, Desktop 3-column behavior)
+var swiperVideos = new Swiper('.mySwiperVideos', {
+  slidesPerView: 1,
+  spaceBetween: 20,
+  pagination: {
+    el: '.mySwiperVideos .swiper-pagination',
+    clickable: true,
+  },
+  breakpoints: {
+    768: {
+      slidesPerView: 3,
+      spaceBetween: 30,
+      allowTouchMove: false, // Tắt kéo trượt trên desktop
+    }
+  }
+});
+
 // Mobile menu toggle logic
 const menuBtn = document.getElementById('menu-btn');
 const mobileMenu = document.getElementById('mobile-menu');
