@@ -69,10 +69,6 @@ var swiperBenefits = new Swiper('.mySwiperBenefits', {
   mousewheel: {
     releaseOnEdges: true,
   },
-  autoplay: {
-    delay: 3000,
-    disableOnInteraction: false,
-  },
   breakpoints: {
     320: {
       slidesPerView: 'auto',
