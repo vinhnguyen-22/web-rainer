@@ -69,6 +69,7 @@ body {
   background-clip: text;
   color: transparent;
   animation: lilac-shine 3s linear infinite;
+  padding: 5px;
 }
 
 @keyframes lilac-shine {

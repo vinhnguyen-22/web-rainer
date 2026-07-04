@@ -130,152 +130,161 @@
 
 <body class="bg-[#020305] text-white font-inter overflow-y-hidden">
   <!-- Header Navigation -->
-  <header class="bg-black/20 border-b border-transparent fixed w-full z-30 transition-all duration-300"
-    id="main-header">
-    <div class="max-w-[1216px] mx-auto px-6 xl:px-0 py-4 relative">
-      <div class="flex items-center justify-between relative w-full">
+  <header class="bg-black/70 backdrop-blur-md fixed w-full z-30">
+    <div class="container mx-auto flex items-center justify-between px-6 py-3">
+      <!-- Logo -->
+      <a href="https://rainier.com.vn/" class="flex items-center space-x-2">
+        <img loading="lazy" src="./images/Logo.png" alt="Rainier Logo" class="h-10" />
+      </a>
 
-        <!-- Mobile Hamburger (Left on mobile, hidden on desktop) -->
-        <button id="menu-btn"
-          class="lg:hidden relative z-50 flex h-10 w-10 items-center justify-start text-white focus:outline-none"
-          aria-label="Mở menu">
-          <svg id="hamburger-icon" class="w-7 h-7 block transition-transform duration-300" fill="none"
-            stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
-          </svg>
-          <svg id="close-icon" class="w-7 h-7 hidden transition-transform duration-300" fill="none"
-            stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
-          </svg>
-        </button>
+      <!-- Navigation Desktop -->
+      <nav class="hidden md:flex items-center space-x-2 text-white font-medium">
+        <a href="https://rainier.com.vn/" class="hover:text-white px-[16px] py-[12px] hover:bg-sky-400 text-sm">TRANG
+          CHỦ</a>
 
-        <!-- Desktop Navigation: Logo + Links -->
-        <div class="hidden lg:flex items-center space-x-6 xl:space-x-8">
-          <a href="https://rainier.vn/" class="flex items-center">
-            <img loading="eager" src="./images/page/Logo 1.png" alt="Rainier Logo" class="h-8" />
-          </a>
-          <!-- Navigation Desktop -->
-          <nav class="flex items-center lg:space-x-1 xl:space-x-2 text-white font-semibold lg:text-xs xl:text-sm">
-            <a href="https://rainier.vn/"
-              class="hover:text-gradient-lilac lg:px-2 xl:px-4 py-2 transition duration-200">TRANG CHỦ</a>
-
-            <!-- Dropdown Sản phẩm -->
-            <div class="relative group">
-              <button
-                class="hover:text-gradient-lilac lg:px-2 xl:px-4 py-2 flex items-center focus:outline-none transition duration-200">
-                SẢN PHẨM
-                <svg class="w-4 h-4 ml-1 transform group-hover:rotate-180 transition-transform duration-200" fill="none"
-                  stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-                </svg>
-              </button>
-              <div
-                class="absolute left-0 top-full mt-2 w-64 bg-black/95 border border-white/10 rounded-lg shadow-xl py-2 hidden group-hover:block transition duration-200">
-                <a href="https://rainier.vn/product-category/phim-cach-nhiet-nha-kinh"
-                  class="block px-4 py-2 text-gray-300 hover:text-white hover:bg-white/10 transition capitalize">Phim
-                  cách nhiệt nhà kính</a>
-                <a href="https://rainier.vn/product-category/phim-cach-nhiet-o-to"
-                  class="block px-4 py-2 text-gray-300 hover:text-white hover:bg-white/10 transition capitalize">Phim
-                  cách nhiệt ô tô</a>
-                <a href="https://rainier.vn/sieu-phim-kinh-lai-lilac50"
-                  class="block px-4 py-2 text-gray-300 hover:text-white hover:bg-white/10 transition capitalize">Siêu
-                  Phim Kính Lái LILAC50</a>
-                <a href="https://rainier.vn/phim-cach-nhiet-cua-so-troi-sky-magic/"
-                  class="block px-4 py-2 text-gray-300 hover:text-white hover:bg-white/10 transition capitalize">Phim
-                  Cửa Sổ Trời SKYMAGIC</a>
-              </div>
-            </div>
-
-            <a href="https://rainier.vn/category/du-an/du-an-nha-kinh"
-              class="hover:text-gradient-lilac lg:px-2 xl:px-4 py-2 transition duration-200">DỰ ÁN</a>
-            <a href="https://rainier.vn/he-thong-dai-ly"
-              class="hover:text-gradient-lilac lg:px-2 xl:px-4 py-2 transition duration-200">ĐẠI LÝ</a>
-            <a href="https://rainier.vn/category/tin-tuc-chung"
-              class="hover:text-gradient-lilac lg:px-2 xl:px-4 py-2 transition duration-200">KINH NGHIỆM</a>
-            <a href="https://rainier.vn/lien-he"
-              class="hover:text-gradient-lilac lg:px-2 xl:px-4 py-2 transition duration-200">LIÊN HỆ</a>
-          </nav>
-        </div>
-
-        <!-- Center: Logo (Mobile only) -->
-        <div
-          class="lg:hidden absolute left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 flex items-center justify-center">
-          <a href="https://rainier.vn/">
-            <img src="./images/page/Logo 1.png" alt="Rainier Logo" class="h-8 w-auto" loading="eager" />
-          </a>
-        </div>
-
-        <!-- Right: Shopping Bag Icon + Badge "1" (Mobile only) -->
-        <div class="lg:hidden flex items-center justify-end">
-          <a href="https://rainier.vn/gio-hang"
-            class="relative w-10 h-10 rounded-full flex items-center justify-center bg-white/10 border border-white/20 backdrop-blur-md">
-            <svg class="w-5 h-5 text-white/80" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
+        <!-- Dropdown Giới thiệu -->
+        <div class="relative group">
+          <button
+            class="hover:text-white px-[16px] py-[12px] hover:bg-sky-400 text-sm flex items-center focus:outline-none">
+            GIỚI THIỆU
+            <svg class="w-4 h-4 ml-1" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd"
+                d="M5.23 7.21a.75.75 0 011.06.02L10 11.21l3.71-3.98a.75.75 0 111.08 1.04l-4.25 4.56a.75.75 0 01-1.08 0L5.21 8.27a.75.75 0 01.02-1.06z"
+                clip-rule="evenodd" />
             </svg>
-            <span
-              class="absolute -top-1 -right-1 w-[18px] h-[18px] bg-[#E88C00] text-white text-[10px] font-bold rounded-full flex items-center justify-center border border-black/20">
-              1
-            </span>
-          </a>
-        </div>
-
-        <!-- Right: Hotline (Desktop/Tablet) -->
-        <div class="hidden md:flex items-center space-x-3 text-right">
-          <div class="flex items-center space-x-3 text-right">
-            <div class="w-8 h-8 rounded-full flex items-center justify-center bg-sky-blue">
-              <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
-                <path
-                  d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.3 11.3 0 005.455 5.455l.773-1.548a1 1 0 011.06-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 6V3z" />
-              </svg>
-            </div>
-            <div>
-              <p class="text-xs font-vietnam font-medium text-gray-400">Hotline: 0934 194 088</p>
-              <p class="text-sky-blue font-vietnam text-xl font-bold">0934 194 088</p>
-            </div>
+          </button>
+          <div
+            class="absolute left-0 top-full flex flex-col items-center whitespace-nowrap p-2 hidden group-hover:block group-focus-within:block bg-white text-black rounded shadow-lg">
+            <a href="https://rainier.com.vn/ve-rainier" class="block px-4 py-2 hover:bg-gray-200">Về
+              Rainier</a>
+            <a href="https://rainier.com.vn/gioi-thieu-ve-cong-nghe" class="block px-4 py-2 hover:bg-gray-200">Công
+              nghệ</a>
           </div>
         </div>
 
+        <!-- Dropdown Sản phẩm -->
+        <div class="relative group">
+          <button
+            class="hover:text-white px-[16px] py-[12px] hover:bg-sky-400 text-sm flex items-center focus:outline-none">
+            SẢN PHẨM
+            <svg class="w-4 h-4 ml-1" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd"
+                d="M5.23 7.21a.75.75 0 011.06.02L10 11.21l3.71-3.98a.75.75 0 111.08 1.04l-4.25 4.56a.75.75 0 01-1.08 0L5.21 8.27a.75.75 0 01.02-1.06z"
+                clip-rule="evenodd" />
+            </svg>
+          </button>
+          <div
+            class="absolute left-0 top-full flex flex-col items-center whitespace-nowrap p-2 hidden group-hover:block group-focus-within:block bg-white text-black rounded shadow-lg">
+            <a href="https://rainier.com.vn/product-category/phim-cach-nhiet-nha-kinh"
+              class="block px-4 py-2 hover:bg-gray-200 capitalize">Phim cách nhiệt nhà kính</a>
+            <a href="https://rainier.com.vn/product-category/phim-cach-nhiet-o-to"
+              class="block px-4 py-2 hover:bg-gray-200 capitalize">Phim cách nhiệt ô tô</a>
+            <a href="https://rainier.com.vn/sieu-phim-kinh-lai-lilac60"
+              class="block px-4 py-2 hover:bg-gray-200 capitalize">Siêu Phim
+              Kính Lái LILAC60 </a>
+            <a href="https://rainier.com.vn/sieu-phim-kinh-lai-lilac50"
+              class="block px-4 py-2 hover:bg-gray-200 capitalize">Siêu Phim
+              Kính Lái LILAC50 </a>
+            <a href="https://rainier.com.vn/phim-cach-nhiet-cua-so-troi-sky-magic/"
+              class="block px-4 py-2 hover:bg-gray-200 capitalize">Phim Cửa Sổ Trời SKYMAGIC</a>
+          </div>
+        </div>
+
+        <a href="https://rainier.com.vn/category/du-an/du-an-nha-kinh"
+          class="hover:text-white px-[16px] py-[12px] hover:bg-sky-400 text-sm">DỰ ÁN</a>
+        <a href="https://rainier.com.vn/he-thong-dai-ly"
+          class="hover:text-white px-[16px] py-[12px] hover:bg-sky-400 text-sm">ĐẠI LÝ</a>
+        <a href="https://rainier.com.vn/category/tin-tuc-chung"
+          class="hover:text-white px-[16px] py-[12px] hover:bg-sky-400 text-sm">KINH NGHIỆM</a>
+        <a href="https://rainier.com.vn/bao-hanh-dien-tu"
+          class="hover:text-white px-[16px] py-[12px] hover:bg-sky-400 text-sm">BẢO HÀNH ĐIỆN TỬ</a>
+        <a href="https://rainier.com.vn/lien-he"
+          class="hover:text-white px-[16px] py-[12px] hover:bg-sky-400 text-sm">LIÊN
+          HỆ</a>
+      </nav>
+
+      <!-- Hotline -->
+      <div class="hidden md:block text-right text-white">
+        <p class="text-sm">Hotline 0934 194 088</p>
+        <p class="text-sky-400 text-md font-bold">0934 194 088</p>
       </div>
+
+      <!-- Hamburger Mobile -->
+      <button id="menu-btn" class="md:hidden text-white focus:outline-none">
+        <svg id="hamburger-icon" class="w-7 h-7 block transition-transform duration-300" fill="none"
+          stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+        <svg id="close-icon" class="w-7 h-7 hidden transition-transform duration-300" fill="none" stroke="currentColor"
+          stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+        </svg>
+      </button>
     </div>
 
     <!-- Mobile Menu -->
     <div id="mobile-menu"
-      class="hidden lg:hidden text-white font-medium flex flex-col space-y-2 px-6 py-4 bg-black/95 border-t border-white/10 transition-all duration-300">
-      <a href="https://rainier.vn/" class="hover:text-gradient-lilac p-2 rounded transition">TRANG CHỦ</a>
+      class="hidden md:hidden text-white font-medium flex flex-col space-y-2 px-6 py-4 transform -translate-x-full transition-all duration-500 ease-in-out">
+      <a href="https://rainier.com.vn/" class="hover:bg-sky-400 p-2 rounded">TRANG CHỦ</a>
 
-      <!-- Mobile submenu Sản phẩm -->
+      <!-- Mobile submenu Giới thiệu -->
       <div class="flex flex-col">
-        <button class="hover:text-gradient-lilac p-2 rounded flex justify-between items-center w-full"
-          onclick="toggleSubmenu('san-pham-submenu')">
-          SẢN PHẨM
-          <svg class="w-4 h-4 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+        <button class="hover:bg-sky-400 p-2 rounded flex justify-between items-center w-full"
+          onclick="toggleSubmenu(event, 'gioi-thieu-submenu')">
+          GIỚI THIỆU
+          <svg class="w-4 h-4 transition-transform" fill="currentColor" viewBox="0 0 20 20"></svg>
+          <path fill-rule="evenodd"
+            d="M5.23 7.21a.75.75 0 011.06.02L10 11.21l3.71-3.98a.75.75 0 111.08 1.04l-4.25 4.56a.75.75 0 01-1.08 0L5.21 8.27a.75.75 0 01.02-1.06z" />
           </svg>
         </button>
-        <div id="san-pham-submenu" class="hidden flex flex-col space-y-1 pl-4">
-          <a href="https://rainier.vn/product-category/phim-cach-nhiet-nha-kinh"
-            class="hover:bg-white/10 p-2 rounded text-sm text-gray-300 capitalize">Phim cách nhiệt nhà kính</a>
-          <a href="https://rainier.vn/product-category/phim-cach-nhiet-o-to"
-            class="hover:bg-white/10 p-2 rounded text-sm text-gray-300 capitalize">Phim cách nhiệt ô tô</a>
-          <a href="https://rainier.vn/sieu-phim-kinh-lai-lilac50"
-            class="hover:bg-white/10 p-2 rounded text-sm text-gray-300 capitalize">Siêu Phim Kính Lái LILAC50</a>
-          <a href="https://rainier.vn/phim-cach-nhiet-cua-so-troi-sky-magic"
-            class="hover:bg-white/10 p-2 rounded text-sm text-gray-300 capitalize">Phim Cách Nhiệt Cửa Sổ Trời
-            SKYMAGIC</a>
+        <div id="gioi-thieu-submenu" class="hidden flex flex-col space-y-1 pl-4">
+          <a href="https://rainier.com.vn/ve-rainier" class="hover:bg-sky-400 p-2 rounded text-sm">Về
+            Rainier</a>
+          <a href="https://rainier.com.vn/gioi-thieu-ve-cong-nghe" class="hover:bg-sky-400 p-2 rounded text-sm">Công
+            nghệ</a>
         </div>
       </div>
 
-      <a href="https://rainier.vn/category/du-an/du-an-nha-kinh"
-        class="hover:text-gradient-lilac p-2 rounded transition">DỰ ÁN</a>
-      <a href="https://rainier.vn/he-thong-dai-ly" class="hover:text-gradient-lilac p-2 rounded transition">ĐẠI LÝ</a>
-      <a href="https://rainier.vn/category/tin-tuc-chung" class="hover:text-gradient-lilac p-2 rounded transition">KINH
-        NGHIỆM</a>
-      <a href="https://rainier.vn/lien-he" class="hover:text-gradient-lilac p-2 rounded transition">LIÊN HỆ</a>
+      <!-- Mobile submenu Sản phẩm -->
+      <div class="flex flex-col">
+        <button class="hover:bg-sky-400 p-2 rounded flex justify-between items-center w-full"
+          onclick="toggleSubmenu('san-pham-submenu')">
+          SẢN PHẨM
+          <svg class="w-4 h-4 transition-transform" fill="currentColor" viewBox="0 0 20 20">
+            <path fill-rule="evenodd"
+              d="M5.23 7.21a.75.75 0 011.06.02L10 11.21l3.71-3.98a.75.75 0 111.08 1.04l-4.25 4.56a.75.75 0 01-1.08 0L5.21 8.27a.75.75 0 01.02-1.06z" />
+          </svg>
+        </button>
+        <div id="san-pham-submenu" class="hidden flex flex-col space-y-1 pl-4">
+          <a href="https://rainier.com.vn/product-category/phim-cach-nhiet-nha-kinh"
+            class="hover:bg-sky-400 p-2 rounded text-sm capitalize">Phim cách nhiệt nhà kính</a>
+          <a href="https://rainier.com.vn/product-category/phim-cach-nhiet-o-to"
+            class="hover:bg-sky-400 p-2 rounded text-sm capitalize">Phim cách nhiệt ô tô</a>
+          <a href="https://rainier.com.vn/sieu-phim-kinh-lai-lilac60"
+            class="hover:bg-sky-400 p-2 rounded text-sm capitalize">Siêu Phim
+            Kính Lái LILAC60 </a>
+          <a href="https://rainier.com.vn/sieu-phim-kinh-lai-lilac50"
+            class="hover:bg-sky-400 p-2 rounded text-sm capitalize">Siêu Phim
+            Kính Lái LILAC50 </a>
+          <a href="https://rainier.com.vn/phim-cach-nhiet-cua-so-troi-sky-magic"
+            class="hover:bg-sky-400 p-2 rounded text-sm capitalize">Phim Cách Nhiệt Cửa Sổ Trời SKYMAGIC</a>
+        </div>
+      </div>
 
-      <div class="pt-4 border-t border-white/10 flex flex-col justify-center items-center">
-        <p class="text-sm text-gray-400">
-          Hotline:
-          <a href="tel:0934194088" class="text-second-color hover:underline">0934 194 088</a>
+      <a href="https://rainier.com.vn/category/du-an/du-an-nha-kinh" class="hover:bg-sky-400 p-2 rounded">DỰ
+        ÁN</a>
+      <a href="https://rainier.com.vn/he-thong-dai-ly" class="hover:bg-sky-400 p-2 rounded">ĐẠI LÝ</a>
+      <a href="https://rainier.com.vn/category/tin-tuc-chung" class="hover:bg-sky-400 p-2 rounded">KINH NGHIỆM</a>
+      <a href="https://rainier.com.vn/bao-hanh-dien-tu" class="hover:bg-sky-400 p-2 rounded">BẢO HÀNH ĐIỆN TỬ</a>
+      <a href="https://rainier.com.vn/lien-he" class="hover:bg-sky-400 p-2 rounded">LIÊN HỆ</a>
+
+      <div class="pt-3 border-t border-gray-600 flex flex-col justify-center items-center">
+        <p class="text-sm">
+          Hotline
+          <a href="tel:0934194088" class="hover:text-sky-400 cursor-pointer">0934 194 088</a>
+        </p>
+        <p class="text-sky-400 text-lg font-bold">
+          <a href="tel:0934194088" class="hover:text-sky-500 cursor-pointer">0934 194 088</a>
         </p>
       </div>
     </div>
@@ -285,7 +294,8 @@
     class="relative h-screen lg:h-screen lg:min-h-[710px] min-h-[710px] flex items-stretch bg-black overflow-hidden pt-24 lg:pt-0">
     <!-- Background Video -->
     <div class="absolute inset-0 z-0">
-      <video autoplay muted loop playsinline poster="./images/page/rainier lillac 70 1.png" class="absolute w-full h-full object-cover object-[65%_center] lg:object-center ">
+      <video autoplay muted loop playsinline poster="./images/page/rainier lillac 70 1.png"
+        class="absolute w-full h-full object-cover object-[65%_center] lg:object-center ">
         <source src="./videos/hero-banner-rl60-opt.webm" type="video/webm">
         <source src="./videos/hero-banner-rl60-opt.mp4" type="video/mp4">
         Your browser does not support the video tag.
@@ -706,7 +716,7 @@
             </svg>
           </div>
           <h3 class="text-gradient-lilac text-[20.78px] font-bold leading-[30.52px] tracking-[-0.02em] mt-[8px]">
-            Dễ thi công HÀNG ĐẦU Việt Nam
+            Phim kim loại dễ thi công HÀNG ĐẦU Việt Nam
           </h3>
           <p class="text-white text-[16px] font-normal leading-[30.52px] tracking-[-0.02em] mt-[8px]">
             Cấu trúc vật liệu ổn định giúp phim bám form đẹp, hạn chế viền trắng và mang lại độ hoàn thiện tinh tế cho
@@ -1187,7 +1197,8 @@
                 <span class="text-lilac text-[16px] font-bold tracking-[-0.02em]">Tổng cản nhiệt (TSER)</span>
                 <span class="text-lilac text-[16px] font-bold tracking-[-0.02em]">60%</span>
               </div>
-              <p class="italic text-[#b0b0b0] text-[13px] sm:text-[14px] leading-relaxed mt-[4px]">Tăng hiệu quả cách nhiệt, giảm cảm giác oi bức trong khoang lái</p>
+              <p class="italic text-[#b0b0b0] text-[13px] sm:text-[14px] leading-relaxed mt-[4px]">Tăng hiệu quả cách
+                nhiệt, giảm cảm giác oi bức trong khoang lái</p>
             </div>
 
             <!-- IRR -->
@@ -1352,32 +1363,56 @@
       </h3>
 
       <div
-        class="flex flex-wrap justify-center items-center gap-12 lg:gap-16 opacity-100 hover:opacity-100 transition duration-300">
-        <img loading="lazy" src="./images/hyundai.png" alt="Hyundai"
-          class="h-8 object-contain hover:scale-110 transition duration-200" />
-        <img loading="lazy" src="./images/peugeot.png" alt="Peugeot"
-          class="h-9 object-contain hover:scale-110 transition duration-200" />
-        <img loading="lazy" src="./images/mitsubishi.png" alt="Mitsubishi"
-          class="h-9 object-contain hover:scale-110 transition duration-200" />
-        <img loading="lazy" src="./images/mazda.png" alt="Mazda"
-          class="h-8 object-contain hover:scale-110 transition duration-200" />
-        <img loading="lazy" src="./images/porsche.png" alt="Porsche"
-          class="h-6 object-contain hover:scale-110 transition duration-200" />
-        <img loading="lazy" src="./images/mercedes.png" alt="Mercedes"
-          class="h-9 object-contain hover:scale-110 transition duration-200" />
-        <img loading="lazy" src="./images/kia.png" alt="KIA"
-          class="h-6 object-contain hover:scale-110 transition duration-200" />
-        <img loading="lazy" src="./images/honda.png" alt="Honda"
-          class="h-8 object-contain hover:scale-110 transition duration-200" />
-        <img loading="lazy" src="./images/nissan.png" alt="Nissan"
-          class="h-8 object-contain hover:scale-110 transition duration-200" />
-        <img loading="lazy" src="./images/toyota.png" alt="Toyota"
-          class="h-8 object-contain hover:scale-110 transition duration-200" />
-        <img loading="lazy" src="./images/ford.png" alt="Ford"
-          class="h-6 object-contain hover:scale-110 transition duration-200" />
+        class="flex flex-wrap justify-center items-center gap-x-8 gap-y-6 md:gap-x-12 md:gap-y-8 opacity-100 hover:opacity-100 transition duration-300">
+        <div class="w-24 sm:w-28 h-10 sm:h-12 flex items-center justify-center">
+          <img loading="lazy" src="./images/hyundai.png" alt="Hyundai"
+            class="max-h-7 sm:max-h-9 max-w-full object-contain hover:scale-110 transition duration-200" />
+        </div>
+        <div class="w-24 sm:w-28 h-10 sm:h-12 flex items-center justify-center">
+          <img loading="lazy" src="./images/peugeot.png" alt="Peugeot"
+            class="max-h-7 sm:max-h-9 max-w-full object-contain hover:scale-110 transition duration-200" />
+        </div>
+        <div class="w-24 sm:w-28 h-10 sm:h-12 flex items-center justify-center">
+          <img loading="lazy" src="./images/mitsubishi.png" alt="Mitsubishi"
+            class="max-h-7 sm:max-h-9 max-w-full object-contain hover:scale-110 transition duration-200" />
+        </div>
+        <div class="w-24 sm:w-28 h-10 sm:h-12 flex items-center justify-center">
+          <img loading="lazy" src="./images/mazda.png" alt="Mazda"
+            class="max-h-7 sm:max-h-9 max-w-full object-contain hover:scale-110 transition duration-200" />
+        </div>
+        <div class="w-24 sm:w-28 h-10 sm:h-12 flex items-center justify-center">
+          <img loading="lazy" src="./images/porsche.png" alt="Porsche"
+            class="max-h-8 sm:max-h-10 max-w-full object-contain hover:scale-110 transition duration-200" />
+        </div>
+        <div class="w-24 sm:w-28 h-10 sm:h-12 flex items-center justify-center">
+          <img loading="lazy" src="./images/mercedes.png" alt="Mercedes"
+            class="max-h-8 sm:max-h-10 max-w-full object-contain hover:scale-110 transition duration-200" />
+        </div>
+        <div class="w-24 sm:w-28 h-10 sm:h-12 flex items-center justify-center">
+          <img loading="lazy" src="./images/kia.png" alt="KIA"
+            class="max-h-7 sm:max-h-9 max-w-full object-contain hover:scale-110 transition duration-200" />
+        </div>
+        <div class="w-24 sm:w-28 h-10 sm:h-12 flex items-center justify-center">
+          <img loading="lazy" src="./images/honda.png" alt="Honda"
+            class="max-h-8 sm:max-h-10 max-w-full object-contain hover:scale-110 transition duration-200" />
+        </div>
+        <div class="w-24 sm:w-28 h-10 sm:h-12 flex items-center justify-center">
+          <img loading="lazy" src="./images/nissan.png" alt="Nissan"
+            class="max-h-8 sm:max-h-10 max-w-full object-contain hover:scale-110 transition duration-200" />
+        </div>
+        <div class="w-24 sm:w-28 h-10 sm:h-12 flex items-center justify-center">
+          <img loading="lazy" src="./images/toyota.png" alt="Toyota"
+            class="max-h-8 sm:max-h-10 max-w-full object-contain hover:scale-110 transition duration-200" />
+        </div>
+        <div class="w-24 sm:w-28 h-10 sm:h-12 flex items-center justify-center">
+          <img loading="lazy" src="./images/ford.png" alt="Ford"
+            class="max-h-7 sm:max-h-9 max-w-full object-contain hover:scale-110 transition duration-200" />
+        </div>
         <!-- Using page logo for BMW -->
-        <img loading="lazy" src="./images/page/toppng.com-logo-bmw-png-bmw-ico-1526x1526 1.png" alt="BMW"
-          class="h-10 w-10 object-contain hover:scale-110 transition duration-200" />
+        <div class="w-24 sm:w-28 h-10 sm:h-12 flex items-center justify-center">
+          <img loading="lazy" src="./images/page/toppng.com-logo-bmw-png-bmw-ico-1526x1526 1.png" alt="BMW"
+            class="max-h-8 sm:max-h-10 max-w-full object-contain hover:scale-110 transition duration-200" />
+        </div>
       </div>
     </div>
   </section>
@@ -1476,7 +1511,7 @@
                 LILAC60</h3>
             </div>
             <p class="text-[#7f878d] text-[16px] leading-[170%] font-jakarta">
-              Phù hợp cho các dòng xe có kính lái nhỏ, cách nhiệt hiệu quả và bảo vệ nội thất
+              Đầu tư một lần, an tâm dài lâu với chế độ bảo hành 30 năm chính hãng
             </p>
             <p class="text-white text-[24px] font-bold leading-[30px] tracking-[-0.02em]">
               6.500.000VNĐ <span class="text-[15px] font-bold">/ KÍNH</span>
